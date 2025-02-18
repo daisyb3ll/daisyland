@@ -1,5 +1,5 @@
 body {
-    font-family: BD Supper, Poppins;
+    font-family: Poppins;
     margin: 0;
     padding: 0;
     background: #f8f8f8;
@@ -10,6 +10,13 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+}
+
+.fixed-logo {
+    position: fixed;
+    top: 10px; /* Adjust top spacing as needed */
+    left: 10px; /* Adjust left spacing as needed */
+    z-index: 100; /* Ensure it's on top of other content */
 }
 
 .logo img {
@@ -29,7 +36,13 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #333;
+    color: inherit;
+    font-size: inherit;
+    cursor: pointer;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
 }
 
 /* Center Content */
@@ -70,7 +83,7 @@ main {
 }
 
 .text-container p {
-    font-family: Peridot Devanagari Light, ;
+    font-family:  ;
     font-size: 1.5em;
     color: #555;
     margin-top: 10px;
