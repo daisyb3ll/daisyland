@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: BD Supper, Poppins;
     margin: 0;
     padding: 0;
     background: #f8f8f8;
@@ -38,8 +38,7 @@ main {
 }
 
 /* FLEXBOX LAYOUT FOR SECTIONS */
-.header-image,
-.about-section {
+.header-image {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -71,29 +70,36 @@ main {
 }
 
 .text-container p {
+    font-family: Peridot Devanagari Light, ;
     font-size: 1.5em;
     color: #555;
     margin-top: 10px;
 }
-
-/* ABOUT SECTION STYLES */
-.about-section {
-    flex-direction: row;
-    padding: 60px 10%;
-
-    background-image:url("assets/minier_me.png"); /* Replace with your image path */
-    background-size: cover; /* Ensures the image covers the section */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents tiling */
-    border-radius: 15px; /* Optional: Adds rounded corners */
-}
-
-.about-section h2 {
+.about-header h1 {
+    display: flex;
+    flex-direction: column;
     font-size: 2.5em;
     color: #333;
     margin-bottom: 20px;
+    gap: 30px;
+    padding: 50px 10%;
+}
+/* ABOUT SECTION STYLES */
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px 10%;
+    
+    background-image:url("../assets/page_background.png"); /* Replace with your image path */
+    background-size: contain ; /* Ensures the image covers the section */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling */
+    border-radius: 0; /* Optional: Adds rounded corners */
 }
 
+
 .about-section .image-container {
-    max-width: 300px; /* Adjust if needed */
+    max-width: max-content; /* Adjust if needed */
 }
