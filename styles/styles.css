@@ -48,8 +48,16 @@ nav ul li a:hover {
 /* Center Content */
 main {
     width: 100%;
-}
+    }
 
+@media (max-width: 768px) {
+    .menu{
+        display: none;
+    }
+    .mobile-menu {
+        display: block;
+    }
+}
 /* FLEXBOX LAYOUT FOR SECTIONS */
 .header-image {
     display: flex;
@@ -77,21 +85,21 @@ main {
 }
 
 .text-container h1 {
-    font-size: 4em;
+    font-size: 4rem;
     margin: 0;
     line-height: 1.1;
 }
 
 .text-container p {
     font-family:  ;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     color: #555;
     margin-top: 10px;
 }
 .about-header h1 {
     display: flex;
     flex-direction: column;
-    font-size: 2.5em;
+    font-size: 2.5rem;
     color: #333;
     margin-bottom: 20px;
     gap: 30px;
