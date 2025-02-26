@@ -200,4 +200,49 @@ main {
     max-width: max-content; /* Adjust if needed */
 }
 
+.social-media-buttons {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Horizontally center the buttons */
+    gap: 1rem; /* Add spacing between the buttons */
+    flex-wrap: wrap; /* Allow buttons to wrap if needed */
+    margin-top: 20px ;
+}
+
+.icon-button {
+    font-family: "lores-12", monospace;
+    display: flex;
+    /* Flexbox for internal alignment */
+    align-items: center;
+    /* Centers icon and text vertically */
+    justify-content: center;
+    /* Centers icon and text horizontally */
+    padding: .5rem .5rem;
+    /* Adds padding for better click area */
+    background-color: hsl(0, 0%, 100%);
+    border: 0px solid rgb(255, 255, 255);
+    /* Optional: Border for clarity */
+    border-radius: 5px;
+    /* Optional: Rounded corners */
+    box-shadow: 5px 5px 0.5px rgba(0, 0, 51, 0.2);
+    /* Optional: Drop shadow */
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.icon-button:hover {
+    background-color: hsl(0, 0%, 100%);
+    transform: scale(1.2);
+}
+
+.icon-button:active {
+    background-color: #ffffff;
+    transform: scale(0.95);
+}
+
+.button-icon {
+    width: 20px;
+    height: 20px;
+}
+
+
 
