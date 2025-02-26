@@ -17,6 +17,7 @@
 
 </head>
 <body>
+<
 <header>
     <div class = "logo">
         <img src ="assets/daisy.logo.png" alt="daisy logo">
@@ -30,7 +31,7 @@
     </nav>
 </header>
 
-<main>
+<main class = "container">
     <div class= "header-image">
         <div class = "image-container">
             <img src = "assets/paper_back.png" alt = "Drawing portrait">
@@ -43,36 +44,32 @@
             <p> ux/ui researcher & designer</p>
         </div>
     </div>
-
     <!--about section-->
-
-    <div class="about-header">
+<div class = "about-section">
+    <section id = "about"  class = "container">
+     <div class="about-header">
         <h1> hello,i'm daisy</h1>
     </div>
-
-    <div id = "about" class = "about-section">
-        <div class="image-container">
-            <img src="assets/minier_me.png" alt="daisy_yearbook_2009">
-        </div>
-        <div class="text-container">
-            <p>
-                <strong>Hi my name is <b>Daisy.</b></strong><br>
-                I am 21 years old and was raised in So-Cal. I am a student at <b>Chapman University</b>
-                where I major in Software Engineering and minor in Peace Studies.<br><br>
-                In my free time, I’m a freelance graphic designer & illustrator and work as a UX/UI student researcher.
-                I'm a self-proclaimed creative technologist and aspiring designer, researcher, and front-end developer.
-                I like to experiment with web design, pixel art, airbrushing, novice 3D modeling, and sculpting.<br><br>
-                Away from <i>The Screens</i>, I like skating, reading manga, rock music, gaming, and axolotls.
-            </p>
-        </div>
+    <div class="image-container">
+        <img src="assets/minier_me.png" alt="daisy_yearbook_2009">
     </div>
-
+    <div class="text-container">
+    <p>
+     <strong>Hi my name is <b>Daisy.</b></strong><br>
+     I am 21 years old and was raised in So-Cal. I am a student at <b>Chapman University</b>
+     where I major in Software Engineering and minor in Peace Studies.<br><br>
+     In my free time, I’m a freelance graphic designer & illustrator and work as a UX/UI student researcher.
+     I'm a self-proclaimed creative technologist and aspiring designer, researcher, and front-end developer.
+     I like to experiment with web design, pixel art, airbrushing, novice 3D modeling, and sculpting.<br><br>
+     Away from <i>The Screens</i>, I like skating, reading manga, rock music, gaming, and axolotls.
+     </p>
+        </div>
+    </section>
+</div>    
+<!--    repeating page background starts-->
+    <div class = "pattern-bgrnd">
     <!--Projects Section-->
-    <div id = "projects" class = "about-header">
-        <h1> </h1>
-        
-<!--        ///-->
-
+    <section id = "projects" class = "container">
         <div class="projects-grid">
             <div class="project-square">
                 <img src="assets/Asset 5.png" alt="Project-1">
@@ -82,7 +79,7 @@
                     <p> Its Tinder for Jobs </p>
                 </div>
             </div>
-            
+<!-- LAMP capstone-->
             <div class="project-square">
                 <img src="assets/lamp_logo.png" alt="Project 2">
                 <div class="project-overlay">
@@ -91,6 +88,8 @@
                     <p> Undergrad Capstone Project </p>
                 </div>
             </div>
+            
+<!--UX research codepathxamaxon -->
 
 <!--            <div class="project-square">-->
 <!--                <img src="project3.jpg" alt="Project-3">-->
@@ -100,7 +99,6 @@
 <!--                    <p> Design Challenge Proposal</p>-->
 <!--                </div>-->
 <!--            </div>-->
-
             <div class="project-square">
                 <img src="assets/dragon_design_1.png" alt="Project-4">
                 <div class="project-overlay">
@@ -110,7 +108,7 @@
                     <p> Design + Prototype + Candy = Dream Halloween </p>
                 </div>
             </div>
-
+<!--covalent therapy-->
             <div class="project-square">
                 <img src="assets/covalenttheray_cards.png" alt="Project-5">
                 <div class="project-overlay">
@@ -123,56 +121,61 @@
             <div class="project-square">
                 <img src="assets/fun.jpg" alt="Project-6">
                 <div class="project-overlay">
-                   <p> Design & Doodling</p>
+                   <p> Designing & Making Things Cool </p>
                     <h3>Design for Fun</h3>
-                    <p> I like to make pretty things! </p>
+                    <p> design work for funsies </p>
                 </div>
             </div>
-            
+<!--art portfolio-->
+            <div class="project-square">
+                <img src="assets/obvio!.png" alt="Project-6">
+                <div class="project-overlay">
+                    <p> Doodling & Drawing </p>
+                    <h3>Artwork & Commissions</h3>
+                    <p> personal projects & commission work </p>
+                </div>
+            </div>
         </div>
-        
-    </div>
-
-
-    <!-- How I Design-->
-    <div id = "process" class = "about-header">
-        <h1> how I design </h1>
-    </div>
-
-
-
-    <!-- Why I Design-->
-    <div id = "thinking" class = "about-header">
-        <h1> why I design  </h1>
-    </div>
+    </section>
     
+    <section id = "process" class = "container">
+        <h1> how I design </h1>
+    </section>
+    
+    
+    <!-- Why I Design-->
+    <section id = "thinking" class = "container">
+        <h1> why I design  </h1>
+    </section>
+    
+<!--    closing repeat pattern tag-->
+</div>
     <!--Footer Section-->
-    <div id="contact" class="about-header">
+    <div class="penultimate-section">
+    <section id="contact" class="container">
         <h1>thank you for stopping by!</h1>
-        <h2>Contact Me </h2>
+        <h1> contact </h1>
         <!--linkedin-->
         <div class = "social-media-buttons">
             <a href="https://www.linkedin.com/in/daisy-fernandez-reyes-50849b237/" class="icon-button">
                 <img src="assets/linkedinSprite.gif" alt="LinkedIn" class="button-icon">
             </a>
-        </div>
         <!--github-->
-        <div class = "social-media-buttons">
             <a href="https://github.com/daisyb3ll" class="icon-button">
                 <img src="assets/githubSprite.png" alt="GitHub" class="button-icon">
             </a>
-        </div>
         <!--instagram-->
-        <div class = "social-media-buttons">
             <a href="https://www.instagram.com/da.s003" class="icon-button">
                 <img src="assets/instagramSprite.png" alt="Instagram" class="button-icon">
             </a>
         </div>
+    </section>
+    </div>
+</main>
     <footer>
         <p>
             crafted with curiosity & creativity</br> hosted on Github Pages </br> © 2024 daisyland
         </p>
     </footer>
-</main>
 </body>
 </html>
