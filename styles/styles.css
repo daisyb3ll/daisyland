@@ -72,19 +72,24 @@ main {
     gap: 30px;
     padding: 50px 20px;
 }
-
+.about-header h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
 .about-section {
     background-image: url("../assets/starting_blank.png");
-    display: flex;
-    align-items: center;
-    justify-content: center;
     gap: 30px;
     padding: 50px 20px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    border: 2px solid green;
+} 
+.projects-section{
+    
 }
 .penultimate-section {
+    border: solid orange;
     background-image: url("../assets/ending_blank.png");
     display: flex;
     align-items: center;
@@ -198,10 +203,50 @@ main {
     .menu {
         display: none;
     }
+
     .mobile-menu {
         display: block;
     }
+
     .projects-grid {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.image-container {
+    flex: 1;
+    max-width: 40%;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.text-container {
+    flex: 2;
+    max-width: 60%;
+}
+
+.text-container p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+}
+/*for mobile*/
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column; /* Stack image and text vertically */
+        gap: 20px; /* Reduce gap for smaller screens */
+    }
+
+    .image-container,
+    .text-container {
+        max-width: 100%; /* Full width on smaller screens */
     }
 }
