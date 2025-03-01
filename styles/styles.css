@@ -2,28 +2,69 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    border: 2px solid red;
+    border: 2px solid red; /* Debug border */
 }
 
-.pattern-bgrnd{
-    background-image: url("../assets/full-blank.png"); /* Path to your pattern */
-    background-repeat: repeat; /* Makes the pattern repeat */
-    background-color: #f8f8f8; /* Fallback color */
-    min-height: 100vh; /* Ensure it covers the full viewport height */
+p {
+    font-family: 'Dongle', sans-serif;
+    font-size: 3.5 rem;
+    line-height: 1.3;
 }
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Poppins', sans-serif;
+}
+h1 {
+    font-size: 3.5rem;
+    /* Increased from 2.5rem */
+}
+
+h2 {
+    font-size: 3rem;
+    /* Increased from 2rem */
+}
+
+h3 {
+    font-size: 2.5rem;
+    /* Increased from 1.75rem */
+}
+
+h4 {
+    font-size: 2rem;
+    /* Increased from 1.5rem */
+}
+
+h5 {
+    font-size: 1.75rem;
+    /* Increased from 1.25rem */
+}
+
+h6 {
+    font-size: 1.5rem;
+    /* Increased from 1rem */
+}
+.pattern-bgrnd {
+    background-image: url("../assets/full-blank.png");
+    background-repeat: repeat;
+    background-color: #f8f8f8;
+    min-height: 100vh;
+}
+
 .container {
     margin: 0 auto;
-    max-width: 100%;
+    max-width: 1200px;
     padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 header {
-    background-position: center; /* Centers the background image */
-    padding: 20px; /* Add padding for spacing */
+    background-position: center;
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    border: 2px solid purple;
 }
 
 .fixed-logo {
@@ -66,31 +107,40 @@ main {
 }
 
 .header-image {
+    border: 2px solid pink;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 30px;
     padding: 50px 20px;
 }
+
 .about-header h1 {
+    text-size-adjust: 100 px;
     text-align: center;
     margin-bottom: 30px;
 }
+
 .about-section {
     background-image: url("../assets/starting_blank.png");
+    display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 30px;
     padding: 50px 20px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     border: 2px solid green;
-} 
-.projects-section{
+}
+
+.projects-section {
     border: 2px solid blue;
 }
-.penultimate-section {
-    border: solid orange;
-    background-image: url("../assets/ending_blank.png");
+
+.design-progress {
+    border: 2px solid yellow;
+    background-image: url("../assets/starting_blank.png");
     display: flex;
     align-items: center;
     justify-content: center;
@@ -99,10 +149,27 @@ main {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    border: 2px solid green;
 }
+
+.penultimate-section {
+    border: 2px solid orange;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px 20px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../assets/Asset 14.png");
+}
+
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+    grid-template-columns: repeat(3, 1fr);
+        /* Change this line */
     gap: 20px;
     padding: 20px;
 }
@@ -135,18 +202,18 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     opacity: 0;
     transition: opacity 0.3s ease;
 }
 
 .project-overlay h3 {
     margin: 0;
-    font-size: 1.5rem;
+    font-size: clamp(1.2rem, 3vw, 2rem);
 }
-
 .project-overlay p {
     margin: 10px 0 0;
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
 }
 
 .project-square:hover img {
@@ -199,24 +266,12 @@ main {
     height: 20px;
 }
 
-@media (max-width: 768px) {
-    .menu {
-        display: none;
-    }
-
-    .mobile-menu {
-        display: block;
-    }
-
-    .projects-grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    }
-}
 .content-wrapper {
     display: flex;
     align-items: center;
     gap: 30px;
 }
+
 .image-container {
     flex: 1;
     max-width: 40%;
@@ -238,15 +293,90 @@ main {
     line-height: 1.6;
     color: #333;
 }
-/*for mobile*/
+
 @media (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
     .content-wrapper {
-        flex-direction: column; /* Stack image and text vertically */
-        gap: 20px; /* Reduce gap for smaller screens */
+        flex-direction: column;
+        gap: 20px;
     }
 
     .image-container,
     .text-container {
-        max-width: 100%; /* Full width on smaller screens */
+        max-width: 100%;
     }
+}
+
+/* form stuff */
+#contact {
+    padding: 50px 20px;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+#contact h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #333;
+}
+
+#contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    resize: vertical;
+    /* Allows vertical resizing */
+}
+
+button[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
 }
