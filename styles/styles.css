@@ -214,7 +214,7 @@ main {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    border: 2px solid orange;
+    /* border: 2px solid orange; */
 }
 
 .projects-grid {
