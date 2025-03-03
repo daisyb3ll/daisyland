@@ -105,7 +105,7 @@ header {
 }
 
 .logo img {
-    height: 40px;
+    height: 128x;
 }
 
 nav ul {
@@ -113,6 +113,7 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
+    font-size: 1.5rem;
 }
 
 nav ul li {
