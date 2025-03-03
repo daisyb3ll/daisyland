@@ -178,7 +178,7 @@ main {
 .design-progress p {
     font-family: 'Dongle', sans-serif;
     font-size: 1.5rem;
-    color: #333;
+    color: #42210B;
     margin-bottom: 30px;
 }
 
@@ -216,7 +216,7 @@ main {
 .tool p {
     font-family: 'Dongle', sans-serif;
     font-size: 1.5rem;
-    color: #333;
+    color: #42210B;
     margin: 0;
     text-align: center;
 }
@@ -274,7 +274,7 @@ main {
 .icon-button {
     font-family: 'Dongle', sans-serif;
     font-size: 1.5rem;
-    color: #333;
+    color: #42210B;
     text-decoration: none;
     padding: 10px 20px;
     background-color: white;
@@ -310,7 +310,7 @@ main {
     margin-bottom: 5px;
     font-family: 'Dongle', sans-serif;
     font-size: 2rem;
-    color: #555;
+    color: #42210B;
 }
 
 .form-group input,
