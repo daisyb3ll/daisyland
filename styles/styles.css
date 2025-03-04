@@ -9,6 +9,7 @@ html {
     overflow-x: hidden;
     /* Prevents horizontal scrolling */
     color: #42210B;
+    
 }
 
 .pattern-bgrnd,
@@ -30,7 +31,7 @@ html {
 .penultimate-section {
     width: 100%;
     margin: 0;
-    padding: 50px 0;
+    padding: 40px 0;
     /* Adjust padding as needed, but remove horizontal padding */
 }
 
@@ -38,6 +39,7 @@ p {
     font-family: 'Poppins', sans-serif;
     font-size: 3rem;
     line-height: 1.5;
+    padding: px;
 }
 
 h1,
@@ -570,3 +572,20 @@ button[type="submit"]:hover {
         color : #42210B
     }
 }
+
+.design-flex {
+    display: flex;
+    align-items: center;
+    /* Align items vertically */
+    justify-content: left;
+    /* Spread elements apart */
+    gap: 2rem;
+    /* Add spacing between elements */
+}
+#minime {
+    transition: opacity 0.3s ease-in-out;
+    /* Add transition for opacity */
+}
+
+
+
