@@ -552,9 +552,14 @@ button[type="submit"]:hover {
     }
 
     .contact-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
+            display: flex;
+            justify-content: center;
+            /* Center-align items */
+            align-items: center;
+            flex-wrap: wrap;
+            /* Allows wrapping if space is tight */
+            gap: 20px;
+            /* Space between buttons */
     }
 
     .contact-links {
@@ -563,7 +568,8 @@ button[type="submit"]:hover {
     }
 
     .social-media-buttons {
-        align-items: center;
+        display: inline-block;
+        margin: 10px;
     }
 
     .contact-form-container {
