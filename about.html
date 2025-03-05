@@ -51,7 +51,7 @@
         <div class="timeline-wrapper">
             <h2 class="my-story-heading">How I Got Here</h2>
             <div class="timeline">
-                <div class="timeline-line"></div> <!-- Custom Daisy Line -->
+                <div class="timeline-line"></div>
 
                 <div class="timeline-item right">
                     <div class="timeline-item-content">
@@ -104,7 +104,7 @@
 
                 <div class="timeline-item left">
                     <div class="timeline-item-content">
-                        <h3>January 2024</h3>
+                        <h3>2025</h3>
                         <h4>Daisy The Creative Technologist</h4>
                         <p>I’m a chronic doodler. On my notes, homework, papers, and even pants. Always the creative, I
                             surprised everyone with a degree in Software Engineering (myself included). I thought I was
@@ -119,21 +119,39 @@
     </div>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("DOMContentLoaded", function () {
+            const timeline = document.querySelector(".timeline");
+            const timelineLine = document.querySelector(".timeline-line");
             const timelineItems = document.querySelectorAll(".timeline-item");
 
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("active");
-                        observer.unobserve(entry.target);
+            function animateTimeline() {
+                const timelineRect = timeline.getBoundingClientRect();
+                const scrollPosition = window.scrollY;
+                const timelineTop = timelineRect.top + scrollPosition;
+                const timelineBottom = timelineRect.bottom + scrollPosition;
+                const viewportHeight = window.innerHeight;
+
+                // Calculate the progress of the scroll within the timeline
+                if (scrollPosition >= timelineTop - viewportHeight && scrollPosition <= timelineBottom) {
+                    const scrollProgress = (scrollPosition - (timelineTop - viewportHeight)) / (timelineBottom - (timelineTop - viewportHeight));
+                    const lineHeight = scrollProgress * timelineRect.height;
+                    timelineLine.style.height = `${lineHeight}px`;
+                }
+
+                // Animate timeline items
+                timelineItems.forEach(item => {
+                    const itemRect = item.getBoundingClientRect();
+                    if (itemRect.top < window.innerHeight * 0.75) {
+                        item.classList.add("active");
                     }
                 });
-            }, { threshold: 0.3 });
+            }
 
-            timelineItems.forEach(item => observer.observe(item));
+            window.addEventListener("scroll", animateTimeline);
+            animateTimeline(); // Run initially in case user reloads in middle
         });
     </script>
+
 </body>
 
 </html>fi

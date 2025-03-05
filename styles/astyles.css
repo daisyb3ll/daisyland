@@ -1,3 +1,37 @@
+header {
+    background-position: center;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    font-family: "Poppins";
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-size: 1.5rem;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+    cursor: pointer;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+
+
 .pattern-bgrnd {
     background-image: url("../assets/full-blank.png");
     background-repeat: repeat;
@@ -62,10 +96,12 @@
 /* TIMELINE SECTION */
 .timeline-wrapper {
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px 0;
-    position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px 0;
+        position: relative;
+        height: auto;
+        /* Allow it to expand based on content */
 }
 
 .timeline {
@@ -80,17 +116,18 @@
 /* The Daisy Line */
 .timeline-line {
     position: absolute;
+    /* Use absolute instead of relative */
     left: 50%;
     transform: translateX(-50%);
-    background: url('../assets/daisy-line.png') repeat-y center;
-    background-size: contain;
+    background: url("../assets/daisy-line.png") repeat-y center;
+    background-size: cover;
     width: 4px;
     height: 100%;
-    /* Ensure it extends fully */
-    z-index: -1;
-    opacity: 0;
-    /* Initially hidden */
-    animation: fillLine 3s ease-out forwards;
+    /* Ensure the line fills the container */
+    z-index: 3;
+    opacity: 1 !important;
+    border: solid red 3px;
+    /* Debugging - remove or change once working */
 }
 
 @keyframes fillLine {
@@ -104,19 +141,12 @@
         opacity: 1;
     }
 }
-
-/* Timeline marker */
-.timeline-item::before {
-    content: '';
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background-color: #a64639;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
+.timeline-container {
+    position: relative;
+    height: 100vh;
+    /* or a fixed value */
 }
+/* Timeline marker */
 
 /* TIMELINE ITEM */
 .timeline-item {
@@ -189,9 +219,26 @@
     .timeline-item::before {
         left: 20px;
     }
+}
+.flower-svg {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    /* Adjust the width of the flower path */
+    height: 100%;
+    /* Make it span the full height of the timeline */
+    z-index: 1;
+}
 
-    .timeline-line {
-        left: 20px;
-        transform: none;
-    }
+.flower-path {
+    stroke: #42210B;
+    /* Color of the flower stem */
+    stroke-dasharray: 500;
+    /* Total length of the path */
+    stroke-dashoffset: 1000;
+    /* Start with the path hidden */
+    transition: stroke-dashoffset 1s ease-in-out;
+    /* Smooth animation */
 }
