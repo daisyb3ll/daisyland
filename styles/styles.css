@@ -269,7 +269,7 @@ main {
 
 .icon-button {
     font-family: 'Poppins', sans-serif;
-    font-size: 3rem;
+    font-size: 2rem;
     color: #42210B;
     text-decoration: none;
     padding: 5px 10px;
@@ -592,5 +592,8 @@ button[type="submit"]:hover {
     /* Add transition for opacity */
 }
 
-
-
+.social-media-buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
