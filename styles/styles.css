@@ -451,7 +451,6 @@ button[type="submit"]:hover {
     gap: 1rem;
     flex-wrap: wrap;
     margin-top: 20px;
-    flex-direction: column;
 }
 
 .icon-button {
