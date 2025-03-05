@@ -96,12 +96,12 @@ nav ul li a:hover {
 /* TIMELINE SECTION */
 .timeline-wrapper {
     width: 100%;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 20px 0;
-        position: relative;
-        height: auto;
-        /* Allow it to expand based on content */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+    position: relative;
+    height: auto;
+    /* Allow it to expand based on content */
 }
 
 .timeline {
@@ -141,11 +141,13 @@ nav ul li a:hover {
         opacity: 1;
     }
 }
+
 .timeline-container {
     position: relative;
     height: 100vh;
     /* or a fixed value */
 }
+
 /* Timeline marker */
 
 /* TIMELINE ITEM */
@@ -220,6 +222,7 @@ nav ul li a:hover {
         left: 20px;
     }
 }
+
 .flower-svg {
     position: absolute;
     top: 0;
