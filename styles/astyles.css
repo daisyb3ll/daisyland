@@ -31,51 +31,104 @@
 }
 
 .about-text {
+    color: #42210B;
     flex: 2;
-    font-family: 'Poppins';
+    font-family: 'Poppins', sans-serif;
 }
 
 .about-text h1 {
+    color: #42210B;
+    font-family: 'Poppins', sans-serif;
     font-size: 2.5em;
     margin-bottom: 20px;
-    font-family: 'Poppins', sans-serif;
 }
 
 .about-text p {
+    color: #42210B;
+    font-family: 'Poppins';
     line-height: 1.6;
     font-size: 1.5rem;
     margin-bottom: 15px;
-    font-family: 'Poppins', sans-serif;
 }
 
 .my-story-heading {
+    color: #42210B;
+    font-family: 'Poppins';
     font-size: 2em;
     margin-bottom: 20px;
     text-align: left;
-    font-family: 'Poppins',sans-serif;
 }
 
+/* TIMELINE SECTION */
 .timeline-wrapper {
     width: 100%;
     max-width: 1200px;
-    overflow-y: auto;
-    height: 500px;
-    margin-bottom: 40px;
+    margin: 0 auto;
+    padding: 20px 0;
+    position: relative;
 }
 
 .timeline {
+    color: #42210B;
+    font-family: 'Poppins';
     display: flex;
     flex-direction: column;
     position: relative;
-    padding-bottom: 20px;
+    padding-left: 50px;
 }
 
+/* The Daisy Line */
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url('../assets/daisy-line.png') repeat-y center;
+    background-size: contain;
+    width: 4px;
+    height: 100%;
+    /* Ensure it extends fully */
+    z-index: -1;
+    opacity: 0;
+    /* Initially hidden */
+    animation: fillLine 3s ease-out forwards;
+}
+
+@keyframes fillLine {
+    from {
+        height: 0;
+        opacity: 1;
+    }
+
+    to {
+        height: 100%;
+        opacity: 1;
+    }
+}
+
+/* Timeline marker */
+.timeline-item::before {
+    content: '';
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #a64639;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+/* TIMELINE ITEM */
 .timeline-item {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    transition: opacity 0.5s ease, transform 0.5s ease;
-    margin-bottom: 30px;
-    font-family: 'Poppins';
+    position: relative;
+    margin-bottom: 40px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    width: 100%;
 }
 
 .timeline-item.active {
@@ -83,28 +136,62 @@
     transform: translateY(0);
 }
 
-.timeline-item::before {
-    content: '';
-    display: block;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background-color: #a64639;
-    margin-right: 20px;
-}
-
 .timeline-item-content {
-    flex: 1;
+    width: 45%;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
 }
 
-.timeline-item h3 {
-    font-size: 1.2em;
+.timeline-item-content h3 {
+    color: #42210B;
+    font-size: 1.3em;
     margin-bottom: 5px;
-    font-family: 'Poppins', sans-serif;
 }
 
-.timeline-item h4 {
+.timeline-item-content h4 {
+    color: #42210B;
     font-size: 1em;
     margin-bottom: 10px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: Poppins, sans-serif;
+}
+
+.timeline-item.left {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item.right {
+    left: 50%;
+    text-align: left;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .timeline-item-content {
+        width: 90%;
+        text-align: left !important;
+    }
+
+    .timeline-item::before {
+        left: 20px;
+    }
+
+    .timeline-line {
+        left: 20px;
+        transform: none;
+    }
 }

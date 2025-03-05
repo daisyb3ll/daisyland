@@ -30,51 +30,110 @@
         </nav>
     </header>
 
-    <div class = "pattern-bgrnd">
-    <section id="about" class="about-section">
-        <div class="about-container">
-            <div class="about-content">
-                <div class="about-image">
-                    <img src="assets/now_me.png" alt="Daisy Fernandez-Reyes smiling portrait">
-                </div>
-                <div class="about-text">
-                    <h1>about daisy</h1>
-                    <p>My name is Daisy. I’m a first-gen so-cal based artist. I’m tech-curious and a habitual creative- I doodle to code and
-                    code when i'm doodling- and I’m always looking to learn more means of expression towards creative solutions. I do UX/UI
-                    research and design, I also draw, prototype, program and sew. Not always in that order.
-                </p>
+    <div class="pattern-bgrnd">
+        <section id="about" class="about-section">
+            <div class="about-container">
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="assets/now_me.png" alt="Daisy Fernandez-Reyes smiling portrait">
+                    </div>
+                    <div class="about-text">
+                        <h1>about daisy</h1>
+                        <p>My name is Daisy. I’m a first-gen So-Cal based artist. I’m tech-curious and a habitual
+                            creative—I doodle to code and code when I'm doodling—and I’m always looking to learn more
+                            means of expression towards creative solutions. I do UX/UI research and design, I also draw,
+                            prototype, program, and sew. Not always in that order.</p>
+                    </div>
                 </div>
             </div>
-    </section>
+        </section>
 
-    <h2 class="my-story-heading"> How I Got Here </h2>
-    <div class="timeline-wrapper">
-        <div class="timeline">
-            <div class="timeline-item">
-                
-                <div class="timeline-item-content">
-                    <h3>August 2021</h3>
-                    <h4>first gen in stem</h4>
-                    <p>daisy the cs major...</p>
+        <div class="timeline-wrapper">
+            <h2 class="my-story-heading">How I Got Here</h2>
+            <div class="timeline">
+                <div class="timeline-line"></div> <!-- Custom Daisy Line -->
+
+                <div class="timeline-item right">
+                    <div class="timeline-item-content">
+                        <h3>August 2021</h3>
+                        <h4>First Gen in STEM</h4>
+                        <p>Started my CS journey at Chapman University! (paws up) I got my first laptop ever and started
+                            taking Computer Science classes for the first time ever! Thank you for your patience, Prof.
+                            Studebaker.</p>
+                    </div>
                 </div>
 
-                <div class="timeline-item-content">
-                    <h3>August 2021</h3>
-                    <h4>first gen in stem</h4>
-                    <p>daisy the cs major...</p>
+                <div class="timeline-item left">
+                    <div class="timeline-item-content">
+                        <h3>Jan 2022</h3>
+                        <h4>Daisy The Game Developer</h4>
+                        <p>After learning some basic languages and taking a Unity class, I added a Game Development
+                            minor and found my niche making assets and animated game sprites.</p>
+                    </div>
                 </div>
 
-                <div class="timeline-item-content">
-                    <h3>August 2021</h3>
-                    <h4>first gen in stem</h4>
-                    <p>daisy the cs major...</p>
+                <div class="timeline-item right">
+                    <div class="timeline-item-content">
+                        <h3>October 2022</h3>
+                        <h4>Daisy The Project Manager</h4>
+                        <p>I realized I'm not half bad at managing teams and worked with my peers to get passion
+                            projects going and get more involved in the community!</p>
+                    </div>
                 </div>
+
+                <div class="timeline-item left">
+                    <div class="timeline-item-content">
+                        <h3>October 2023</h3>
+                        <h4>Daisy The Software Engineer</h4>
+                        <p>I started developing my own programming projects and experimenting with different languages
+                            and frameworks in order to broaden my skillset!</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item right">
+                    <div class="timeline-item-content">
+                        <h3>January 2024</h3>
+                        <h4>Daisy The Designer</h4>
+                        <p>After broadening my skillset, I realized I could add more of a creative pop to things. I
+                            reflected on what made me happy as both a programmer and designer. I've since worked on
+                            finding my niche and have created my own space in the World Wide Web. I've found my niche as
+                            someone who aspires to research & learn, design, experiment, develop, and include. I am a
+                            creative technologist. Welcome to my work.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item left">
+                    <div class="timeline-item-content">
+                        <h3>January 2024</h3>
+                        <h4>Daisy The Creative Technologist</h4>
+                        <p>I’m a chronic doodler. On my notes, homework, papers, and even pants. Always the creative, I
+                            surprised everyone with a degree in Software Engineering (myself included). I thought I was
+                            stuck in tech world forever, but quickly realized I’d never left my roots in art—or that
+                            there was never a border between the two. I’ve since done work in game dev art, UX/UI design
+                            and development, 3D modeling, hardware prototyping, fabrication, and more.</p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
-    
-    </div>
-    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const timelineItems = document.querySelectorAll(".timeline-item");
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("active");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            timelineItems.forEach(item => observer.observe(item));
+        });
+    </script>
 </body>
 
-</html>
+</html>fi
