@@ -149,50 +149,38 @@
 
                 const pathLength = path.getTotalLength();
 
-                // Set initial stroke properties (fully hidden)
+                // ✅ Ensure path starts fully hidden
                 path.style.strokeDasharray = pathLength;
                 path.style.strokeDashoffset = pathLength;
-                path.style.stroke = "#42210B"; // Stroke color
                 path.style.opacity = 0;
-                path.style.visibility = "hidden";
+                path.style.visibility = "hidden"; // Prevent preloading
 
                 function animateTimeline() {
                     const scrollPosition = window.scrollY + window.innerHeight;
                     const timelineTop = timeline.offsetTop;
                     const timelineHeight = timeline.clientHeight;
 
-                
-                
-                
-                
-                    if (scrollPosition < timelineTop) {
+                    // ✅ Ensure animation starts ONLY when scrolling starts
+                    if (scrollPosition < timelineTop +200) {
                         path.style.opacity = 0;
+                        path.style.visibility = "hidden";
                         path.style.strokeDashoffset = pathLength;
-                        path.style.visibility = "hidden"; // ✅ Hide path completely until scroll
                         return;
                     } else {
                         path.style.opacity = 1;
-                        path.style.visibility = "visible"; // ✅ Make visible only when scrolling starts
+                        path.style.visibility = "visible"; // ✅ Make visible when scrolling starts
                     }
 
-                    let progress = (scrollPosition - timelineTop) / timelineHeight;
-                    progress = Math.min(Math.max(progress, 0), 1); // Clamp between 0 and 1
+                    let progress = (scrollPosition - (timelineTop+200)) / (timelineHeight*1.5);
+                    progress = Math.min(Math.max(progress, 0), 0.584); // Clamp between 0 and 1
 
-                    const delayThreshold = 0.1; // ✅ Start animation at 10% scroll
-
+                    const delayThreshold = 0.15; // ✅ Delay animation start until 10% scroll
                     if (progress >= delayThreshold) {
                         let adjustedProgress = (progress - delayThreshold) / (1 - delayThreshold);
                         path.style.strokeDashoffset = pathLength * (1 - adjustedProgress);
                     }
 
-                    // 🚀 Reverse animation when scrolling up
-                    if (progress < 0.8) {
-                        path.style.strokeDashoffset = pathLength * (1 - progress);
-                    } else {
-                        path.style.strokeDashoffset = pathLength * (1 - progress); // Finishes drawing
-                    }
-
-                    // 🕐 TIMELINE ITEM ANIMATION - Appear progressively
+                    // ✅ Show timeline items progressively
                     timelineItems.forEach((item, index) => {
                         const itemTrigger = timelineTop + (index / timelineItems.length) * timelineHeight * 1.2;
                         if (scrollPosition > itemTrigger) {
@@ -204,7 +192,7 @@
                 }
 
                 window.addEventListener("scroll", animateTimeline);
-                animateTimeline(); // Check on load in case user is mid-page
+                animateTimeline(); // Ensure it's hidden on load
             });
 
     </script>

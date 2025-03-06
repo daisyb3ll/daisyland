@@ -4,6 +4,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color:#42210B;
 }
 
 nav ul {
@@ -109,14 +110,14 @@ main.container {
 
 /* TIMELINE SECTION */
 .timeline-wrapper {
-    /* border:solid blue; */
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px 0;
     position: relative;
     height: auto;
-    /* Allow it to expand based on content */
+    padding-bottom: 200px;
+    /* Increased padding so it doesn’t cut off */
 }
 
 .timeline {
@@ -255,26 +256,26 @@ main.container {
     pointer-events: none;
     /* border: 3px solid goldenrod; */
     padding-bottom: 3em;
+    color: #42210B;
 }
 
 #animatedPath {
     z-index: 1;
-    /* Ensure it’s a single color */
     stroke-width: 10;
     stroke-linecap: round;
     stroke-linejoin: round;
-    /* Ensures smooth joins */
     fill: none;
-    stroke-dasharray: 10000;
-    /* Adjust to match your path */
-    stroke-dashoffset: 10000;
-    /* Initially hidden */
-    transition: stroke 0.6s ease-in-out, stroke-dashoffset 1.5s ease-in-out, opacity 0.8s ease-in-out;
+    stroke-dasharray: 3000; /* Match with path length */
+    stroke-dashoffset: 3000; /* Start hidden */
     opacity: 0;
+    visibility: hidden;
+    transition: stroke-dashoffset 1s ease-in-out, opacity 0.6s ease-in-out;
+    stroke: #42210B;
+    color: #42210B;
 }
 
+
 .flower-path {
-    stroke: #42210B;
     /* Color of the flower stem */
     stroke-dasharray: 500;
     /* Total length of the path */
