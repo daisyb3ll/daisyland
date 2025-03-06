@@ -30,7 +30,7 @@
         </nav>
     </header>
 
-<main class="container"></main>
+<main class="container">
     <div class="pattern-bgrnd">
         <section id="about" class="about-section">
             <div class="about-container">
@@ -48,12 +48,22 @@
                 </div>
             </div>
         </section>
+        
+        <h2 class="my-story-heading">How I Got Here</h2>
 
-        <div class="timeline-wrapper">
-            <h2 class="my-story-heading">How I Got Here</h2>
+        <div class="timeline-wrapper">        
+            <!-- SVG Animated Path -->
+            <svg class="flower-svg" id="timelinePath" width="100%" height="100%" viewBox="0 0 708 3090" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path id="animatedPath"
+                d="M252.647 4.36751C246.087 65.8875 276.207 122.358 303.577 175.188C318.067 203.168 332.537 231.318 342.277 261.378C352.797 293.837 358.287 327.718 359.757 361.768C362.677 429.228 351.287 497.837 331.737 562.297C323.867 588.227 313.927 613.388 302.757 638.057C293.367 658.777 283.397 679.247 274.977 700.398C253.417 754.568 244.767 813.677 245.967 871.828C246.737 909.198 252.327 946.818 268.037 980.977C289.267 1027.14 325.037 1063.86 366.617 1092.27C380.917 1102.04 395.637 1111.65 410.497 1120.55C437.087 1136.49 466.747 1148.1 497.477 1152.74C527.407 1157.25 558.857 1155.37 587.097 1143.86C611.277 1134 632.077 1117.09 647.477 1096.07C662.877 1075.05 672.197 1050.55 672.667 1024.96C673.117 1000.77 664.737 977.208 649.337 958.598C619.847 922.968 569.117 909.768 524.537 914.908C470.487 921.138 426.487 955.848 394.597 998.268C357.607 1047.48 334.697 1106.83 315.627 1164.86C293.597 1231.89 278.707 1301.24 271.457 1371.43C268.827 1396.85 268.287 1421.91 274.307 1446.94C279.287 1467.63 288.687 1489.24 306.607 1501.87C325.257 1515.01 350.737 1513.45 368.987 1500.41C390.417 1485.11 402.667 1459.48 410.067 1434.91C426.607 1379.99 428.377 1320.38 414.737 1264.64C401.367 1210 372.307 1158.23 328.557 1122.24C284.807 1086.25 234.217 1067.84 180.477 1065.66C126.907 1063.49 69.5069 1080.43 31.5069 1119.68C10.9869 1140.88 -1.56311 1168.41 0.156894 1198.26C2.00689 1230.46 17.5969 1260.4 35.7269 1286.39C72.8369 1339.59 120.897 1383.99 168.727 1427.33C216.557 1470.67 264.987 1513.27 304.207 1564.49C341.587 1613.31 372.267 1670.33 379.307 1732.23C382.727 1762.28 380.127 1792.36 372.577 1821.6C365.057 1850.74 353.327 1878.56 340.677 1905.79C315.707 1959.52 286.097 2012.59 275.057 2071.44C269.357 2101.87 267.497 2136.18 285.457 2163.11C302.487 2188.66 331.827 2205.45 358.247 2219.71C415.887 2250.82 480.617 2268.68 546.067 2271.4C603.867 2273.81 676.857 2265.19 701.737 2203.93C711.807 2179.13 708.187 2151.45 690.597 2131.04C673.007 2110.63 648.267 2101.61 623.927 2096.02C597.037 2089.85 568.807 2088.1 541.297 2088.12C513.787 2088.14 484.047 2090.85 455.937 2096.19C400.137 2106.79 345.847 2128.33 299.637 2161.62C254.747 2193.96 218.407 2236.75 196.527 2287.75C175.427 2336.94 166.797 2391.8 173.677 2445C180.247 2495.82 201.347 2548.5 239.247 2584.2C271.817 2614.88 336.237 2641.65 372.177 2601.09C379.327 2593.02 367.287 2579.56 360.587 2575.15C351.487 2569.15 339.827 2567.35 329.177 2568.93C301.837 2573 287.897 2600.98 279.897 2624.46C270.057 2653.35 262.447 2683.37 257.217 2713.43C251.987 2743.49 249.317 2774.57 252.187 2805.17C254.927 2834.47 262.707 2863.29 277.277 2888.98C284.107 2901.03 292.567 2914.33 305.397 2920.7C315.617 2925.78 327.527 2925.78 337.497 2920.09C357.997 2908.39 367.177 2880.62 371.097 2858.81C374.877 2837.75 376.617 2810.77 363.707 2792.27C357.667 2783.61 348.347 2777.96 337.737 2777.2C325.307 2776.31 313.437 2783.1 305.597 2792.36C283.957 2817.93 294.857 2851.74 305.577 2879.54C307.247 2883.88 314.867 2883.82 314.417 2878.34C309.937 2823.91 261.417 2778.69 207.317 2775.26C182.007 2773.65 150.247 2782.23 137.917 2806.64C123.877 2834.43 144.687 2861.26 165.597 2878.16C180.497 2890.2 197.057 2900.24 212.977 2910.85C231.397 2923.13 249.807 2935.41 268.227 2947.7C272.737 2950.71 276.777 2944.31 273.677 2940.63C257.547 2921.48 229.307 2917.82 206.657 2926.24C180.627 2935.91 164.447 2960.56 158.307 2986.8C152.847 3010.13 149.437 3049.85 177.237 3060.31C189.347 3064.86 203.397 3062.52 215.347 3058.63C229.287 3054.09 242.767 3047.64 255.337 3040.13C283.787 3023.12 308.007 2999.55 325.877 2971.65L318.107 2967.11C306.877 2992.95 297.467 3023.89 308.427 3051.46C316.997 3073.03 337.667 3091.39 362.007 3089.5C364.057 3089.34 365.727 3088.2 366.347 3086.2C380.107 3041.34 376.277 2992.36 356.107 2950.05C354.107 2945.84 347.797 2948.13 347.717 2952.32C346.847 3003.74 408.847 3047.5 455.607 3020.44C475.677 3008.82 487.807 2986.65 490.497 2964.03C491.827 2952.89 490.777 2941.23 486.807 2930.69C482.357 2918.88 474.647 2909.72 465.007 2901.72C437.307 2878.74 400.837 2870.06 367.497 2886.01C362.277 2888.51 366.837 2896.27 372.037 2893.78C398.517 2881.11 427.777 2886.36 451.417 2902.62C460.907 2909.15 470.087 2917.15 475.557 2927.44C480.187 2936.16 482.157 2946.11 482.037 2955.94C481.797 2975.6 473.167 2995.76 457.667 3008.17C440.197 3022.16 416.117 3022.48 396.527 3012.81C373.667 3001.53 356.267 2978.41 356.717 2952.3L348.327 2954.57C367.457 2994.71 370.677 3041.32 357.657 3083.79L361.997 3080.49C340.757 3082.14 322.727 3065.59 316.087 3046.36C307.567 3021.71 315.917 2994.53 325.867 2971.64C328.127 2966.44 321.297 2962.1 318.097 2967.1C304.057 2989.01 285.857 3008.23 264.637 3023.31C253.937 3030.91 242.517 3037.52 230.577 3042.97C219.727 3047.93 207.937 3052.69 195.917 3053.58C183.197 3054.52 171.237 3050.34 166.717 3037.43C162.677 3025.89 163.417 3012 164.977 3000.04C168.097 2976.15 179.297 2950.9 201.107 2938.62C221.967 2926.86 251.167 2927.82 267.307 2946.98L272.757 2939.91C243.967 2920.71 215.097 2901.62 186.377 2882.31C167.037 2869.31 139.607 2848.74 142.457 2822.19C145.307 2795.64 176.127 2784.61 199.027 2784.08C223.497 2783.51 247.737 2792.89 266.607 2808.28C287.897 2825.64 303.127 2850.66 305.397 2878.33L314.237 2877.13C304.767 2852.58 292.617 2820.21 312.887 2797.61C320.307 2789.34 331.177 2783.86 342.367 2787.1C350.737 2789.52 356.557 2796.07 359.857 2803.92C367.387 2821.84 365.317 2844.15 361.137 2862.62C356.957 2881.09 349.317 2903.72 331.977 2912.82C308.847 2924.96 291.277 2896.46 282.367 2879.52C270.517 2857.01 263.847 2831.97 261.327 2806.72C256.227 2755.52 266.177 2703.86 280.047 2654.75C286.987 2630.21 293.777 2598.71 316.257 2583.36C331.927 2572.66 362.287 2575.79 365.517 2598.07L366.677 2593.69C335.947 2628.36 282.537 2608.68 252.307 2583.72C218.167 2555.54 196.827 2511.7 187.047 2469.23C166.717 2380.88 192.737 2282.46 253.187 2215.1C318.537 2142.28 415.227 2104.41 511.537 2098.06C535.857 2096.46 560.307 2096.79 584.577 2099.07C606.627 2101.14 628.847 2104.76 649.387 2113.39C668.737 2121.52 687.317 2134.93 694.877 2155.28C703.357 2178.11 695.747 2203.34 680.947 2221.77C646.547 2264.58 582.127 2265.29 532.147 2261.55C476.557 2257.38 421.707 2242 372.017 2216.74C348.507 2204.79 323.747 2191.05 304.837 2172.39C295.157 2162.83 287.687 2151.54 283.837 2138.42C279.897 2124.97 279.447 2110.79 280.537 2096.9C284.547 2045.77 306.677 1997.72 328.497 1952.07C350.147 1906.77 373.527 1861.26 384.087 1811.8C394.747 1761.89 389.407 1710.9 371.257 1663.37C332.327 1561.42 249.287 1488.31 170.587 1416.85C130.417 1380.37 90.5269 1343.09 57.0769 1300.18C23.6269 1257.27 -8.50311 1202.49 19.5869 1150.56C42.2169 1108.71 90.6969 1084.87 135.997 1077.23C180.987 1069.65 228.427 1077.2 269.777 1096.07C312.347 1115.5 347.887 1146.79 372.587 1186.53C398.437 1228.11 412.117 1276.63 414.427 1325.4C415.597 1350.01 413.977 1374.78 409.467 1399.01C405.177 1422.05 399.047 1445.53 387.187 1465.94C376.597 1484.17 360.007 1501.48 337.547 1501.99C319.757 1502.39 305.427 1492.31 296.207 1477.63C272.447 1439.85 277.587 1391.94 282.877 1349.98C290.397 1290.38 303.647 1231.49 321.967 1174.29C338.097 1123.93 357.177 1073.33 385.047 1028.17C409.677 988.258 444.047 949.747 488.877 932.588C525.557 918.538 569.087 919.138 604.797 935.948C621.817 943.958 637.247 955.788 647.867 971.468C659.577 988.758 664.897 1009.44 663.407 1030.24C660.277 1074.16 629.037 1114.13 589.947 1132.75C542.077 1155.55 484.217 1146.73 437.777 1124.85C420.727 1116.82 405.227 1106.35 389.347 1096.31C375.867 1087.79 362.597 1078.92 350.117 1068.97C316.877 1042.45 288.707 1008.02 272.737 969.417C260.797 940.547 256.237 909.018 255.127 877.968C253.297 826.858 259.257 774.258 275.297 725.588C287.637 688.148 306.537 653.388 321.587 617.047C341.907 567.977 355.157 515.988 362.857 463.488C371.117 407.128 372.197 349.268 360.177 293.348C354.397 266.448 345.247 240.618 333.757 215.648C322.267 190.678 309.997 168.448 298.107 144.848C276.097 101.158 256.307 54.2775 261.627 4.29751C262.237 -1.45249 253.237 -1.41249 252.627 4.29751L252.647 4.36751Z"
+                stroke="#FF8C00"
+                stroke-width="4"
+                fill="#42210B"
+                stroke-linecap="round"/>
+            </svg>
+        
+            <!-- Timeline Content -->
             <div class="timeline">
-                <div class="timeline-line"></div>
-
                 <div class="timeline-item right">
                     <div class="timeline-item-content">
                         <h3>August 2021</h3>
@@ -63,7 +73,7 @@
                             Studebaker.</p>
                     </div>
                 </div>
-
+        
                 <div class="timeline-item left">
                     <div class="timeline-item-content">
                         <h3>Jan 2022</h3>
@@ -72,7 +82,7 @@
                             minor and found my niche making assets and animated game sprites.</p>
                     </div>
                 </div>
-
+        
                 <div class="timeline-item right">
                     <div class="timeline-item-content">
                         <h3>October 2022</h3>
@@ -81,7 +91,7 @@
                             projects going and get more involved in the community!</p>
                     </div>
                 </div>
-
+        
                 <div class="timeline-item left">
                     <div class="timeline-item-content">
                         <h3>October 2023</h3>
@@ -90,69 +100,109 @@
                             and frameworks in order to broaden my skillset!</p>
                     </div>
                 </div>
-
+        
                 <div class="timeline-item right">
                     <div class="timeline-item-content">
                         <h3>January 2024</h3>
                         <h4>Daisy The Designer</h4>
                         <p>After broadening my skillset, I realized I could add more of a creative pop to things. I
                             reflected on what made me happy as both a programmer and designer. I've since worked on
-                            finding my niche and have created my own space in the World Wide Web. I've found my niche as
-                            someone who aspires to research & learn, design, experiment, develop, and include. I am a
-                            creative technologist. Welcome to my work.</p>
+                            finding my niche and have created my own space in the World Wide Web.</p>
                     </div>
                 </div>
-
+        
                 <div class="timeline-item left">
                     <div class="timeline-item-content">
                         <h3>2025</h3>
                         <h4>Daisy The Creative Technologist</h4>
                         <p>I’m a chronic doodler. On my notes, homework, papers, and even pants. Always the creative, I
                             surprised everyone with a degree in Software Engineering (myself included). I thought I was
-                            stuck in tech world forever, but quickly realized I’d never left my roots in art—or that
-                            there was never a border between the two. I’ve since done work in game dev art, UX/UI design
-                            and development, 3D modeling, hardware prototyping, fabrication, and more.</p>
+                            stuck in tech world forever, but quickly realized I’d never left my roots in art.</p>
                     </div>
                 </div>
-
             </div>
         </div>
+
     </div>
+
+    </main>
+
+
+    <footer>
+        <section id="footer" class="container">
+            <a href="index.html">
+                <div class="logo">
+                    <img src="assets/daisy.logo 1.png" alt="daisy logo">
+                </div>
+            </a>
+            <p>crafted with curiosity & creativity<br>hosted with love on github pages <br>© 2024 daisyland</p>
+        </section>
+    </footer>
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            const timeline = document.querySelector(".timeline");
-            const timelineLine = document.querySelector(".timeline-line");
-            const timelineItems = document.querySelectorAll(".timeline-item");
+                const path = document.getElementById("animatedPath");
+                const timelineItems = document.querySelectorAll(".timeline-item");
+                const timeline = document.querySelector(".timeline-wrapper");
 
-            function animateTimeline() {
-                const timelineRect = timeline.getBoundingClientRect();
-                const scrollPosition = window.scrollY;
-                const timelineTop = timelineRect.top + scrollPosition;
-                const timelineBottom = timelineRect.bottom + scrollPosition;
-                const viewportHeight = window.innerHeight;
+                if (!path || !timeline || timelineItems.length === 0) return;
 
-                // Calculate the progress of the scroll within the timeline
-                if (scrollPosition >= timelineTop - viewportHeight && scrollPosition <= timelineBottom) {
-                    const scrollProgress = (scrollPosition - (timelineTop - viewportHeight)) / (timelineBottom - (timelineTop - viewportHeight));
-                    const lineHeight = scrollProgress * timelineRect.height;
-                    timelineLine.style.height = `${lineHeight}px`;
+                const pathLength = path.getTotalLength();
+
+                // Set initial stroke properties (fully hidden)
+                path.style.strokeDasharray = pathLength;
+                path.style.strokeDashoffset = pathLength;
+                path.style.stroke = "#42210B"; // Stroke color
+                path.style.opacity = 1;
+
+                function animateTimeline() {
+                    const scrollPosition = window.scrollY + window.innerHeight;
+                    const timelineTop = timeline.offsetTop;
+                    const timelineHeight = timeline.clientHeight;
+
+                    if (scrollPosition < timelineTop)
+                    {
+                        path.style.opacity = 0;
+                        path.style.strokeDashoffset = pathLength;
+                        return;
+                    }
+                    else
+                    {
+                        path.style.opacity = 1;
+                    }
+
+                    let progress = (scrollPosition - timelineTop) / timelineHeight;
+                    progress = Math.min(Math.max(progress, 0), 1); // Clamp between 0 and 1
+
+                    const delayThreshold = 0.5; // 🚀 Adjust this to delay the drawing start
+
+                    if (progress >= delayThreshold) {
+                        path.style.strokeDashoffset = pathLength * (1 - (progress - delayThreshold) / (1 - delayThreshold));
+                    }
+
+                    // 🚀 Reverse animation when scrolling up
+                    if (progress < 0.8) {
+                        path.style.strokeDashoffset = pathLength * (1 - progress);
+                    } else {
+                        path.style.strokeDashoffset = pathLength * (1 - progress); // Finishes drawing
+                    }
+
+                    // 🕐 TIMELINE ITEM ANIMATION - Appear progressively
+                    timelineItems.forEach((item, index) => {
+                        const itemTrigger = timelineTop + (index / timelineItems.length) * timelineHeight * 1.2;
+                        if (scrollPosition > itemTrigger) {
+                            item.classList.add("active");
+                        } else {
+                            item.classList.remove("active"); // 🚀 Removes when scrolling back up
+                        }
+                    });
                 }
 
-                // Animate timeline items
-                timelineItems.forEach(item => {
-                    const itemRect = item.getBoundingClientRect();
-                    if (itemRect.top < window.innerHeight * 0.75) {
-                        item.classList.add("active");
-                    }
-                });
-            }
+                window.addEventListener("scroll", animateTimeline);
+                animateTimeline(); // Check on load in case user is mid-page
+            });
 
-            window.addEventListener("scroll", animateTimeline);
-            animateTimeline(); // Run initially in case user reloads in middle
-        });
     </script>
-
 </body>
 
 </html>

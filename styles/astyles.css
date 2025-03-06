@@ -39,11 +39,18 @@ nav ul li a:hover {
     min-height: 100vh;
 }
 
+main.container {
+    min-height: 200vh;
+    /* Increase height so the timeline has enough space */
+    /* border: solid red; */
+}
+
 .about-container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    /* border: solid  orange; */
 }
 
 .about-content {
@@ -51,11 +58,14 @@ nav ul li a:hover {
     align-items: flex-start;
     gap: 20px;
     margin-bottom: 40px;
+    /* border: solid yellowgreen; */
+    
 }
 
 .about-image {
     flex: 1;
     max-width: 40%;
+    /* border: solid yellow; */
 }
 
 .about-image img {
@@ -68,6 +78,7 @@ nav ul li a:hover {
     color: #42210B;
     flex: 2;
     font-family: 'Poppins', sans-serif;
+    /* border: solid greenyellow; */
 }
 
 .about-text h1 {
@@ -75,6 +86,7 @@ nav ul li a:hover {
     font-family: 'Poppins', sans-serif;
     font-size: 2.5em;
     margin-bottom: 20px;
+    /* border: solid green; */
 }
 
 .about-text p {
@@ -83,6 +95,7 @@ nav ul li a:hover {
     line-height: 1.6;
     font-size: 1.5rem;
     margin-bottom: 15px;
+    /* border:solid teal; */
 }
 
 .my-story-heading {
@@ -90,11 +103,13 @@ nav ul li a:hover {
     font-family: 'Poppins';
     font-size: 2em;
     margin-bottom: 20px;
-    text-align: left;
+    text-align: center;
+    
 }
 
 /* TIMELINE SECTION */
 .timeline-wrapper {
+    /* border:solid blue; */
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
@@ -115,18 +130,19 @@ nav ul li a:hover {
 
 /* The Daisy Line */
 .timeline-line {
+    /* border:3px solid purple; */
     position: absolute;
     /* Use absolute instead of relative */
     left: 50%;
     transform: translateX(-50%);
-    background: url("../assets/daisy-line.png") repeat-y center;
+    /* background: url("../assets/daisy-line.png") repeat-y center; */
     background-size: cover;
     width: 4px;
     height: 100%;
     /* Ensure the line fills the container */
     z-index: 3;
     opacity: 1 !important;
-    border: solid red 3px;
+
     /* Debugging - remove or change once working */
 }
 
@@ -143,9 +159,11 @@ nav ul li a:hover {
 }
 
 .timeline-container {
+    /* border: 3px solid gold; */
     position: relative;
     height: 100vh;
     /* or a fixed value */
+    padding: 100px;
 }
 
 /* Timeline marker */
@@ -159,13 +177,16 @@ nav ul li a:hover {
     margin-bottom: 40px;
     opacity: 0;
     transform: translateY(30px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
     width: 100%;
+    z-index: 2;
 }
 
 .timeline-item.active {
     opacity: 1;
+    /* Becomes visible */
     transform: translateY(0);
+    /* Moves to correct position */
 }
 
 .timeline-item-content {
@@ -222,17 +243,34 @@ nav ul li a:hover {
         left: 20px;
     }
 }
-
 .flower-svg {
+    scale: 80%;
+    padding-top: 3em;
     position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    /* Adjust the width of the flower path */
     height: 100%;
-    /* Make it span the full height of the timeline */
+    pointer-events: none;
+    /* border: 3px solid goldenrod; */
+    padding-bottom: 3em;
+}
+
+#animatedPath {
     z-index: 1;
+    /* Ensure it’s a single color */
+    stroke-width: 10;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    /* Ensures smooth joins */
+    fill: none;
+    stroke-dasharray: 10000;
+    /* Adjust to match your path */
+    stroke-dashoffset: 10000;
+    /* Initially hidden */
+    transition: stroke 0.6s ease-in-out, stroke-dashoffset 1.5s ease-in-out, opacity 0.8s ease-in-out;
+    opacity: 0;
 }
 
 .flower-path {
@@ -244,4 +282,15 @@ nav ul li a:hover {
     /* Start with the path hidden */
     transition: stroke-dashoffset 1s ease-in-out;
     /* Smooth animation */
+}
+footer {
+    padding-top: 80px; 
+    /* lol almost padding-ton */
+    font-family: 'Poppins';
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
 }
