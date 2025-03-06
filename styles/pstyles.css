@@ -1,3 +1,93 @@
+/* Tab content transition */
+.tab-content {
+    opacity: 0;
+    transform: translateY(10px);
+    visibility: hidden;
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    min-height: 70vh;
+}
+
+/* Active tab smoothly fades in */
+.tab-content.active {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+    position: relative;
+}
+
+
+/* Centering the gallery */
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Gallery Grid (Masonry Layout) */
+.gallery {
+    column-count: 3;
+    /* Number of columns */
+    column-gap: 15px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+/* Ensuring images stay inside the grid properly */
+.gallery-item {
+    width: 100%;
+    margin-bottom: 15px;
+    break-inside: avoid;
+}
+
+/* Ensure the gallery centers properly */
+.gallery-item img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.gallery-item:hover img {
+    transform: scale(1.02);
+    opacity: 0.9;
+}
+/* Tab Content Sections */
+.tab-content {
+    display: none;
+    /* Hide all by default */
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    padding: 20px;
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+/* Active Tab */
+.tab-content.active {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .gallery {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery {
+        column-count: 1;
+    }
+}
+
+
 body {
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
@@ -128,4 +218,47 @@ footer {
     align-items: center;
     width: 100%;
     padding: 20px;
+}
+
+/* Doodle-Style Buttons */
+.doodle-icon-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Button Design */
+.doodle-button {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    border: none;
+    /* Removes default button border */
+    outline: none;
+    /* Removes focus outline */
+    background-color: transparent;
+    /* Ensures no background */
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Doodle Icon Styling */
+.doodle-button img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0.9;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Hover Effects */
+.doodle-button:hover {
+    transform: translateY(-5px) rotate(-3deg);
+}
+
+.doodle-button:hover img {
+    opacity: 1;
+    transform: scale(1.1);
 }

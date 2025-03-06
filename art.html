@@ -24,124 +24,78 @@
         </a>
         <nav>
             <ul>
-                <li><a href="index.html#about">about</a></li>
-                <li><a href="index.html#portfolio">portfolio</a></li>
-                <li><a href="index.html#contact">contact</a></li>
+            <li><a href="#" class="tab-link active" data-tab="portfolio">portfolio</a></li>
+            <li><a href="#" class="tab-link" data-tab="personal-work">personal-work</a></li>
+            <li><a href="#" class="tab-link" data-tab="doodles">doodles</a></li>
+            <li><a href="#" class="tab-link" data-tab="about">about</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Portfolio Section -->
-    <main class="container">
-        <section id="portfolio" class="portfolio">
-            <h2>Daisy Fernandez-Reyes</h2>
-            <div class="projects-grid">
-
-                <div class="project-square">
-                    <img src="assets/portfolio_assets/linkedinHeader.png" alt="Artwork 1">
-                    <div class="project-overlay">
-                        <p>Doodles</p>
-                        <h3>Daisy's Linkedin Header</h3>
-                        <p>2024 Procreate</p>
-                    </div>
+    <main>
+        <section id="portfolio" class="tab-content active">
+            <h2>Portfolio</h2>
+            <p>Showcasing professional projects...</p>
+                <div class="gallery-container">
+                    <section class="gallery">
+                        <div class="gallery-item">
+                            <img src="assets/portfolio_assets/linkedinHeader.png" alt="Artwork 1">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/portfolio_assets/hero_haircuts.png" alt="Artwork 2">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/portfolio_assets/draw.png" alt="Artwork 3">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/portfolio_assets/Cozy_Fall.gif" alt="Artwork 5">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/portfolio_assets/corgrl_prog.png" alt="Artwork 6">
+                        </div>
+                    </section>
                 </div>
-                <div class="project-square">
-                    <img src="assets/portfolio_assets/hero_haircuts.png" alt="Artwork 1">
-                    <div class="project-overlay">
-                        <p>Concept Art</p>
-                        <h3>Hero Haircuts</h3>
-                        <p>Orange Public Library Design Challenge 2020 Procreate</p>
-                    </div>
+        </section>
+    
+        <section id="personal-work" class="tab-content">
+            <h2>Personal Work</h2>
+            <p>Creative and passion projects...</p>
+                <div class="gallery-container">
+                    <section class="gallery">
+                        <div class="gallery-item">
+                            <img src="assets/portfolio_assets/linkedinHeader.png" alt="Artwork 1">
+                        </div>
+                    </section>
                 </div>
-                <div class="project-square">
-                    <img src="assets/portfolio_assets/draw.png" alt="Artwork 1">
-                    <div class="project-overlay">
-                        <p>Concept Art</p>
-                        <h3>Draw!</h3>
-                        <p>2023 Procreate</p>
-                    </div>
-                </div>
-                <div class="project-square">
-                    <img src="assets/portfolio_assets/Cozy_Fall.gif" alt="Artwork 1">
-                    <div class="project-overlay">
-                        <p>Doodles</p>
-                        <h3>Cozy Fall</h3>
-                        <p>Codèdex November 2024 Design Challenge, Procreate</p>
-                    </div>
-                </div>
+        </section>
 
 
-                <div class="project-square">
-                    <img src="assets/portfolio_assets/corgrl_prog.png" alt="Artwork 1">
-                    <div class="project-overlay">
-                        <p>Concept Art</p>
-                        <h3>Cowgirl Light Study</h3>
-                        <p>Chapman University 2022 , Procreate</p>
-                    </div>
-                </div>
-                
-                <div class="project-square">
-                    <img src="assets/portfolio_assets/CHP_Strybrd.png" alt="Artwork 1">
-                    <div class="project-overlay">
-                        <p>Concept Art & Storyboard</p>
-                        <h3>Zach Cant Have Peanuts! Peanut Allergy? </h3>
-                        <p>Chapman University 2022 GCI - Procreate</p>
-                    </div>
-                </div>
-                
-                <div class="project-square">
-                    <img src="assets/portfolio_assets/bryan.png" alt="Artwork 1">
-                    <div class="project-overlay">
-                        <p>Doodles</p>
-                        <h3>Bryan Molina # 11</h3>
-                        <p>2023 Procreate</p>
-                    </div>
-                </div>
-                
-                <div class="project-square">
-                    <img src="assets/portfolio_assets/2021doodles.jpg" alt="Artwork 1">
-                    <div class="project-overlay">
-                        <p>Doodles</p>
-                        <h3>2022 Doodle Dump</h3>
-                        <p>2022 Mixed Media </p>
-                    </div>
-                </div>
+        <section id="doodles" class="tab-content">
+            <h2>Personal Work</h2>
+            <p>my sketchbook doodles</p>
+            <div class="gallery-container">
+                <section class="gallery">
 
-                <div class="project-square">
-                    <img src="assets/portfolio_assets/miku_15.png" alt="Artwork 1">
-                    <div class="project-overlay">
-                        <p>Fan Art</p>
-                        <h3>Hatsune Miku Quinceñera</h3>
-                        <p>2022 procreate</p>
+                    <div class="gallery-item">
+                        <img src="../assets/portfolio_assets/2021doodles.jpg" alt="2021 doodles">
                     </div>
-                </div>
 
-                <div class="project-square">
-                    <img src="assets/portfolio_assets/miraculous.png" alt="Artwork 2">
-                    <div class="project-overlay">
-                        <p>Fan Art</p>
-                        <h3>Ladybug Repairs</h3>
-                        <p> 2022 Procreate</p>
+                    <div class="gallery-item">
+                        <img src="../assets/portfolio_assets/game_dev_art.png" alt="berry escape">
                     </div>
-                </div>
-                <div class="project-square">
-                    <img src="assets/portfolio_assets/clementine.jpg" alt="Artwork 1">
-                    <div class="project-overlay">
-                        <p>Concept Art</p>
-                        <h3>Clementine Charaacter Sheet</h3>
-                        <p>Orange High School 2018- AP 2D Art & Design  , Procreate</p>
+
+                    <div class="gallery-item">
+                        <img src="assets/portfolio_assets/morlo@morlan.png" alt="morlo@morlan">
                     </div>
-                </div>
-                <div class="project-square">
-                    <img src="assets/portfolio_assets/eleanore.png" alt="Artwork 2">
-                    <div class="project-overlay">
-                        <p>Concept Art</p>
-                        <h3>Eleanore Charaacter Sheet</h3>
-                        <p>Orange High School 2018- AP 2D Art & Design , Procreate</p>
-                    </div>
-                </div>
-                <!-- Add more project squares as needed -->
+
+
+                </section>
             </div>
+        </section>
+
+        <section id="about" class="tab-content">
+            <h2>About Me</h2>
+            <p>Biography, journey, and more...</p>
         </section>
     </main>
 
@@ -154,28 +108,79 @@
             </div>
         </a>
         <p>crafted with curiosity & creativity<br>hosted with love on github pages <br>© 2024 daisyland</p>
+    
+    <div class="doodle-button-icons">
+        <a href="https://github.com/daisyb3ll" class="doodle-button">
+            <img src="assets/contact_assets/PNG/github-icon-doodle.png" alt="Github">
+        </a>
+        <a href="https://www.linkedin.com/in/daisy-fernandez-reyes-50849b237/" class="doodle-button">
+            <img src="assets/contact_assets/PNG/linkedin-icon-doodle.png" alt="linkedin">
+        </a>
+        <a href="https://www.instagram.com/da.s003" class="doodle-button">
+            <img src="assets/contact_assets/PNG/instagram-icon-doodle.png" alt="instagram">
+        </a>
+    </div>
+    
     </section>
 </footer>
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-        document.body.style.opacity = "1"; // Ensures the page fades in smoothly
+            document.body.style.opacity = "1"; // Ensures smooth fade-in
 
-        // Select all links
-        document.querySelectorAll("a").forEach(link => {
-            link.addEventListener("click", function (event) {
-                if (link.getAttribute("target") === "_blank") return; // Ignore new tab links
+            document.querySelectorAll("a").forEach(link => {
+                // Ignore tabs & new tab links
+                if (link.classList.contains("tab-link") || link.getAttribute("target") === "_blank") return;
 
-                event.preventDefault(); // Stop default link behavior
-                let href = this.href;
+                link.addEventListener("click", function (event) {
+                    event.preventDefault(); // Stop default link behavior
+                    let href = this.href;
 
-                document.body.style.opacity = "0"; // Fade out
-                setTimeout(() => {
-                    window.location.href = href; // Change page after fade-out
-                }, 500); // 0.5s delay to match transition
+                    document.body.style.opacity = "0"; // Fade out
+                    setTimeout(() => {
+                        window.location.href = href; // Change page after fade-out
+                    }, 500); // 0.5s delay to match transition
+                });
             });
         });
-    });
+
+        document.addEventListener("DOMContentLoaded", function () {
+                const tabs = document.querySelectorAll(".tab-link");
+                const contents = document.querySelectorAll(".tab-content");
+
+                tabs.forEach(tab => {
+                    tab.addEventListener("click", function (event) {
+                        event.preventDefault();
+
+                        // Remove active class from all tabs
+                        tabs.forEach(t => t.classList.remove("active"));
+                        this.classList.add("active");
+
+                        const selectedTab = this.getAttribute("data-tab");
+                        const newTab = document.getElementById(selectedTab);
+                        const currentTab = document.querySelector(".tab-content.active");
+
+                        if (currentTab !== newTab) {
+                            // Fade out the current tab
+                            currentTab.style.opacity = "0";
+                            currentTab.style.transform = "translateY(10px)";
+
+                            setTimeout(() => {
+                                currentTab.classList.remove("active");
+                                newTab.classList.add("active");
+
+                                // Fade in the new tab
+                                setTimeout(() => {
+                                    newTab.style.opacity = "1";
+                                    newTab.style.transform = "translateY(0)";
+                                }, 50);
+                            }, 300); // 300ms delay for fade-out before switching
+                        }
+                    });
+                });
+            });
+
+
 </script>
 
 </body>
