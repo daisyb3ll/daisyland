@@ -263,6 +263,48 @@ main.container {
     .about-text {
         width: 100%;
     }
+
+    nav ul {
+        flex-direction: column;
+        /* Stack nav items */
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        /* Add vertical spacing */
+    }
+
+    .timeline {
+        padding-left: 0;
+        /* Remove left padding */
+        align-items: center;
+        /* Center items */
+    }
+
+    .timeline-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        /* Center text */
+    }
+
+    .timeline-item-content {
+        width: 100%;
+        /* Full width */
+    }
+    
+    .flower-svg {
+        scale: 100%;
+        /* Restore to full size */
+        width: 90%;
+        /* Keep it responsive */
+        height: auto;
+        /* Maintain aspect ratio */
+        position: relative;
+        /* Avoid absolute positioning issues */
+    }
+
 }
 .flower-svg {
     scale: 80%;
