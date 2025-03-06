@@ -249,62 +249,76 @@ main.container {
 
 /* Mobile Styles */
 @media (max-width: 768px) {
-    .about-content {
+    body {
+            padding: 0 10px;
+            /* Add padding on the sides */
+        }
+    
+        .container {
+            padding: 0 15px;
+            /* Adjust container spacing */
+        }
+    header {
         flex-direction: column;
-        align-items: center;
         text-align: center;
-    }
-
-    .about-image {
-        max-width: 80%;
-        /* Reduce image size on smaller screens */
-    }
-
-    .about-text {
-        width: 100%;
+        padding: 15px 0;
+        /* Reduce padding */
     }
 
     nav ul {
         flex-direction: column;
-        /* Stack nav items */
-        align-items: center;
+        /* Stack links */
+        padding: 0;
+        margin-top: 10px;
     }
 
     nav ul li {
         margin: 10px 0;
-        /* Add vertical spacing */
+        /* Give each nav item space */
     }
 
-    .timeline {
-        padding-left: 0;
-        /* Remove left padding */
-        align-items: center;
-        /* Center items */
-    }
-
-    .timeline-item {
+    .about-content {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        /* Center text */
+        padding: 0 20px;
+        /* Add padding on the sides */
     }
 
-    .timeline-item-content {
+    .about-image {
+        max-width: 100%;
+        /* Allow it to be full width */
+        display: flex;
+        justify-content: center;
+    }
+
+    .about-image img {
+        max-width: 90%;
+        /* Keep image inside safe area */
+        border-radius: 12px;
+        /* Keep rounded edges */
+    }
+
+    .about-text {
         width: 100%;
-        /* Full width */
+        text-align: center;
+        /* Ensure text stays centered */
+        padding: 0 20px;
+        /* Add some spacing */
+    }
+
+    .about-text h1 {
+        font-size: 2em;
+        /* Reduce size slightly for better fit */
+        margin-top: 10px;
+    }
+
+    .about-text p {
+        font-size: 1.2rem;
+        /* Slightly smaller text for readability */
+        line-height: 1.5;
     }
     
-    .flower-svg {
-        scale: 100%;
-        /* Restore to full size */
-        width: 90%;
-        /* Keep it responsive */
-        height: auto;
-        /* Maintain aspect ratio */
-        position: relative;
-        /* Avoid absolute positioning issues */
-    }
-
 }
 .flower-svg {
     scale: 80%;
