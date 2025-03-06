@@ -12,9 +12,8 @@ html {
     
 }
 
-.pattern-bgrnd,
-.about-section,
-.penultimate-section {
+.pattern-bgrnd
+{
     width: 100%;
     margin: 0;
     padding: 0;
@@ -26,13 +25,29 @@ html {
     /* Prevents the background from repeating */
 }
 
-.about-section,
+.about-section{
+    background-image: url("../assets/starting_blank.png");
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+     /* Ensures the background covers the entire section */
+    background-position: center;
+    /* Centers the background image */
+    background-repeat: no-repeat;
+    /* Prevents the background from repeating */
+}
 .design-progress,
 .penultimate-section {
     width: 100%;
-    margin: 0;
-    padding: 40px 0;
-    /* Adjust padding as needed, but remove horizontal padding */
+        margin: 0;
+        padding: 0;
+        background-size: cover;
+        /* Ensures the background covers the entire section */
+        background-position: center;
+        /* Centers the background image */
+        background-repeat: no-repeat;
+        /* Prevents the background from repeating */
 }
 
 p {
@@ -145,8 +160,11 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 30px;
     padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .about-header h1 {
@@ -168,8 +186,10 @@ main {
 }
 
 .design-progress {
-    padding: 50px 20px;
+    padding: 60px 20px;
     text-align: center;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 .design-progress h1 {
@@ -188,26 +208,29 @@ main {
 
 .tools-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    max-width: 800px;
-    margin: 0 auto;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        /* Auto adjust grid layout */
+        gap: 20px;
+        max-width: 600px;
+        margin: 0 auto;
+        justify-content: center;
 }
 
 .tool {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-block: 20px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 15px;
+        text-align: center;
 }
 
 
 .tool img {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 10px;
-    transition: transform 0.6s ease-in-out;
+    width: 80px;
+        /* Smaller size for better fit */
+        height: auto;
+        transition: transform 0.3s ease-in-out;
 }
 
 .tool:hover img {
@@ -216,10 +239,9 @@ main {
 
 .tool p {
     font-family: 'Poppins', sans-serif;
-    font-size: 3rem;
+    font-size: 1.2rem;
     color: #42210B;
-    margin: 0;
-    text-align: center;
+    margin: 5px 0 0;
 }
 
 .tool p:first-of-type {
@@ -486,24 +508,37 @@ button[type="submit"]:hover {
 
 .content-wrapper {
     display: flex;
-    align-items: center;
-    gap: 30px;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 30px;
 }
 
 .image-container {
-    flex: 1;
-    max-width: 40%;
+        flex: 1;
+        max-width: 100%;
+        /* Keeps image from getting too small */
+        min-width: 300px;
+        /* Prevents excessive shrinking */
+        text-align: center;
 }
 
 .image-container img {
     width: 100%;
+    max-width: 800px;
+    /* Ensures it doesn't shrink too much */
+    min-width: 300px;
+    /* Prevents it from getting too small */
     height: auto;
-    border-radius: 10px;
+    object-fit: cover;
+    /* Ensures it maintains aspect ratio */
 }
 
 .photo-container {
     flex: 1;
-    max-width: 40%;
+    max-width: 45%;
+    min-width: 300px;
+    text-align: center;
 }
 
 .photo-container img {
@@ -517,8 +552,10 @@ button[type="submit"]:hover {
 }
 
 .text-container {
-    flex: 2;
-    max-width: 60%;
+        flex: 1;
+        max-width: 45%;
+        min-width: 300px;
+        text-align: center;
 }
 
 .text-container p {
@@ -528,7 +565,80 @@ button[type="submit"]:hover {
     color: #42210B;
 }
 
+.design-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* Allow wrapping on small screens */
+    gap: 2rem;
+}
+
+#minime {
+    transition: opacity 0.3s ease-in-out;
+    /* Add transition for opacity */
+}
+
+.social-media-buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Doodle-Style Buttons */
+.doodle-icon-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    /* Space between buttons */
+    flex-wrap: wrap;
+    padding-top: 15px;
+}
+
+/* Button Design */
+.doodle-button {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    border: none;
+    /* Removes default button border */
+    outline: none;
+    /* Removes focus outline */
+    background-color: transparent;
+    /* Ensures no background */
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Doodle Icon Styling */
+.doodle-button img {
+    width: 100%;
+        height: 100%;
+        object-fit: contain;
+        opacity: 0.9;
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Hover Effects */
+.doodle-button:hover {
+    transform: translateY(-5px) rotate(-3deg);
+}
+
+.doodle-button:hover img {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+
 @media (max-width: 768px) {
+    .about-section p {
+            font-size: 1.3rem;
+        }
+    
+    .penultimate-section p {
+        font-size: 1.3rem;
+    }
     .menu {
         display: none;
     }
@@ -544,11 +654,6 @@ button[type="submit"]:hover {
     .content-wrapper {
         flex-direction: column;
         gap: 20px;
-    }
-
-    .image-container,
-    .text-container {
-        max-width: 100%;
     }
 
     .contact-container {
@@ -576,24 +681,43 @@ button[type="submit"]:hover {
         width: 100%;
         color : #42210B
     }
-}
 
-.design-flex {
-    display: flex;
-    align-items: center;
-    /* Align items vertically */
-    justify-content: left;
-    /* Spread elements apart */
-    gap: 2rem;
-    /* Add spacing between elements */
-}
-#minime {
-    transition: opacity 0.3s ease-in-out;
-    /* Add transition for opacity */
-}
+        .design-flex {
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .photo-container {
+            max-width: 80%;
+            /* Make the image slightly smaller for smaller screens */
+        }
+    
+        .tools-grid {
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            max-width: 100%;
+        }
+    
+        .tool img {
+            width: 70px;
+        }
+    
+        .tool p {
+            font-size: 1rem;
+        }
 
-.social-media-buttons-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+        .header-image {
+            flex-direction: column;
+            text-align: center;
+            padding: 40px 20px;
+        }
+    
+        .image-container {
+            max-width: 80%;
+            /* Keeps the image size reasonable */
+        }
+    
+        .text-container {
+            max-width: 90%;
+            /* Prevents text from touching edges */
+        }
 }
