@@ -244,6 +244,26 @@ main.container {
         left: 20px;
     }
 }
+
+/* Desktop styles go here (already in your CSS) */
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-image {
+        max-width: 80%;
+        /* Reduce image size on smaller screens */
+    }
+
+    .about-text {
+        width: 100%;
+    }
+}
 .flower-svg {
     scale: 80%;
     padding-top: 3em;
@@ -295,3 +315,4 @@ footer {
     width: 100%;
     padding: 20px;
 }
+
