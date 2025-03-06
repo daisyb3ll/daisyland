@@ -48,7 +48,7 @@
                 </div>
             </div>
         </section>
-        
+
         <h2 class="my-story-heading">How I Got Here</h2>
 
         <div class="timeline-wrapper">        
@@ -153,31 +153,36 @@
                 path.style.strokeDasharray = pathLength;
                 path.style.strokeDashoffset = pathLength;
                 path.style.stroke = "#42210B"; // Stroke color
-                path.style.opacity = 1;
+                path.style.opacity = 0;
+                path.style.visibility = "hidden";
 
                 function animateTimeline() {
                     const scrollPosition = window.scrollY + window.innerHeight;
                     const timelineTop = timeline.offsetTop;
                     const timelineHeight = timeline.clientHeight;
 
-                    if (scrollPosition < timelineTop)
-                    {
+                
+                
+                
+                
+                    if (scrollPosition < timelineTop) {
                         path.style.opacity = 0;
                         path.style.strokeDashoffset = pathLength;
+                        path.style.visibility = "hidden"; // ✅ Hide path completely until scroll
                         return;
-                    }
-                    else
-                    {
+                    } else {
                         path.style.opacity = 1;
+                        path.style.visibility = "visible"; // ✅ Make visible only when scrolling starts
                     }
 
                     let progress = (scrollPosition - timelineTop) / timelineHeight;
                     progress = Math.min(Math.max(progress, 0), 1); // Clamp between 0 and 1
 
-                    const delayThreshold = 0.5; // 🚀 Adjust this to delay the drawing start
+                    const delayThreshold = 0.1; // ✅ Start animation at 10% scroll
 
                     if (progress >= delayThreshold) {
-                        path.style.strokeDashoffset = pathLength * (1 - (progress - delayThreshold) / (1 - delayThreshold));
+                        let adjustedProgress = (progress - delayThreshold) / (1 - delayThreshold);
+                        path.style.strokeDashoffset = pathLength * (1 - adjustedProgress);
                     }
 
                     // 🚀 Reverse animation when scrolling up
@@ -193,7 +198,7 @@
                         if (scrollPosition > itemTrigger) {
                             item.classList.add("active");
                         } else {
-                            item.classList.remove("active"); // 🚀 Removes when scrolling back up
+                            item.classList.remove("active"); // Removes when scrolling back up
                         }
                     });
                 }
