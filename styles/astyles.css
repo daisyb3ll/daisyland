@@ -223,103 +223,6 @@ main.container {
     text-align: left;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .timeline::before {
-        left: 20px;
-    }
-
-    .timeline-item {
-        flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
-    }
-
-    .timeline-item-content {
-        width: 90%;
-        text-align: left !important;
-    }
-
-    .timeline-item::before {
-        left: 20px;
-    }
-}
-
-/* Desktop styles go here (already in your CSS) */
-
-/* Mobile Styles */
-@media (max-width: 768px) {
-    body {
-            padding: 0 10px;
-            /* Add padding on the sides */
-        }
-    
-        .container {
-            padding: 0 15px;
-            /* Adjust container spacing */
-        }
-    header {
-        flex-direction: column;
-        text-align: center;
-        padding: 15px 0;
-        /* Reduce padding */
-    }
-
-    nav ul {
-        flex-direction: column;
-        /* Stack links */
-        padding: 0;
-        margin-top: 10px;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-        /* Give each nav item space */
-    }
-
-    .about-content {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 0 20px;
-        /* Add padding on the sides */
-    }
-
-    .about-image {
-        max-width: 100%;
-        /* Allow it to be full width */
-        display: flex;
-        justify-content: center;
-    }
-
-    .about-image img {
-        max-width: 90%;
-        /* Keep image inside safe area */
-        border-radius: 12px;
-        /* Keep rounded edges */
-    }
-
-    .about-text {
-        width: 100%;
-        text-align: center;
-        /* Ensure text stays centered */
-        padding: 0 20px;
-        /* Add some spacing */
-    }
-
-    .about-text h1 {
-        font-size: 2em;
-        /* Reduce size slightly for better fit */
-        margin-top: 10px;
-    }
-
-    .about-text p {
-        font-size: 1.2rem;
-        /* Slightly smaller text for readability */
-        line-height: 1.5;
-    }
-    
-}
 .flower-svg {
     scale: 80%;
     padding-top: 3em;
@@ -369,6 +272,141 @@ footer {
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding: 20px;
+    padding: 2em;
 }
 
+/* Responsive Design */
+/* Desktop styles go here (already in your CSS) */
+/* Mobile Styles */
+@media (max-width: 768px) {
+    html,body {
+        padding: 0 10px;
+        overflow-x: hidden;
+        width:100%;
+        /* Add padding on the sides */
+    }
+    
+    * {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .container {
+        padding: 0 15px;
+        /* Adjust container spacing */
+    }
+
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    /* ✅ About Section Fixes */
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .about-image {
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .about-image img {
+        max-width: 90%;
+        border-radius: 12px;
+    }
+
+    .about-text {
+        width: 100%;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .about-text h1 {
+        font-size: 2em;
+        margin-top: 10px;
+    }
+
+    .about-text p {
+        font-size: 1.2rem;
+        line-height: 1.5;
+    }
+
+    /* ✅ TIMELINE FIXES: Stack Cards Vertically */
+    .timeline-wrapper {
+        padding: 0 10px;
+    }
+
+    .timeline {
+        padding-left: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* Center all items */
+    }
+
+    .timeline-item {
+        width: 100%;
+        margin-bottom: 20px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .timeline-item-content {
+        width: 90%;
+        /* Full width */
+        max-width: 500px;
+        /* Keep a reasonable max width */
+        padding: 15px;
+        font-size: 1rem;
+    }
+
+    .timeline-item-content h3 {
+        font-size: 1.2em;
+    }
+
+    .timeline-item-content h4 {
+        font-size: 1em;
+    }
+
+    .timeline-item-content p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+    /* ✅ Remove Left/Right Offsets */
+    .timeline-item.left,
+    .timeline-item.right {
+        left: 0;
+        text-align: center;
+    }
+
+    /* ✅ Reduce Timeline Path & SVG */
+    .flower-svg {
+        scale: 60%;
+        padding-top: 1.5em;
+        padding-bottom: 1.5em;
+        width: 100%;
+        height: auto;
+    }
+
+    #animatedPath {
+        stroke-width: 5px;
+    }
+}
