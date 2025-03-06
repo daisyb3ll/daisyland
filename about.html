@@ -190,11 +190,29 @@
                         }
                     });
                 }
-
                 window.addEventListener("scroll", animateTimeline);
                 animateTimeline(); // Ensure it's hidden on load
             });
 
+            document.addEventListener("DOMContentLoaded", function () {
+                    document.body.style.opacity = "1"; // Ensures the page fades in smoothly
+
+                    // Select all links
+                    document.querySelectorAll("a").forEach(link => {
+                        link.addEventListener("click", function (event) {
+                            if (link.getAttribute("target") === "_blank") return; // Ignore new tab links
+
+                            event.preventDefault(); // Stop default link behavior
+                            let href = this.href;
+
+                            document.body.style.opacity = "0"; // Fade out
+                            setTimeout(() => {
+                                window.location.href = href; // Change page after fade-out
+                            }, 500); // 0.5s delay to match transition
+                        });
+                    });
+                });
+            
     </script>
 </body>
 
