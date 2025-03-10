@@ -1,0 +1,730 @@
+/* Start with opacity 0 and animate to visible */
+body {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+
+body,
+html {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    /* added for infinity background */
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    /* Prevents horizontal scrolling */
+    color: #42210B;
+    
+}
+
+.pattern-bgrnd
+{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    /* Ensures the background covers the entire section */
+    background-position: center;
+    /* Centers the background image */
+    background-repeat: no-repeat;
+    /* Prevents the background from repeating */
+}
+
+.about-section{
+    background-image: url("../assets/starting_blank.png");
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+     /* Ensures the background covers the entire section */
+    background-position: center;
+    /* Centers the background image */
+    background-repeat: no-repeat;
+    /* Prevents the background from repeating */
+}
+.design-progress,
+.penultimate-section {
+    width: 100%;
+        margin: 0;
+        padding: 0;
+        background-size: cover;
+        /* Ensures the background covers the entire section */
+        background-position: center;
+        /* Centers the background image */
+        background-repeat: no-repeat;
+        /* Prevents the background from repeating */
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    line-height: 1.5;
+    padding: px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 2.5rem;
+}
+
+h4 {
+    font-size: 2rem;
+}
+
+h5 {
+    font-size: 1.75rem;
+}
+
+h6 {
+    font-size: 1.5rem;
+}
+
+.pattern-bgrnd {
+    background-image: url("../assets/full-blank.png");
+    background-repeat: repeat;
+    background-color: #f8f8f8;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-position: center;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fixed-logo {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 100;
+}
+
+.logo img {
+    height: 4rem;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-size: 1.5rem;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+    cursor: pointer;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-header h1 {
+    text-size-adjust: 100 px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.about-section {
+    background-image: url("../assets/starting_blank.png");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px 20px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.design-progress {
+    padding: 60px 20px;
+    text-align: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.design-progress h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    color: #42210B;
+    margin-bottom: 10px;
+}
+
+.design-progress p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    color: #42210B;
+    margin-bottom: 30px;
+}
+
+.tools-grid {
+    display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        /* Auto adjust grid layout */
+        gap: 20px;
+        max-width: 600px;
+        margin: 0 auto;
+        justify-content: center;
+}
+
+.tool {
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 15px;
+        text-align: center;
+}
+
+
+.tool img {
+    width: 80px;
+        /* Smaller size for better fit */
+        height: auto;
+        transition: transform 0.3s ease-in-out;
+}
+
+.tool:hover img {
+    transform: scale(1.1);
+}
+
+.tool p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    color: #42210B;
+    margin: 5px 0 0;
+}
+
+.tool p:first-of-type {
+    font-weight: bold;
+}
+
+.tool p:last-of-type {
+    font-size: 3rem;
+    margin-top: 10px;
+}
+
+.penultimate-section {
+    background-image: url("../assets/Asset 14.png");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    width: 100%;
+    gap: 40px;
+    /* Space between links and form */
+}
+
+.contact-links {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contact-links h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    color: #42210B;
+    margin-bottom: 20px;
+}
+
+
+.icon-button {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    color: #42210B;
+    text-decoration: none;
+    padding: 5px 10px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.6s ease-in-out, box-shadow 0.3s ease;
+    display: inline-block;
+}
+
+.icon-button:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.contact-form-container {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+#contact-form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    /* Add spacing between form elements */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    /* Include padding in width calculation */
+}
+
+#contact-form textarea {
+    resize: vertical;
+    /* Allow vertical resizing */
+    min-height: 150px;
+    /* Set a minimum height */
+}
+
+#contact-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #a64639;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#contact-form button:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    color: #42210B;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+button[type="submit"] {
+    background-color: #a74639;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Poppins';
+    font-size: 2rem;
+    cursor: pointer;
+    transition: transform 0.6s ease-in-out;
+}
+
+button[type="submit"]:hover {
+    background-color: #42210B;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.projects-grid p {
+    color: #ccc;
+}
+
+.project-square {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-square img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-overlay h3 {
+    margin: 0;
+    font-size: clamp(1.2rem, 3vw, 2rem);
+}
+
+.project-overlay p {
+    margin: 10px 0 0;
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
+}
+
+.project-square:hover img {
+    transform: scale(1.1);
+}
+
+.project-square:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-square:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.social-media-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.icon-button {
+    color: #42210B;
+    font-family: "Poppins", monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .5rem .5rem;
+    background-color: hsl(0, 0%, 100%);
+    border: 0px solid rgb(255, 255, 255);
+    border-radius: 8px;
+    box-shadow: 5px 5px 0.5px rgba(0, 0, 51, 0.2);
+    cursor: pointer;
+    size: 2rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.icon-button:hover {
+    background-color: hsl(0, 0%, 100%);
+    transform: scale(1.1);
+}
+
+.icon-button:active {
+    background-color: #ffffff;
+    transform: scale(0.95);
+}
+
+.button-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.content-wrapper {
+    display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 30px;
+}
+
+.image-container {
+        flex: 1;
+        max-width: 100%;
+        /* Keeps image from getting too small */
+        min-width: 300px;
+        /* Prevents excessive shrinking */
+        text-align: center;
+}
+
+.image-container img {
+    width: 100%;
+    max-width: 800px;
+    /* Ensures it doesn't shrink too much */
+    min-width: 300px;
+    /* Prevents it from getting too small */
+    height: auto;
+    object-fit: cover;
+    /* Ensures it maintains aspect ratio */
+}
+
+.photo-container {
+    flex: 1;
+    max-width: 45%;
+    min-width: 300px;
+    text-align: center;
+}
+
+.photo-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.photo-container:hover {
+    transform: rotate(15deg);
+}
+
+.text-container {
+        flex: 1;
+        max-width: 45%;
+        min-width: 300px;
+        text-align: center;
+}
+
+.text-container p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    line-height: 1.5;
+    color: #42210B;
+}
+
+.design-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* Allow wrapping on small screens */
+    gap: 2rem;
+}
+
+#minime {
+    transition: opacity 0.3s ease-in-out;
+    /* Add transition for opacity */
+}
+
+.social-media-buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Doodle-Style Buttons */
+.doodle-icon-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    /* Space between buttons */
+    flex-wrap: wrap;
+    padding-top: 15px;
+}
+
+/* Button Design */
+.doodle-button {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    border: none;
+    /* Removes default button border */
+    outline: none;
+    /* Removes focus outline */
+    background-color: transparent;
+    /* Ensures no background */
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Doodle Icon Styling */
+.doodle-button img {
+    width: 100%;
+        height: 100%;
+        object-fit: contain;
+        opacity: 0.9;
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Hover Effects */
+.doodle-button:hover {
+    transform: translateY(-5px) rotate(-3deg);
+}
+
+.doodle-button:hover img {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+
+@media (max-width: 768px) {
+    .about-section p {
+            font-size: 1.3rem;
+        }
+    
+    .penultimate-section p {
+        font-size: 1.3rem;
+    }
+    .menu {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .content-wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact-container {
+            display: flex;
+            justify-content: center;
+            /* Center-align items */
+            align-items: center;
+            flex-wrap: wrap;
+            /* Allows wrapping if space is tight */
+            gap: 20px;
+            /* Space between buttons */
+    }
+
+    .contact-links {
+        align-items: center;
+        text-align: center;
+    }
+
+    .social-media-buttons {
+        display: inline-block;
+        margin: 10px;
+    }
+
+    .contact-form-container {
+        width: 100%;
+        color : #42210B
+    }
+
+        .design-flex {
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .photo-container {
+            max-width: 80%;
+            /* Make the image slightly smaller for smaller screens */
+        }
+    
+        .tools-grid {
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            max-width: 100%;
+        }
+    
+        .tool img {
+            width: 70px;
+        }
+    
+        .tool p {
+            font-size: 1rem;
+        }
+
+        .header-image {
+            flex-direction: column;
+            text-align: center;
+            padding: 40px 20px;
+        }
+    
+        .image-container {
+            max-width: 80%;
+            /* Keeps the image size reasonable */
+        }
+    
+        .text-container {
+            max-width: 90%;
+            /* Prevents text from touching edges */
+        }
+}

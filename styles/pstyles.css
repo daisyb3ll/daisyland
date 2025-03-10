@@ -11,6 +11,22 @@
     min-height: 70vh;
 }
 
+.image-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 800px;
+    /* Adjust as needed */
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    box-shadow:5px 5px 10px #fff9f5;
+}
+
+
 /* Active tab smoothly fades in */
 .tab-content.active {
     opacity: 1;
