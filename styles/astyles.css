@@ -121,7 +121,7 @@ main.container {
     padding: 20px 0;
     position: relative;
     height: auto;
-    padding-bottom: 200px;
+    padding-bottom: 100px;
     /* Increased padding so it doesn’t cut off */
 }
 
@@ -179,27 +179,6 @@ main.container {
     margin-top: 20px;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .project-button {
-        font-size: 1.2rem;
-        padding: 8px 15px;
-    }
-}
-
-
-@keyframes fillLine {
-    from {
-        height: 0;
-        opacity: 1;
-    }
-
-    to {
-        height: 100%;
-        opacity: 1;
-    }
-}
-
 .timeline-container {
     /* border: 3px solid gold; */
     position: relative;
@@ -207,10 +186,6 @@ main.container {
     /* or a fixed value */
     padding: 100px;
 }
-
-/* Timeline marker */
-
-/* TIMELINE ITEM */
 .timeline-item {
     display: flex;
     justify-content: space-between;
@@ -226,20 +201,20 @@ main.container {
 
 .timeline-item.active {
     opacity: 1;
-    /* Becomes visible */
     transform: translateY(0);
-    /* Moves to correct position */
 }
 
 .timeline-item-content {
-    width: 45%;
+    width: 90%;
+    max-width: 500px;
     background: white;
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: relative;
-    z-index: 2;
+    text-align: center;
 }
+
+
 
 .timeline-item-content h3 {
     color: #42210B;
@@ -374,38 +349,46 @@ footer {
 
 /* Individual Tool Logo Styling */
 .tool-logo {
-display: flex;
-    justify-content: center;
-    /* Centers icons within the container */
-    align-items: center;
-    gap: 12px;
-    /* Adds spacing between logos */
-    flex-wrap: wrap;
-    padding: 10px 0;
-    /* Adds padding so they don't touch text */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        padding: 15px 0;
+        max-width: 100%;
 }
 
 .tool-logo img {
-width: 50px;
-    /* Adjust icon size */
-    height: 50px;
+    width: 60px;
+    height:   auto;
+    max-height: 60px;
     object-fit: contain;
     border-radius: 8px;
-    /* Optional rounded effect */
-    padding: 8px;
-    /* Adds inner spacing */
+    background: white;
+    padding: 10px;
+    box-shadow: 2px 2px 5px rgba(66, 33, 11, 0.2);
 }
 
 /* Responsive Adjustments */
+
+
 @media (max-width: 768px) {
-    .tool-logo {
-        width: 40px;
-        height: 40px;
-        padding: 8px;
+    .project-button {
+        font-size: 1.2rem;
+        padding: 8px 15px;
     }
-/* Responsive Design */
-/* Desktop styles go here (already in your CSS) */
-/* Mobile Styles */
+}
+@keyframes fillLine {
+    from {
+        height: 0;
+        opacity: 1;
+    }
+
+    to {
+        height: 100%;
+        opacity: 1;
+    }
+}
 @media (max-width: 768px) {
     html,body {
         padding: 0 10px;
@@ -413,7 +396,19 @@ width: 50px;
         width:100%;
         /* Add padding on the sides */
     }
-    
+    .tool-logo {
+            justify-content: center;
+            gap: 8px;
+            max-width: 100%;
+            width: 40px;
+            height: 40px;
+            padding: 8px;
+        }
+    .tool-logo img {
+                width: 50px;
+                max-height: 50px;
+                padding: 5px;
+    }
     * {
         max-width: 100%;
         box-sizing: border-box;
@@ -440,7 +435,6 @@ width: 50px;
         margin: 10px 0;
     }
 
-    /* ✅ About Section Fixes */
     .about-content {
         flex-direction: column;
         align-items: center;
@@ -475,9 +469,11 @@ width: 50px;
         line-height: 1.5;
     }
 
-    /* ✅ TIMELINE FIXES: Stack Cards Vertically */
     .timeline-wrapper {
-        padding: 0 10px;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px 0;
     }
 
     .timeline {
@@ -485,24 +481,21 @@ width: 50px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        /* Center all items */
     }
 
     .timeline-item {
         width: 100%;
-        margin-bottom: 20px;
         text-align: center;
+        display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
     }
 
     .timeline-item-content {
         width: 90%;
-        /* Full width */
         max-width: 500px;
-        /* Keep a reasonable max width */
         padding: 15px;
-        font-size: 1rem;
     }
 
     .timeline-item-content h3 {
@@ -519,7 +512,6 @@ width: 50px;
         line-height: 1.4;
     }
 
-    /* ✅ Remove Left/Right Offsets */
     .timeline-item.left,
     .timeline-item.right {
         left: 0;
@@ -539,4 +531,16 @@ width: 50px;
         stroke-width: 5px;
     }
 }
+
+@media (max-width: 480px) {
+    .tool-logo {
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .tool-logo img {
+        width: 45px;
+        max-height: 45px;
+        padding: 4px;
+    }
 }
