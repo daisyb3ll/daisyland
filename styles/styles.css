@@ -728,3 +728,142 @@ button[type="submit"]:hover {
             /* Prevents text from touching edges */
         }
 }
+/* ... (Your existing CSS) ... */
+
+@media (max-width: 1200px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* Adjust grid for medium screens */
+    }
+}
+
+@media (max-width: 992px) {
+    .header-image {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .image-container,
+    .text-container {
+        max-width: 90%;
+    }
+
+    .text-container h1 {
+        font-size: 3rem;
+        /* Adjust font size for smaller screens */
+    }
+
+    .text-container p {
+        font-size: 1.5rem;
+        /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 5px;
+    }
+
+    .about-section p,
+    .penultimate-section p {
+        font-size: 1.3rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        /* Single column on small screens */
+    }
+
+    .content-wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .contact-links {
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact-form-container {
+        width: 90%;
+        /* Adjust form width */
+    }
+
+    .design-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .photo-container {
+        max-width: 90%;
+    }
+
+    .tools-grid {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    }
+
+    .tool img {
+        width: 60px;
+    }
+
+    .tool p {
+        font-size: 0.9rem;
+    }
+
+    .header-image {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .image-container,
+    .text-container {
+        max-width: 90%;
+    }
+
+    .text-container h1 {
+        font-size: 2.5rem;
+    }
+
+    .text-container p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-container h1 {
+        font-size: 2rem;
+    }
+
+    .text-container p {
+        font-size: 1rem;
+    }
+
+    .logo img {
+        height: 3rem;
+    }
+
+    nav ul li a {
+        font-size: 1.2rem;
+    }
+}

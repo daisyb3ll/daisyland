@@ -278,3 +278,73 @@ footer {
     opacity: 1;
     transform: scale(1.1);
 }
+
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .gallery {
+        column-count: 2;
+    }
+
+    .projects-grid {
+        margin: 0 auto;
+        padding: 10px;
+    }
+
+    .tab-content {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Adjust navigation for smaller screens */
+    header {
+        font-size: 1rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    /* Adjust image and gallery layout */
+    .image-container {
+        max-width: 90%;
+    }
+
+    .gallery {
+        column-count: 1;
+    }
+
+    .tab-content {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* Further reduce nav size */
+    nav ul li a {
+        font-size: 0.9rem;
+    }
+
+    /* Adjust text sizes for better readability */
+    h2 {
+        font-size: 2rem;
+    }
+
+    .project-overlay h3 {
+        font-size: 1.2rem;
+    }
+
+    .project-overlay p {
+        font-size: 1rem;
+    }
+}
