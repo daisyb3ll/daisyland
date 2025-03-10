@@ -152,6 +152,42 @@ main.container {
     /* Debugging - remove or change once working */
 }
 
+.project-button {
+    font-family: 'Poppins', sans-serif;
+        font-size: 2rem;
+        color: #42210B;
+        text-decoration: none;
+        padding: 5px 10px;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.6s ease-in-out, box-shadow 0.3s ease;
+        display: inline-block;
+}
+
+.project-button:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+/* Centering Buttons */
+.project-buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .project-button {
+        font-size: 1.2rem;
+        padding: 8px 15px;
+    }
+}
+
+
 @keyframes fillLine {
     from {
         height: 0;
@@ -325,6 +361,48 @@ footer {
     transform: scale(1.1);
 }
 
+/* Tool Logo Container */
+.tool-logo-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Individual Tool Logo Styling */
+.tool-logo {
+display: flex;
+    justify-content: center;
+    /* Centers icons within the container */
+    align-items: center;
+    gap: 12px;
+    /* Adds spacing between logos */
+    flex-wrap: wrap;
+    padding: 10px 0;
+    /* Adds padding so they don't touch text */
+}
+
+.tool-logo img {
+width: 50px;
+    /* Adjust icon size */
+    height: 50px;
+    object-fit: contain;
+    border-radius: 8px;
+    /* Optional rounded effect */
+    padding: 8px;
+    /* Adds inner spacing */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .tool-logo {
+        width: 40px;
+        height: 40px;
+        padding: 8px;
+    }
 /* Responsive Design */
 /* Desktop styles go here (already in your CSS) */
 /* Mobile Styles */
@@ -429,6 +507,7 @@ footer {
 
     .timeline-item-content h3 {
         font-size: 1.2em;
+        padding: 20px;
     }
 
     .timeline-item-content h4 {
@@ -459,4 +538,5 @@ footer {
     #animatedPath {
         stroke-width: 5px;
     }
+}
 }
