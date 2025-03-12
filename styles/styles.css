@@ -637,6 +637,22 @@ button[type="submit"]:hover {
     transform: scale(1.1);
 }
 
+footer {
+    padding-top: 80px;
+    /* lol almost padding-ton */
+    font-family: 'Poppins';
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1em;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
 
 @media (max-width: 768px) {
     .about-section p {
@@ -649,7 +665,6 @@ button[type="submit"]:hover {
     .menu {
         display: none;
     }
-
     .mobile-menu {
         display: block;
     }
