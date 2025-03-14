@@ -1,3 +1,21 @@
+/* title section */
+.title-section {
+    text-align: center;
+    padding: 40px 20px;
+    /* Light background for contrast */
+}
+
+.title-section h1 {
+    font-size: 3rem;
+    /* Adjust size as needed */
+    font-family: 'Poppins', sans-serif;
+    /* Use one of your imported fonts */
+    font-weight: 600;
+    color:#42210B;
+    /* Dark text for readability */
+    margin: 0;
+}
+
 /* Tab content transition */
 .tab-content {
     opacity: 0;
@@ -53,26 +71,101 @@
     padding: 20px;
 }
 
-/* Ensuring images stay inside the grid properly */
+/* Ensure gallery items behave correctly */
 .gallery-item {
+    position: relative;
+    display: inline-block;
+    /* Prevents unwanted stretching */
+    overflow: hidden;
+    /* Ensures content doesn't overflow */
+    border-radius: 10px;
     width: 100%;
-    margin-bottom: 15px;
-    break-inside: avoid;
+    /* Adjust this if needed */
 }
 
-/* Ensure the gallery centers properly */
+/* Make sure images fit properly */
 .gallery-item img {
     width: 100%;
     display: block;
     border-radius: 10px;
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
 }
 
-/* Hover Effect */
-.gallery-item:hover img {
-    transform: scale(1.02);
-    opacity: 0.9;
+/* Overlay should fully cover the image */
+.gallery-item-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    /* Dark overlay */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Centers text vertically */
+    align-items: center;
+    /* Centers text horizontally */
+    text-align: center;
+    opacity: 0;
+    /* Hidden by default */
+    transition: opacity 0.3s ease-in-out;
+    padding: 10px;
+    box-sizing: border-box;
 }
+
+/* Make sure text does not overflow */
+.gallery-item-overlay h3,
+.gallery-item-overlay p {
+    margin: 5px 0;
+    max-width: 85%;
+    /* Ensures text does not touch edges */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    text-align: center;
+}
+
+/* Adjust font sizes dynamically */
+.gallery-item-overlay h3 {
+    font-size: clamp(12px, 1.2vw, 18px);
+    font-weight: bold;
+    line-height: 1.2;
+    padding: 5px;
+}
+
+.gallery-item-overlay p {
+    font-size: clamp(10px, 1vw, 14px);
+    line-height: 1.3;
+    padding: 5px;
+}
+
+/* Show overlay on hover */
+.gallery-item:hover .gallery-item-overlay {
+    opacity: 1;
+}
+
+/* Slight zoom effect */
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Ensure text fits properly on smaller screens */
+@media (max-width: 768px) {
+    .gallery-item-overlay {
+        padding: 8px;
+    }
+
+    .gallery-item-overlay h3 {
+        font-size: clamp(10px, 2vw, 16px);
+    }
+
+    .gallery-item-overlay p {
+        font-size: clamp(9px, 1.8vw, 12px);
+    }
+}
+
 /* Tab Content Sections */
 .tab-content {
     display: none;
