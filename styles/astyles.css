@@ -349,13 +349,13 @@ footer {
 
 /* Individual Tool Logo Styling */
 .tool-logo {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        gap: 15px;
-        padding: 15px 0;
-        max-width: 100%;
+display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* Centers icons horizontally */
+    align-items: center;
+    gap: 10px;
+    /* Space between icons */
 }
 
 .tool-logo img {
@@ -397,17 +397,15 @@ footer {
         /* Add padding on the sides */
     }
     .tool-logo {
-            justify-content: center;
-            gap: 8px;
-            max-width: 100%;
-            width: 40px;
-            height: 40px;
-            padding: 8px;
+        flex-wrap: nowrap;
+            /* Ensures logos stay in a single row */
+            overflow-x: auto;
+            /* Allows horizontal scrolling if needed */
+            justify-content: flex-start;
+            /* Aligns to the left for scrolling */
         }
     .tool-logo img {
-                width: 50px;
-                max-height: 50px;
-                padding: 5px;
+        width: 35px
     }
     * {
         max-width: 100%;
