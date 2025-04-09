@@ -16,8 +16,6 @@
 │── styles/             # Static files (CSS, JS)
 ```
 ### to-do edits
-- [ ] Buy groceries
-- [ ] adding more whitespace between components for margins, and text between project cards
 - [ ] site error for when clickin on project cards and hitting back button
 - [ ] project card titles / project card descriptions
 - [ ] optional: adding tiny logos for tools used in corers of project title cards
