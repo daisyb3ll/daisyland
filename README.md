@@ -15,3 +15,14 @@
 │── projects/           # Dependencies (not committed, install)
 │── styles/             # Static files (CSS, JS)
 ```
+### to-do edits
+- [ ] Buy groceries
+- [ ] adding more whitespace between components for margins, and text between project cards
+- [ ] site error for when clickin on project cards and hitting back button
+- [ ] project card titles / project card descriptions
+- [ ] optional: adding tiny logos for tools used in corers of project title cards
+- [ ] text layout editing "Hi! (with a newline here) my name is Daisy."
+- [ ] moving skills seciton "How I Design" towards the top section 
+- [ ] remove hover from tools if theyre not gonna be buttons or add animations
+- [ ] add pictures next to projects on timeline 
+- [ ] including relavent coursework in same section as skills / tools
