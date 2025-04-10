@@ -24,3 +24,5 @@
 - [ ] remove hover from tools if theyre not gonna be buttons or add animations
 - [ ] add pictures next to projects on timeline 
 - [ ] including relavent coursework in same section as skills / tools
+- [ ] make nav sticky! 
+- [ ] make home logo sticky!

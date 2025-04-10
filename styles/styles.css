@@ -4,7 +4,6 @@ body {
     transition: opacity 0.5s ease-in-out;
 }
 
-
 body,
 html {
     font-family: 'Poppins', sans-serif;
@@ -18,6 +17,19 @@ html {
     color: #42210B;
     
 }
+.projects-section{
+    background-size: cover;
+        background-image: url("../assets/starting_blank.png");
+        background-position: center;
+        background-repeat: no-repeat;
+}
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    /* Keeps it above other content */
+    background-color: white;
+}
 
 .pattern-bgrnd
 {
@@ -30,19 +42,13 @@ html {
     /* Centers the background image */
     background-repeat: no-repeat;
     /* Prevents the background from repeating */
+    z-index: -1;
 }
 
 .about-section{
-    background-image: url("../assets/starting_blank.png");
     width: 100%;
     margin: 0;
     padding: 0;
-    background-size: cover;
-     /* Ensures the background covers the entire section */
-    background-position: center;
-    /* Centers the background image */
-    background-repeat: no-repeat;
-    /* Prevents the background from repeating */
 }
 .design-progress,
 .penultimate-section {
@@ -60,8 +66,8 @@ html {
 p {
     font-family: 'Poppins', sans-serif;
     font-size: 3rem;
-    line-height: 1.5;
     padding: px;
+    text-align: left;
 }
 
 h1,
@@ -74,7 +80,8 @@ h6 {
 }
 
 h1 {
-    font-size: 3.5rem;
+    font-size: 6rem;
+    line-height: 1;
 }
 
 h2 {
@@ -181,15 +188,11 @@ main {
 }
 
 .about-section {
-    background-image: url("../assets/starting_blank.png");
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 30px;
     padding: 50px 20px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
 .design-progress {
@@ -422,7 +425,7 @@ button[type="submit"]:hover {
     position: relative;
     overflow: hidden;
     aspect-ratio: 1 / 1;
-    border-radius: 10px;
+    border-radius: 0px;
     background-color: #f0f0f0;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -440,7 +443,7 @@ button[type="submit"]:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.556);
     color: white;
     display: flex;
     flex-direction: column;
