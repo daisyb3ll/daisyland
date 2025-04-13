@@ -31,7 +31,6 @@
                 <li><a href="#contact">contact</a></li>
             </ul>
         </nav>
-        </div>
     </header>
 
     <main class="container">
@@ -140,13 +139,14 @@
             <!-- Design Progress Section -->
             <div class="design-progress">
                 <div class="content-wrapper">
-                    <section id="how" class="container">
                         <section id="process" class="container">
-                            <h1>How I Design</h1>
+                            <a href="#how">how I design</a>
                             <div class="design-flex">
+                                
                                 <div class="photo-container">
                                     <img src="assets/bunny_sketch.png" alt="bojji art">
                                 </div>
+
                                 <div class="tools-grid">
                                     <div class="tool">
                                         <img src="assets/svg_files/miro.svg" alt="Miro">
@@ -168,7 +168,6 @@
                                     </div>
                                 </div>
                         </section>
-                    </section>
                 </div>
             </div>
 
@@ -292,22 +291,19 @@
     });
 
     document.addEventListener("DOMContentLoaded", function () {
-            const minime = document.getElementById("minime");
-
-            if (minime) {
-                minime.addEventListener("click", function () {
-                    // Toggle between childhood and current photo
-                    this.src = this.src.includes("minier_me.png")
-                        ? "assets/Asset 19.png" 
-                        : "assets/minier_me.png";
-                });
-            }
-        });
-
-
+        
+        const minime = document.getElementById("minime");
+        if (minime) {
+            minime.addEventListener("click", function () {
+                minime.src = minime.src.includes("minier_me.png")
+                    ? "assets/Asset 19.png"
+                    : "assets/minier_me.png";
+            });
+        }
+    });
     
     </script>
 
-</body>
+</body> 
 
 </html>
