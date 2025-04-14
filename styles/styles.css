@@ -26,7 +26,7 @@ html {
         background-image: url("../assets/starting_blank.png");
         background-position: center;
         background-repeat: no-repeat;
-        border: solid red;
+        /* border: solid red; */
 }
 header {
     position: sticky;
@@ -62,25 +62,28 @@ header {
 }
 
 .about-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* vertically centers if parent has height */
-    flex-direction: column;
-    text-align: center;
-    padding: 50px 20px;
     width: 100%;
     box-sizing: border-box;
+    margin-bottom: 3em;
 }
 
 .about-section .content-wrapper {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     text-align:left;
-    gap: 30px;
     margin: 0 auto;
+}
+
+.about-section .text-container {
+    /* or 90%, whichever looks better to you */
     width: 100%;
+    margin: 0 auto;
+    text-align: left;
+    padding: 0 1rem;
+    /* optional: keeps some breathing space on the edges */
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    max-width: 80%;
 }
 .design-progress,
 .penultimate-section {
@@ -213,18 +216,10 @@ main {
 }
 
 .about-header h1 {
-    text-size-adjust: 100 px;
     text-align: center;
     margin-bottom: 30px;
 }
 
-.about-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-    padding: 50px 20px;
-}
 
 .design-progress {
     padding: 60px 20px;
@@ -1036,7 +1031,7 @@ footer p {
 }
 
 #minime {
-    max-width: 200px;
+    max-width: 500px;
     /* adjust size as you like */
     width: 100%;
     height: auto;
@@ -1044,4 +1039,14 @@ footer p {
     margin: 20px auto;
     transition: opacity 0.3s ease-in-out;
     cursor: pointer;
+}
+
+/* Mobile scroll-based reveal */
+.project-square.reveal .project-overlay {
+    opacity: 1;
+}
+
+.project-square.reveal img {
+    transform: scale(1.1);
+    filter: blur(8px);
 }
