@@ -76,8 +76,6 @@ main.container {
 
 .about-image img {
     width: 100%;
-    border-radius: 10px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .about-text {
@@ -126,13 +124,12 @@ main.container {
 }
 
 .timeline {
-    color: #42210B;
-    font-family: 'Poppins';
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    padding-left: 50px;
-}
+            color: #42210B;
+            font-family: 'Poppins';
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
 
 /* The Daisy Line */
 .timeline-line {
@@ -178,24 +175,44 @@ main.container {
     gap: 15px;
     margin-top: 20px;
 }
-
-.timeline-container {
-    /* border: 3px solid gold; */
+/* TIMELINE SECTION */
+.timeline-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0 100px;
     position: relative;
-    height: 100vh;
-    /* or a fixed value */
-    padding: 100px;
+    height: auto;
 }
-.timeline-item {
+
+.timeline {
+    color: #42210B;
+    font-family: 'Poppins';
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
     position: relative;
-    margin-bottom: 40px;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 100%;
+    background-color: transparent;
+    z-index: 1;
+}
+
+.timeline-item {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    width: 100%;
     z-index: 2;
 }
 
@@ -204,17 +221,52 @@ main.container {
     transform: translateY(0);
 }
 
-.timeline-item-content {
-    width: 90%;
-    max-width: 500px;
-    background: white;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
+.timeline-content-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    max-width: 900px;
+    width: 100%;
+    /* box-sizing: border-box; */
+}
+
+.timeline-item.right .timeline-content-wrapper {
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-left: 0;
+    transform: translateX(25%);
+    /* border: solid green; */
+}
+.timeline-item.left .timeline-content-wrapper {
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 0px;
+    transform: translateX(-15%);
+    /* border: solid red; */
 }
 
 
+.timeline-side-photo {
+    flex: 0 0 240px;
+    max-width: 240px;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.timeline-side-photo img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.timeline-item-content {
+    flex: 1;
+    background: white;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    text-align: left;
+}
 
 .timeline-item-content h3 {
     color: #42210B;
@@ -229,16 +281,7 @@ main.container {
     font-family: Poppins, sans-serif;
 }
 
-.timeline-item.left {
-    left: 0;
-    text-align: right;
-}
-
-.timeline-item.right {
-    left: 50%;
-    text-align: left;
-}
-
+/* flower timeloine */
 .flower-svg {
     scale: 80%;
     padding-top: 3em;
@@ -509,10 +552,14 @@ display: flex;
         line-height: 1.4;
     }
 
-    .timeline-item.left,
+    .timeline-item.left {
+        justify-content: flex-end;
+        text-align: right;
+    }
+    
     .timeline-item.right {
-        left: 0;
-        text-align: center;
+        justify-content: flex-start;
+        text-align: left;
     }
 
     /* ✅ Reduce Timeline Path & SVG */
@@ -539,5 +586,55 @@ display: flex;
         width: 45px;
         max-height: 45px;
         padding: 4px;
+    }
+}
+
+#minime {
+    max-width: 500px;
+    /* adjust size as you like */
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    transition: opacity 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.timeline-side-photo {
+    max-width: 280px;
+    width: 40%;
+    flex-shrink: 0;
+    min-width: 300px;
+    overflow: hidden;
+    opacity: 1;
+    z-index: 2;
+}
+
+.timeline-side-photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .timeline-item {
+        flex-direction: column !important;
+        align-items: center;
+    }
+
+    .timeline-side-photo {
+        width: 90%;
+        margin-top: 10px;
+    }
+}
+@media (max-width: 768px) {
+    .timeline-content-wrapper {
+        flex-direction: column !important;
+        align-items: center;
+    }
+    .timeline-side-photo {
+        width: 90%;
+        margin-bottom: 10px;
     }
 }

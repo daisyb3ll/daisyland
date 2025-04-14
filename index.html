@@ -26,8 +26,8 @@
 
         <nav>
             <ul>
-                <li><a href="#about">about</a></li>
                 <li><a href="#projects">projects</a></li>
+                <li><a href="about.html">about</a></li>
                 <li><a href="#contact">contact</a></li>
             </ul>
         </nav>
@@ -134,7 +134,7 @@
         </div>
 
 <!-- Repeating Page Background Starts -->
-            <div class="pattern-bgrnd"> 
+            <!-- <div class="pattern-bgrnd">  -->
 
             <!-- Design Progress Section
             <div class="design-progress">
@@ -172,7 +172,7 @@
             </div>  -->
 
 <!-- About Section -->
-<div class="about-section">
+<!-- <div class="about-section">
     <section id="about" class="container">
         <div class="content-wrapper">
             <div class="text-container">
@@ -192,14 +192,46 @@
                     graphic design work for student clubs like Computer Science Club, The Society of Women Engineers, and Chess Club.
                 </p>
 
+                    <div class="media-row">
+                        <div class="image-container">
+                            <img id="swe-tabling" src="assets/irl-photos/swe-tabling-table.JPEG" alt="SWE-tabling-stickers">
+                        </div>
+                    
+                        <div class="image-container">
+                            <img id="cs-club-meeting" src="assets/irl-photos/cs-club.jpg" alt="cs-club-instagram-photo">
+                        </div>
+                    </div>
+
+                    
                 <p>
                     When i'm not working on Software and conducting research I like to create all kinds of art!
-                    I sew all kinds of projects for fun.I also like to draw, read, and I enojoy watching anime and reading manga.
-                    I also play guitar, and love to skate! 
+                    In my free time I like to swe, also like to draw, read, and I enojoy watching anime and reading manga.
+                    I also play guitar, and love to skate! My most new hobby has been 3d modeling and sculpting in Nomad.
                 </p>
 
+                <div class = media-row>
+                    <div class="video-container">
+                        <video width="320" height="240" autoplay muted loop>
+                            <source src="assets/irl-photos/daisy-skating.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    
+                    <div class="image-container">
+                        <img id="pete-3d" src="assets/irl-photos/3d-pete.PNG" alt="photo-of-resin-figure">
+                    </div>
+
+                    <div class="video-container">
+                        <video width="320" height="240" autoplay muted loop>
+                            <source src="assets/irl-photos/daisy-sews.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                </div>
+
+                
+
                 <p>
-                   I'm taking steps towards landing my first role! My eventual career goal is to go back to school for HCI or UX/UI!
+                I'm taking steps towards landing my first role! My eventual career goal is to go back to school for HCI or UX/UI!
                 </p>
 
                 <p>To find out more about me and my journey in tech, feel free to check out my resume or bio.</p>
@@ -210,10 +242,10 @@
             </div>
         </div>
     </section>
-</div>
+</div> -->
 
 <!-- Background Pattern Closing Div -->
-</div>
+<!-- </div> -->
 
         <!-- Penultimate Section -->
         <div class="penultimate-section">
@@ -312,7 +344,7 @@
     
 
     document.addEventListener("DOMContentLoaded", function () {
-       if (window.innerWidth <= 768) {
+        if (window.innerWidth <= 768) {
             const projectSquares = document.querySelectorAll(".projects-grid .project-square");
 
             const observer = new IntersectionObserver((entries) => {

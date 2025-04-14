@@ -1050,3 +1050,27 @@ footer p {
     transform: scale(1.1);
     filter: blur(8px);
 }
+
+.media-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.media-row .image-container,
+.media-row .video-container {
+    flex: 1 1 300px;
+    /* Adjusts to available space, with a min width */
+    max-width: 320px;
+}
+
+.media-row img,
+.media-row video {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+}
