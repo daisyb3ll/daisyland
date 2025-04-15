@@ -225,7 +225,7 @@ main.container {
     display: flex;
     align-items: center;
     gap: 100px;
-    max-width: 900px;
+    max-width: 1100px;
     width: 100%;
     /* box-sizing: border-box; */
 }
@@ -234,7 +234,6 @@ main.container {
     flex-direction: row;
     justify-content: flex-start;
     margin-left: 0;
-    transform: translateX(25%);
     /* border: solid green; */
 }
 .timeline-item.left .timeline-content-wrapper {
@@ -247,22 +246,31 @@ main.container {
 
 
 .timeline-side-photo {
-    flex: 0 0 240px;
-    max-width: 240px;
-    overflow: hidden;
-    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    flex-wrap: wrap;
+    /* FORCE row layout, no wrapping */
+    max-width: 100%;
+    /* don't restrict unless needed */
+    overflow-x: auto;
+    /* scroll horizontally if overflowed */
 }
 
 .timeline-side-photo img {
-    width: 100%;
-    height: auto;
+    height: 300px;
+    /* adjust to desired size */
+    width: auto;
+    border-radius: 10px;
     object-fit: cover;
+    flex-shrink: 0;
+    /* prevents squishing */
 }
 
 .timeline-item-content {
     flex: 1;
     background: white;
-    padding: 25px 30px;
+    padding: 18px 34px;
     border-radius: 12px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
     text-align: left;
@@ -599,24 +607,6 @@ display: flex;
     transition: opacity 0.3s ease-in-out;
     cursor: pointer;
 }
-
-.timeline-side-photo {
-    max-width: 280px;
-    width: 40%;
-    flex-shrink: 0;
-    min-width: 300px;
-    overflow: hidden;
-    opacity: 1;
-    z-index: 2;
-}
-
-.timeline-side-photo img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-}
-
 @media (max-width: 768px) {
     .timeline-item {
         flex-direction: column !important;
