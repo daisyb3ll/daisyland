@@ -1,0 +1,245 @@
+header {
+    background-position: center;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fixed-logo {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 100;
+}
+
+.logo img {
+    height: 4rem;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-size: 1.5rem;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+    cursor: pointer;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+} 
+body {
+    font-family: "Poppins", sans-serif;
+    color: #42210B;
+    margin: 10em;
+    padding: 20px;
+    line-height: 1.6;
+    border: solid red;
+}
+
+h1 {
+    margin-top: 2em;
+    font-size: 2.5rem;
+    margin: 0;
+    border: solid lime;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    border: solid limegreen;
+}
+
+h4 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+    text-transform: lowercase;
+    border: solid green;
+}
+
+.banner-image img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border: solid orange;
+}
+
+.case-content {
+
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 1em;
+    border: solid purple;
+}
+
+.problem-statement{
+        display: flex;
+        flex-direction: row;
+        display: flex;
+        /* vertically center image and text */
+        gap: 40px;
+        /* space between image and text */
+        margin: 40px 0;
+        border: solid teal;
+}
+
+.audience-section
+{
+    display: flex;
+    flex-direction: row;
+    display: flex;
+    border: solid pink;
+}
+
+.image-box {
+    width: 600px;
+    height: 350px;
+}
+.pink {
+    background-color: #f99c9c;
+}
+
+
+.card-stack-diagonal {
+    position: relative;
+    width: 350px;
+    height: 300px;
+    margin: 60px auto;
+    padding: 2em;
+}
+
+.card {
+    position: absolute;
+    width: 200px;
+    height: 300px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 10px;
+    color: #42210B;
+    font-family: "Poppins", sans-serif;
+}
+
+.card-content {
+    display: none;
+    font-size: 0.9rem;
+}
+
+/* Default stacked positions */
+.green {
+    background-color: #9cf9b2;
+    top: 0;
+    left: 100px;
+    z-index: 1;
+}
+
+.blue {
+    background-color: #9cd7f9;
+    top: 20px;
+    left: 50px;
+    z-index: 2;
+}
+
+.orange {
+    background-color: #f9b279;
+    top: 40px;
+    left: 0;
+    z-index: 3;
+}
+
+/* When a card is clicked */
+.card.active {
+    transform: scale(1.05);
+    z-index: 4 !important;
+}
+
+.card.active .card-content {
+    display: block;
+    margin-top: 10px;
+}
+
+/* image grid */
+
+.image-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    height: 500px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.img {
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+}
+
+/* Position the third image to span two rows */
+.img-3 {
+    grid-row: 1 / span 2;
+}
+
+/* research grid stuff for proto */
+
+.research-section {
+    max-width: 1000px;
+    font-family: "Poppins", sans-serif;
+    color: #42210B;
+}
+
+.research-section h4 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.research-grid {
+    display: flex;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.research-card {
+    flex: 1;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.research-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+}
+
+.research-card.expanded {
+    flex: 3;
+}

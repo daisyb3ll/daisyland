@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Case Study Template</title>
+    <link rel="stylesheet" href="../projects/casestudy.css">
+</head>
+
+<header>
+    <a href="index.html">
+        <div class="logo">
+            <img src="../assets/daisy.logo 1.png" alt="daisy logo">
+        </div>
+    </a>
+
+    <nav>
+        <ul>
+            <li><a href="../index.html#projects">projects</a></li>
+            <li><a href="../about.html">about</a></li>
+            <li><a href="../index.html#contact">contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="case-content">
+    <section class="overview">
+    
+        <div class = "banner-image">
+            <img src = "../assets/portfolio_assets/fr_pportfolio/linkedinHeader.png" alt = "banner image">
+        </div>
+        <h3>overview</h3>
+        <p>this is the product/design and this is the context it was made in</p>
+    </section>
+
+    <section class="problem-statement">
+        <div class="image-box blue"></div>
+
+        <div class="text-block">
+            <h4>problem statement</h4>
+            <p>this is the problem/ challenge the design is intended to address</p>
+        </div>
+    </section>
+
+
+    <section class="audience-section">
+        <div>
+            
+            <h4> user & audience:</h4>
+            <p>describe the user and the audience/ who is the user? who is the audience?</p>
+        </div>
+
+        <div class="card-stack-diagonal" id="cardStack">
+            <div class="card green" onclick="bringToFront(this)">
+                <div class="card-content">Green card content</div>
+            </div>
+            <div class="card blue" onclick="bringToFront(this)">
+                <div class="card-content">Blue card content</div>
+            </div>
+            <div class="card orange" onclick="bringToFront(this)">
+                <div class="card-content">Orange card content</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="concept-stuff">
+        <div>
+            <h4> concept art</h4>
+                <p>space for concept stages and stuff</p>
+        </div>
+
+        <section class="image-grid">
+            <div class="img img-1"><img src="path/to/image1.jpg" alt="Top Left"></div>
+            <div class="img img-2"><img src="path/to/image2.jpg" alt="Bottom Left"></div>
+            <div class="img img-3"><img src="path/to/image3.jpg" alt="Right Column"></div>
+        </section>
+    </section>
+
+    <section class="sketches">
+        <div>
+            <h4> sketches and wireframes</h4>
+            <p>space for concept stages and stuff</p>
+        </div>
+    </section>
+
+    <section class="research-section">
+        <h4>Research:</h4>
+        <p>explaining research methodology used to understand user needs, include user journeys, include personas</p>
+        <div class="research-grid">
+                <div class="research-card expanded"> <!-- big one -->
+                    <img src="path/to/image1.jpg" alt="Research Overview">
+                </div>
+                <div class="research-card" onclick="toggleExpand(this)">
+                    <img src="path/to/image2.jpg" alt="Journey 1">
+                </div>
+                <div class="research-card" onclick="toggleExpand(this)">
+                    <img src="path/to/image3.jpg" alt="Journey 2">
+                </div>
+                <div class="research-card" onclick="toggleExpand(this)">
+                    <img src="path/to/image4.jpg" alt="Persona">
+                </div>
+        </div>
+        </section>
+
+
+    </section>
+
+    <section class="conclusions / reflection">
+        <div>
+            <h4> reflection / conclusions</h4>
+            <p>challenges , solutions, outcomes and impacts & reflections </p>
+        </div>
+    </section>
+    
+
+
+    <script>
+        function bringToFront(card) {
+            // Remove active state from all cards
+            document.querySelectorAll('.card').forEach(c => {
+                c.classList.remove('active');
+            });
+
+            // Add active to the clicked one
+            card.classList.add('active');
+        };
+
+        function toggleExpand(card) {
+            const allCards = document.querySelectorAll('.research-card');
+
+            if (card.classList.contains('expanded')) {
+                card.classList.remove('expanded'); // collapse if already expanded
+            } else {
+                allCards.forEach(c => c.classList.remove('expanded'));
+                card.classList.add('expanded'); // expand the one clicked
+            }
+        };
+    </script>
+
+
+</main>
+</body>
+
+</html>
