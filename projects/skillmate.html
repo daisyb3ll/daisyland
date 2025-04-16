@@ -13,7 +13,7 @@
 </head>
 
 <header>
-    <a href="index.html">
+    <a href="../index.html">
         <div class="logo">
             <img src="../assets/daisy.logo 1.png" alt="daisy logo">
         </div>
@@ -32,42 +32,100 @@
     <section class="overview">
     
         <div class = "banner-image">
-            <img src = "../assets/portfolio_assets/fr_pportfolio/linkedinHeader.png" alt = "banner image">
+            <img src = "../projects/skillmate_assets/Asset 2-100.jpg" alt = "banner image">
         </div>
-        <h3>overview</h3>
-        <p>this is the product/design and this is the context it was made in</p>
+
+        <h3>problem</h3>
+        <p>
+        In the reality of the job market today, applying for positions and getting hired has turned into a job in itself. More
+        and more applications demand hours of work, personalization, and effort. The process has become frustrating and
+        anxiety-inducing with the demands of extensive customization, personalization, and requirements.
+        <br><br>
+        On the flip side, employers face similar challenges in identifying suitable, competent, and promising candidates from
+        such a large applicant pool.<br><br>
+        
+        This mentally exhausting, time consuming, and morale draining process indicates a larger
+        issue, in the inefficiency and faults in the role-to-recuiter-to-applicant relationship. 
+        </p>
     </section>
 
     <section class="problem-statement">
         <div class="image-box blue"></div>
-
-        <div class="text-block">
-            <h4>problem statement</h4>
-            <p>this is the problem/ challenge the design is intended to address</p>
-        </div>
+        <section class="project-intro">
+            <div class="project-column">
+                <h5>project</h5>
+                <hr>
+                <h2>Skillmate</h2>
+                <p class="description">
+                    a digital product that empowers students to pursue their dream roles by improving the job search experience
+                </p>
+            </div>
+        
+            <div class="info-column">
+                <h5>info</h5>
+                <hr>
+                <div class="info-pair">
+                    <strong>Role</strong>
+                    <p>UX/UI Designer & IOS Prototyper</p>
+                </div>
+                <div class="info-pair">
+                    <strong>Team</strong>
+                    <p>1 UX Designers, 2 IOS Developers <br>& 1 Data Scientist/ Fullstack Developer </p>
+                </div>
+                <div class="info-pair">
+                    <strong>Timeline</strong>
+                    <p>Final Projectr Submission; Software Design</p>
+                </div>
+            </div>
+        </section>
     </section>
+
 
 
     <section class="audience-section">
         <div>
-            
-            <h4> user & audience:</h4>
-            <p>describe the user and the audience/ who is the user? who is the audience?</p>
+            <h5>understanding the user</h5>
+            <hr>
+            <h4> user & audience</h4>
+            <p>To understand the user and target audience we collected data by conducting informal qualitative research <br> through
+            informal interviews, and contextual queries of our fellow peers.
+            </p>
+            <p><em>we identified the following</em></p>
         </div>
 
         <div class="card-stack-diagonal" id="cardStack">
             <div class="card green" onclick="bringToFront(this)">
-                <div class="card-content">Green card content</div>
+                <div class="card-content">
+                    <h2>Burnout</h2>
+                    <p>applications are time-consuming, often requiring tailored responses, resumes, and cover letters.</p>
+                    <br>
+                    <p>users are tired! theyre exhausted from the process, but they need to find a role!</p>
+                </div>
             </div>
             <div class="card blue" onclick="bringToFront(this)">
-                <div class="card-content">Blue card content</div>
+                <div class="card-content">
+                    <h2>Ghosting</h2>
+                    <p>many applicants send in applications that they never hear back from</p>
+                    <br>
+                    <p><em>its demoralizing, especially when i'm putting so much work in! at least send me a copy-paste rejection </em></p>
+                    </div>
             </div>
-            <div class="card orange" onclick="bringToFront(this)">
-                <div class="card-content">Orange card content</div>
-            </div>
+            <div class="card orange" onclick = "showCard(this)">
+                <div class="card-content">
+                    <h2>Narrow or Misleading Filters</h2>
+                    <p>Roles want very specific qualities and experiences!</p>
+                    <br>
+                    <p><em>I'm graduating and applying early career- why is everything a minimum 5 years of experience?</em></p>
+                </div>
         </div>
     </section>
 
+    <section class="overview">
+        <h5>design opportunity</h5>
+        <h3>our proposal</h3>
+        <p>asdfghjk</p>
+    </section>
+    
     <section class="concept-stuff">
         <div>
             <h4> concept art</h4>
@@ -139,6 +197,13 @@
                 allCards.forEach(c => c.classList.remove('expanded'));
                 card.classList.add('expanded'); // expand the one clicked
             }
+        };
+
+    function showCard(clickedCard) {
+            document.querySelectorAll('.card').forEach(card => {
+                card.classList.remove('active');
+            });
+            clickedCard.classList.add('active');
         };
     </script>
 

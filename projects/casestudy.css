@@ -42,10 +42,18 @@ nav ul li a:hover {
 body {
     font-family: "Poppins", sans-serif;
     color: #42210B;
-    margin: 10em;
+    margin: 5em;
     padding: 20px;
     line-height: 1.6;
-    border: solid red;
+    /* border: solid red; */
+}
+
+p {
+    color: #42210B;
+    font-family: 'Poppins';
+    line-height: 1.6;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
 }
 
 h1 {
@@ -56,9 +64,10 @@ h1 {
 }
 
 h3 {
+    font-weight: 500 ;
     font-size: 1.5rem;
     margin-top: 0.5rem;
-    border: solid limegreen;
+    /* border: solid limegreen; */
 }
 
 h4 {
@@ -66,14 +75,15 @@ h4 {
     font-weight: bold;
     margin-bottom: 0.3rem;
     text-transform: lowercase;
-    border: solid green;
+    /* border: solid green; */
 }
 
 .banner-image img {
     width: 100%;
-    max-height: 300px;
     object-fit: cover;
-    border: solid orange;
+    /* border: solid orange; */
+    /* my border for debugging */
+    box-shadow: 0 10px 6px rgba(0, 42, 255, 0.067);
 }
 
 .case-content {
@@ -82,18 +92,17 @@ h4 {
     flex-direction: column;
     gap: 40px;
     padding: 1em;
-    border: solid purple;
+    /* border: solid purple; */
 }
 
 .problem-statement{
         display: flex;
         flex-direction: row;
-        display: flex;
         /* vertically center image and text */
         gap: 40px;
         /* space between image and text */
         margin: 40px 0;
-        border: solid teal;
+        /* border: solid teal; */
 }
 
 .audience-section
@@ -101,7 +110,7 @@ h4 {
     display: flex;
     flex-direction: row;
     display: flex;
-    border: solid pink;
+    /* border: solid pink; */
 }
 
 .image-box {
@@ -129,33 +138,68 @@ h4 {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: all 0.3s ease;
-    padding: 10px;
+    padding: 20px;
     color: #42210B;
     font-family: "Poppins", sans-serif;
+
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .card-content {
-    display: none;
-    font-size: 0.9rem;
+    display: block;
+    /* change from 'none' */
+    font-size: 0.85rem;
+    line-height: 1.4;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    max-height: 100%;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
+
+/* When active, allow content to show
+.card.active .card-content {
+    display: block;
+} */
+
+.card-content h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 0;
+    white-space: normal;
+}
+
+.card-content p {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5;
+    margin: 0;
+    white-space: normal;
+}
 /* Default stacked positions */
 .green {
-    background-color: #9cf9b2;
+    background-color: #00c8ff;
     top: 0;
     left: 100px;
     z-index: 1;
 }
 
 .blue {
-    background-color: #9cd7f9;
+    background-color: #ffd500;
     top: 20px;
     left: 50px;
     z-index: 2;
 }
 
 .orange {
-    background-color: #f9b279;
+    background-color: #ff8d2f;
     top: 40px;
     left: 0;
     z-index: 3;
@@ -171,7 +215,6 @@ h4 {
     display: block;
     margin-top: 10px;
 }
-
 /* image grid */
 
 .image-grid {
@@ -242,4 +285,117 @@ h4 {
 
 .research-card.expanded {
     flex: 3;
+}
+
+footer {
+    padding-top: 80px;
+    /* lol almost padding-ton */
+    font-family: 'Poppins';
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1em;
+}
+
+/* Doodle-Style Buttons */
+.doodle-icon-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Button Design */
+.doodle-button {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    border: none;
+    /* Removes default button border */
+    outline: none;
+    /* Removes focus outline */
+    background-color: transparent;
+    /* Ensures no background */
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Doodle Icon Styling */
+.doodle-button img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0.9;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Hover Effects */
+.doodle-button:hover {
+    transform: translateY(-5px) rotate(-3deg);
+}
+
+.doodle-button:hover img {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.project-intro {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 0 20px;
+    font-family: 'Helvetica Neue', sans-serif;
+    color: #222;
+}
+
+.project-column,
+.info-column {
+    flex: 1;
+}
+
+h5 {
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+.info-pair {
+    margin-bottom: 20px;
+}
+
+.info-pair strong {
+    font-size: 1rem;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.info-pair p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5;
 }
