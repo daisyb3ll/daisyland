@@ -50,7 +50,10 @@
     </section>
 
     <section class="problem-statement">
-        <div class="image-box blue"></div>
+        <div class="image-box">
+            <img src="../projects/skillmate_assets/hands-holding.jpg" alt="project image">
+        </div>
+
         <section class="project-intro">
             <div class="project-column">
                 <h5>project</h5>
@@ -154,9 +157,11 @@
             <hr>
         </div>
         <section class="image-grid">
-            <div class="img img-1"><img src="path/to/image1.jpg" alt="Top Left"></div>
-            <div class="img img-2"><img src="path/to/image2.jpg" alt="Bottom Left"></div>
-            <div class="img img-3"><img src="path/to/image3.jpg" alt="Right Column"></div>
+            <!-- projects/skillmate_assets/skillmate-branding.png -->
+        <div class="img img-1"><img src="../projects/skillmate_assets/skillmate-branding.png" alt="Top Left"></div>
+            <div class="img img-4"><img src="../projects/skillmate_assets/holding-hands-concept1.png" alt="Top Left"></div>
+            <div class="img img-2"><img src="../projects/skillmate_assets/home-button-proto.png" alt="Bottom Left"></div>
+            <div class="img img-3"><img src="../projects/skillmate_assets/iconography1.png" alt="Right Column"></div>
         </section>
     </section>
 
@@ -165,17 +170,17 @@
         <hr>
         <p>explaining research methodology used to understand user needs, include user journeys, include personas</p>
         <div class="research-grid">
-                <div class="research-card expanded"> <!-- big one -->
-                    <img src="path/to/image1.jpg" alt="Research Overview">
+                <div class="research-card" onclick="toggleExpand(this)">
+                    <img src="../projects/skillmate_assets/startup-animation.png" alt="Journey 2">
                 </div>
                 <div class="research-card" onclick="toggleExpand(this)">
-                    <img src="path/to/image2.jpg" alt="Journey 1">
+                    <img src="../projects/skillmate_assets/homescreen.png" alt="Journey 2">
+                </div>
+                <div class="research-card expanded" onclick="toggleExpand(this)"> <!-- big one -->
+                    <img src="../projects/skillmate_assets/button-branding.png" alt="Research Overview">
                 </div>
                 <div class="research-card" onclick="toggleExpand(this)">
-                    <img src="path/to/image3.jpg" alt="Journey 2">
-                </div>
-                <div class="research-card" onclick="toggleExpand(this)">
-                    <img src="path/to/image4.jpg" alt="Persona">
+                    <img src="../projects/skillmate_assets/figma.png" alt="Journey 1">
                 </div>
         </div>
         </section>
