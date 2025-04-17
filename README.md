@@ -17,12 +17,12 @@
 ```
 ### to-do edits
 - [ ] site error for when clickin on project cards and hitting back button
-- [ ] project card titles / project card descriptions
-- [ ] optional: adding tiny logos for tools used in corers of project title cards
-- [ ] text layout editing "Hi! (with a newline here) my name is Daisy."
-- [ ] moving skills seciton "How I Design" towards the top section 
-- [ ] remove hover from tools if theyre not gonna be buttons or add animations
-- [ ] add pictures next to projects on timeline 
+- [x] project card titles / project card descriptions
+- [x] optional: adding tiny logos for tools used in corers of project title cards
+- [x] text layout editing "Hi! (with a newline here) my name is Daisy."
+- [x] moving skills seciton "How I Design" towards the top section 
+- [x] remove hover from tools if theyre not gonna be buttons or add animations
+- [x] add pictures next to projects on timeline 
 - [ ] including relavent coursework in same section as skills / tools
-- [ ] make nav sticky! 
-- [ ] make home logo sticky!
+- [x] make nav sticky! 
+- [x] make home logo sticky!
