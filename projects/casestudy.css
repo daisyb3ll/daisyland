@@ -38,14 +38,15 @@ nav ul li a {
 
 nav ul li a:hover {
     text-decoration: underline;
-} 
+}
+
 body {
     font-family: "Poppins", sans-serif;
     color: #42210B;
     margin: 5em;
     padding: 20px;
     line-height: 1.6;
-    /* border: solid red; */
+    overflow-x: hidden;
 }
 
 p {
@@ -63,10 +64,9 @@ h1 {
 }
 
 h3 {
-    font-weight: 500 ;
+    font-weight: 500;
     font-size: 1.5rem;
     margin-top: 0.5rem;
-    /* border: solid limegreen; */
 }
 
 h4 {
@@ -74,52 +74,41 @@ h4 {
     font-weight: bold;
     margin-bottom: 0.3rem;
     text-transform: lowercase;
-    /* border: solid green; */
 }
 
 .banner-image img {
     width: 100%;
     object-fit: cover;
-    /* border: solid orange; */
-    /* my border for debugging */
     box-shadow: 0 10px 6px rgba(0, 42, 255, 0.067);
 }
 
 .case-content {
-
     display: flex;
     flex-direction: column;
     gap: 40px;
     padding: 1em;
-    /* border: solid purple; */
 }
 
-.problem-statement{
-        display: flex;
-        flex-direction: row;
-        /* vertically center image and text */
-        gap: 40px;
-        /* space between image and text */
-        margin: 40px 0;
-        /* border: solid teal; */
-}
-
-.audience-section
-{
+.problem-statement {
     display: flex;
     flex-direction: row;
+    gap: 40px;
+    margin: 40px 0;
+}
+
+.audience-section {
     display: flex;
-    /* border: solid pink; */
+    flex-direction: row;
 }
 
 .image-box {
     width: 600px;
     height: 350px;
 }
+
 .pink {
     background-color: #f99c9c;
 }
-
 
 .card-stack-diagonal {
     position: relative;
@@ -140,7 +129,6 @@ h4 {
     padding: 20px;
     color: #42210B;
     font-family: "Poppins", sans-serif;
-
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -149,7 +137,6 @@ h4 {
 
 .card-content {
     display: block;
-    /* change from 'none' */
     font-size: 0.85rem;
     line-height: 1.4;
     word-break: break-word;
@@ -160,12 +147,6 @@ h4 {
     overflow: hidden;
     text-overflow: ellipsis;
 }
-
-
-/* When active, allow content to show
-.card.active .card-content {
-    display: block;
-} */
 
 .card-content h2 {
     font-size: 1.3rem;
@@ -182,7 +163,7 @@ h4 {
     margin: 0;
     white-space: normal;
 }
-/* Default stacked positions */
+
 .green {
     background-color: #ffdd61;
     top: 0;
@@ -204,7 +185,6 @@ h4 {
     z-index: 3;
 }
 
-/* When a card is clicked */
 .card.active {
     transform: scale(1.05);
     z-index: 4 !important;
@@ -214,7 +194,6 @@ h4 {
     display: block;
     margin-top: 10px;
 }
-/* image grid */
 
 .image-grid {
     display: grid;
@@ -229,8 +208,6 @@ h4 {
 
 .img {
     overflow: hidden;
-    /* border-radius: 12px; */
-    /* box-shadow: 0 10px 6px rgba(0, 42, 255, 0.067); */
 }
 
 .img img {
@@ -238,19 +215,16 @@ h4 {
     height: 100%;
     object-fit: contain;
     display: block;
-    /* border-radius: 12px;*/
 }
-
 
 .img-1 {
     grid-row: 1 / span 3;
     grid-column: 1 / 2;
     width: auto;
     height: auto;
-    object-fit:cover;
+    object-fit: cover;
     display: block;
-    /* box-shadow: 0 10px 6px rgba(0, 42, 255, 0.067); */
-
+    box-shadow: 0 10px 6px rgba(0, 42, 255, 0.067);
 }
 
 .img-2 {
@@ -267,15 +241,6 @@ h4 {
     grid-row: 3 / 4;
     grid-column: 2 / 3;
 }
-
-.img-1 img{
-/* overflow: hidden; */
-    /* border-radius: 12px; */
-    box-shadow: 0 10px 6px rgba(0, 42, 255, 0.067);
-}
-
-
-/* research grid stuff for proto */
 
 .research-section {
     max-width: 100%;
@@ -319,7 +284,6 @@ h4 {
 
 footer {
     padding-top: 80px;
-    /* lol almost padding-ton */
     font-family: 'Poppins';
     text-align: center;
     display: flex;
@@ -329,7 +293,6 @@ footer {
     padding: 1em;
 }
 
-/* Doodle-Style Buttons */
 .doodle-icon-buttons {
     display: flex;
     justify-content: center;
@@ -337,23 +300,18 @@ footer {
     width: 100%;
 }
 
-/* Button Design */
 .doodle-button {
     display: inline-block;
     width: 50px;
     height: 50px;
     padding: 5px;
     border: none;
-    /* Removes default button border */
     outline: none;
-    /* Removes focus outline */
     background-color: transparent;
-    /* Ensures no background */
     border-radius: 50%;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-/* Doodle Icon Styling */
 .doodle-button img {
     width: 100%;
     height: 100%;
@@ -362,7 +320,6 @@ footer {
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
-/* Hover Effects */
 .doodle-button:hover {
     transform: translateY(-5px) rotate(-3deg);
 }
@@ -435,5 +392,102 @@ h2 {
     height: 100%;
     object-fit: contain;
     border-radius: 0px;
-    /* optional, if you want it to match other visuals */
+}
+
+@media (max-width: 1024px) {
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    .problem-statement,
+    .project-intro,
+    .audience-section,
+    .research-grid,
+    .image-grid {
+        flex-direction: column;
+        display: flex;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .image-box,
+    .image-box img,
+    .img,
+    .img img,
+    .research-card,
+    .research-card img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .card-stack-diagonal {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        width: 100%;
+        padding: 1rem;
+        box-sizing: border-box;
+    }
+
+    .card {
+        position: static;
+        width: 100%;
+        max-width: 700px;
+        height: auto;
+        box-sizing: border-box;
+        padding: 1.5rem;
+        border-radius: 20px;
+    }
+
+    .card-content {
+        font-size: 1rem;
+    }
+
+    .img-1,
+    .img-2,
+    .img-3,
+    .img-4 {
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+    .image-grid {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    .project-intro,
+    .overview,
+    .case-content {
+        padding: 0 10px;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        font-size: 90%;
+        flex-wrap: wrap;
+    }
+
+    p,
+    .description,
+    .info-pair p {
+        font-size: 1rem;
+    }
+    
 }
