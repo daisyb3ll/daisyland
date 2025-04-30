@@ -467,7 +467,6 @@ button[type="submit"]:hover {
     overflow: hidden;
     aspect-ratio: 1 / 1;
     border-radius: 0px;
-    background-color: #f0f0f0;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 
     
