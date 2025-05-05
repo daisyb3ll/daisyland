@@ -16,7 +16,7 @@
 │── styles/             # Static files (CSS, JS)
 ```
 ### to-do edits
-- [ ] site error for when clickin on project cards and hitting back button
+- [x] site error for when clickin on project cards and hitting back button
 - [x] project card titles / project card descriptions
 - [x] optional: adding tiny logos for tools used in corers of project title cards
 - [x] text layout editing "Hi! (with a newline here) my name is Daisy."

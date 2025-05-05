@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Case Study Template</title>
+    <link rel="icon" type="image/png" href="/assets/daisyland-branding/daisy-icon.png" sizes="32x32">
+    <link rel="stylesheet" href="/styles/daisy-does-graphic-design.css">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bungee+Tint&family=Chokokutai&family=Comfortaa:wght@300..700&family=Coral+Pixels&family=Dongle&family=Gaegu&family=IM+Fell+Double+Pica:ital@0;1&family=Jersey+15&family=Kirang+Haerang&family=Lacquer&family=Lexend+Deca:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Dirt&family=Special+Elite&family=Syne+Mono&family=Tiny5&display=swap');
+</style>
+</head>
+
+<header>
+    <a href="../index.html">
+        <div class="logo">
+            <img src="../assets/daisyland-branding/daisy-icon.png" alt="daisy logo">
+        </div>
+    </a>
+
+    <nav>
+        <ul>
+            <li><a href="../index.html#projects">projects</a></li>
+            <li><a href="../about.html">about</a></li>
+            <li><a href="../index.html#contact">contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<body>
+<main>
+    <div class="project-container">
+        <!-- CS Club Designs -->
+        <div class="project cs-club" onclick="toggleGallery('cs')">
+            <div class="project-thumbnail">
+                <img src="../projects/DAISY-DOES-GRAPHIC-DESIGN/cs-club/Untitled-1 (3).png" alt=" cs club project thumbnails">
+            </div>
+            <div class="project-info">
+                <h2>Chapman Computer Science Club</h2>
+                <h5>stickers,flyers, "cool things for fun"</h5>
+            </div>
+        </div>
+
+        <div class="gallery-container">
+            <section class="gallery" id ="cs-gallery">    
+                <div class="gallery-item">
+                    <img src="../projects/DAISY-DOES-GRAPHIC-DESIGN/cs-club/CS_SCAVENGER HUNT FLYER.png" alt="cs club scavenger hunt">
+                </div>     
+                <div class="gallery-item">
+                    <img src="../projects/DAISY-DOES-GRAPHIC-DESIGN/cs-club/cs trivia night flyer.png" alt="Artwork 2">
+                </div>
+            </section>
+        </div>
+    </div>
+
+<footer>
+    <section id="footer" class="container">
+        <a href="../index.html">
+            <div class="logo">
+                <img src="../assets/daisyland-branding/daisy-icon.png" alt="daisy logo">
+            </div>
+        </a>
+        <p>crafted with curiosity & creativity<br>hosted with love on github pages <br>© 2024 daisyland</p>
+
+        <div class="doodle-button-icons">
+            <a href="https://github.com/daisyb3ll" class="doodle-button">
+                <img src="../assets/contact_assets/PNG/github-icon-doodle.png" alt="Github">
+            </a>
+            <a href="https://www.linkedin.com/in/daisy-fernandez-reyes-50849b237/" class="doodle-button">
+                <img src="../assets/contact_assets/PNG/linkedin-icon-doodle.png" alt="linkedin">
+            </a>
+            <a href="https://www.instagram.com/da.s003" class="doodle-button">
+                <img src="../assets/contact_assets/PNG/instagram-icon-doodle.png" alt="instagram">
+            </a>
+        </div>
+    </section>
+</footer>
+
+<script>
+    function toggleGallery(id) {
+        const gallery = document.getElementById(id + "-gallery");
+        const isOpen = gallery.style.display === "flex";
+
+        // Close all galleries first
+        document.querySelectorAll('.gallery').forEach(g => g.style.display = 'none');
+
+        // Toggle current
+        gallery.style.display = isOpen ? "none" : "flex";
+    }
+</script>
+
+</body>
+
+</html>
