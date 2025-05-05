@@ -1,34 +1,34 @@
 p {
     color: #42210B;
-    font-family: 'Poppins';
+    font-family: 'Darumadrop One';
     line-height: 1.6;
     font-size: 1.3rem;
     margin-bottom: 15px;
 }
 
 h1 {
-    font-family: 'Poppins';
+    font-family: 'Darumadrop One';
     margin-top: 2em;
     font-size: 2.5rem;
     margin: 0;
 }
 
 h1 {
-    font-family: 'Poppins';
+    font-family: 'Darumadrop One';
     margin-top: 2em;
     font-size: 2.5rem;
     margin: 0;
 }
 
 h3 {
-    font-family: 'Poppins';
+    font-family: 'Darumadrop One';
     font-weight: 500;
     font-size: 1.5rem;
     margin-top: 0.5rem;
 }
 
 h4 {
-    font-family: 'Poppins';
+    font-family: 'Darumadrop One';
     font-size: 1.2rem;
     font-weight: bold;
     margin-bottom: 0.3rem;
@@ -105,40 +105,31 @@ display: flex;
 .gallery-container {
     display: flex;
     justify-content: center;
-    width: 100%;
+    width: 75%;
 }
 
-/* Gallery Grid (Masonry Layout) */
 .gallery {
-    column-count: 3;
-    /* Number of columns */
-    column-gap: 15px;
-    width: 100%;
-    max-width: 1200px;
-    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    /* spacing between items */
+    justify-content: center;
 }
 
-/* Ensure gallery items behave correctly */
 .gallery-item {
-    position: relative;
-    display: inline-block;
-    /* Prevents unwanted stretching */
-    overflow: hidden;
-    /* Ensures content doesn't overflow */
-    border-radius: 10px;
-    width: 100%;
-    /* Adjust this if needed */
+    flex: 1 1 300px;
+    /* allows items to grow/shrink, base width */
+    max-width: 400px;
+    margin: 0 auto;
 }
 
-/* Make sure images fit properly */
 .gallery-item img {
     width: 100%;
+    height: auto;
+    /* 👈 preserve aspect ratio */
     display: block;
-    border-radius: 10px;
     transition: transform 0.3s ease-in-out;
 }
-
-
 
 
 
@@ -155,7 +146,7 @@ display: flex;
 }
 footer {
     padding-top: 80px;
-    font-family: "Poppins";
+    font-family: "Darumadrop One";
     text-align: center;
     display: flex;
     justify-content: center;
@@ -206,7 +197,7 @@ nav ul {
     padding: 0;
     display: flex;
     font-size: 1.5rem;
-    font-family: "Poppins";
+    font-family: "Darumadrop One";
 }
 
 nav ul li {
@@ -235,7 +226,42 @@ header {
 .cs-club p,
 .cs-club h2,
 .cs-club h5 {
-    font-family: "Tiny5";
+    font-family: "Salted";
     font-size: 1.5rem;
     letter-spacing: 1px;
+}
+
+.video-header {
+    position: relative;
+    height: 80vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    transform: translateY(-40%);
+    z-index: -1;
+}
+
+.overlay-text p{
+    z-index: 1;
+    color: white;
+    font-family: Darumadrop One;
+}
+
+.overlay-text h1 {
+    color: white;
+    font-size: 3rem;
+    margin: 0;
+    font-family: Darumadrop One;
 }

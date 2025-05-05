@@ -431,7 +431,6 @@ h2 {
     object-fit: contain;
     border-radius: 0px;
 }
-
 @media (max-width: 1024px) {
 
     html,
@@ -439,50 +438,52 @@ h2 {
         overflow-x: hidden;
     }
 
+    body {
+        margin: 2em auto;
+        padding: 1em;
+        max-width: 100%;
+    }
+
     .problem-statement,
     .project-intro,
     .audience-section,
     .research-grid,
-    .image-grid {
+    .image-grid,
+    .case-content {
         flex-direction: column;
         display: flex;
         width: 100%;
         gap: 20px;
+        padding: 0 1em;
+        box-sizing: border-box;
     }
 
-    .image-box,
+    .case-content {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    p,
+    .description,
+    .info-pair p {
+        font-size: 1.05rem;
+        line-height: 1.8;
+    }
+
+    img,
     .image-box img,
-    .img,
     .img img,
-    .research-card,
     .research-card img {
         width: 100%;
         height: auto;
         object-fit: contain;
+        display: block;
+        margin: 0 auto;
     }
 
-    .card-stack-diagonal {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
+    .image-box {
         width: 100%;
-        padding: 1rem;
-        box-sizing: border-box;
-    }
-
-    .card {
-        position: static;
-        width: 100%;
-        max-width: 700px;
-        height: auto;
-        box-sizing: border-box;
-        padding: 1.5rem;
-        border-radius: 20px;
-    }
-
-    .card-content {
-        font-size: 1rem;
+        max-width: 100%;
     }
 
     .img-1,
@@ -496,21 +497,55 @@ h2 {
     .image-grid {
         display: flex;
         flex-direction: column;
+        gap: 20px;
+    }
+
+    .card-stack-diagonal {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .card {
+        position: static;
+        width: 100%;
+        max-width: 100%;
         height: auto;
+        padding: 1.5rem;
+        border-radius: 20px;
+    }
+
+    .card-content {
+        font-size: 1rem;
     }
 }
 
 @media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 10px 20px;
+    }
+
     nav ul {
         flex-direction: column;
         gap: 10px;
         align-items: flex-start;
+        width: 100%;
+        padding-left: 0;
     }
 
-    .project-intro,
-    .overview,
-    .case-content {
-        padding: 0 10px;
+    .logo img {
+        height: 3rem;
+    }
+
+    .fixed-logo {
+        position: static;
+        margin-bottom: 10px;
     }
 
     h1,
@@ -526,6 +561,10 @@ h2 {
     .description,
     .info-pair p {
         font-size: 1rem;
+        line-height: 1.8;
     }
-    
+
+    .case-content {
+        padding: 0 1em;
+    }
 }
