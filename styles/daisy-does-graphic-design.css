@@ -55,7 +55,7 @@ h4 {
 .project-thumbnail img {
     width: 50%;
     height: 50%;
-    object-fit: cover;
+    /* object-fit: cover; */
     transition: transform 0.3s ease;
 }
 
