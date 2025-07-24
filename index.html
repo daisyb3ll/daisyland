@@ -2,396 +2,232 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>daisy fernandez-reyes</title>
-    <link rel="icon" type="image/png" href="assets/daisyland-branding/daisy.logo 1.png" sizes="32x32">
-    <link rel="stylesheet" href="styles/styles.css">
+
+    <link rel="icon" type="image/png" href="assets/contact_assets/daisy-nav-hero.svg" sizes="32x32">
+    <link rel="stylesheet" href="cleancss.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://use.typekit.net/ldr5vzi.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Coiny&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Dongle:wght@300;400;700&family=Doto:wght@100..900&family=Jersey+10&family=Lexend:wght@500&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Moirai+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Puddles&family=Shizuru&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Tiny5&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bungee+Tint&family=Chokokutai&family=Comfortaa:wght@300..700&family=Coral+Pixels&family=Darumadrop+One&family=Dongle&family=Doto:wght@100..900&family=East+Sea+Dokdo&family=Gaegu&family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IM+Fell+Double+Pica:ital@0;1&family=Jersey+15&family=Kirang+Haerang&family=Lacquer&family=Lexend+Deca:wght@100..900&family=Playwrite+VN+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Dirt&family=Schoolbell&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Special+Elite&family=Syne+Mono&family=Tiny5&family=Yomogi&display=swap');
     </style>
+    <!-- for in and out transition motion -->
     <script src="https://cdn.jsdelivr.net/npm/motion@latest/dist/motion.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
 </head>
 
 <body>
-    <header>
+    <nav class="navbar">
 
         <a href="index.html">
             <div class="logo">
-                <img src="assets/daisyland-branding/daisy-icon.png" alt="daisy logo">
+                <img src="/assets/contact_assets/daisy-nav-hero.svg" alt="logo" class="logo" />
             </div>
         </a>
+        
+        <div class="nav-links">
+            <a href="aboutme.html">about me </a>
+            <a href="side-projects.html"> side projects </a>
+            <a href="art.html"> my art</a>
+        </div>
+    </nav>
 
-        <nav>
-            <ul>
-                <li><a href="#projects">projects</a></li>
-                <li><a href="about.html">about</a></li>
-                <li><a href="#contact">contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main class="container">
-        <div class="header-image">
-            <div class="image-container">
-                <img src="assets/selfie-gif.gif" alt="Drawing portrait">
+    <main class="hero">
+        <div class="container">
+            <div class="intro">
+                <p>I am Daisy, a developer, designer & habitual doodler.</p>
+                <span class="asterisk">*and also part-time wannabe rock star</span>
             </div>
-            <div class="text-container">
-                <h1>hi</h1>
-                <h1>i'm</h1>
-                <h1>daisy! </h1>
 
-                <p>I'm a UX Researcher, Designer,and Developer. I design for accessibility, for inclusivity, and for fun. Welcome to my space in the World Wide Web.</p>
-                <div class="doodle-button-icons">
-                    <a href="https://github.com/daisyb3ll" class="doodle-button">
-                        <img src="assets/contact_assets/PNG/github-icon-doodle.png" alt="Github">
-                    </a>
-                    <a href="www.linkedin.com/in/daisyfernandezreyes/" class="doodle-button">
-                        <img src="assets/contact_assets/PNG/linkedin-icon-doodle.png" alt="linkedin">
-                    </a>
-                    <a href="https://www.instagram.com/da.s003" class="doodle-button">
-                        <img src="assets/contact_assets/PNG/instagram-icon-doodle.png" alt="instagram">
-                    </a>
+            <div class="illustration illustration-hero">
+                <div class="svg-snap">
+                    <img src="assets/daisy-doing-frames/SVG/d1.svg" class="frame frame-1" />
+                    <img src="assets/daisy-doing-frames/SVG/d2.svg" class="frame frame-2" />
+                    <img src="assets/daisy-doing-frames/SVG/d3.svg" class="frame frame-3" />
                 </div>
+
             </div>
         </div>
+        <div class="container">
+            <p class="subtitle">
+                I design to connect, include, and delight.<br />
 
-        <div class="projects-section">
-            <!-- Projects Section -->
-            <section id="projects" class="container">
-                <h2>passion projects & design work</h2>
-                <div class="projects-grid">
-                    <!-- Skillmate -->
-                    <div class="project-square">
-                        <a href="projects/skillmate.html">
-                            <img src="assets/skillmate-hands.png" alt="Project-1">
-                            <div class="project-overlay">
-                                <p><em>case study</em></p>
-                                <p>UI & IOS Development</p>
-                                <h3>Skillmate</h3>
-                                <p>Its Tinder for Jobs</p>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- LAMP capstone -->
-                    <div class="project-square">
-                        <a href="projects/building-LAMP.html">
-                            <img src="projects/lamp-assets/Layer 2.png" alt="Project 2">
-                            <div class="project-overlay">
-                                <p>UX/UI & Web Dev</p>
-                                <h3>LAMP</h3>
-                                <p>Undergrad Capstone Project</p>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- higherground collab -->
-                    <div class="project-square">
-                        <a href="https://daisyb3ll.github.io/daisyb3ll.io/subpages/retrospecs/dragon_project.html">
-                            <img src="assets/dragon_design_1.png" alt="Project-4">
-                            <div class="project-overlay">
-                                <p>Concept Artist & Designer</p>
-                                <h3>Higherground<br>Collab</h3>
-                                <p>Design + Prototype + Candy = Dream Halloween</p>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- Covalent Therapy -->
-                    <div class="project-square">
-                        <a href="projects/covalent-therapy.html">
-                            <img src="assets/covalenttheray_cards.png" alt="Project-5">
-                            <div class="project-overlay">
-                                <p><em>case study</em></p>
-                                <p>Branding & Design</p>
-                                <h3>Covalent Therapy</h3>
-                                <p>marriage and family therapy </p>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- designing for fun -->
-                    <div class="project-square">
-                        <a href="projects/daisy-does-graphic-design.html">
-                            <img src="assets/fun.jpg" alt="Project-6">
-                            <div class="project-overlay">
-                                <p>Designing & Making Things Cool</p>
-                                <h3>Design for Fun</h3>
-                                <p>Design Work for Funsies</p>
-                            </div>
-                        </a>
-                    </div>
-                    <a href="art.html" class="project-link">
-                        <!-- Art Portfolio -->
-                        <div class="project-square">
-                            <img src="assets/obvio!.png" alt="Project-6">
-                            <div class="project-overlay">
-                                <p>Doodling & Drawing</p>
-                                <h3>Artwork & Commissions</h3>
-                                <p>Personal Projects & Commission work</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </section>
-        </div>
-
-<!-- Repeating Page Background Starts -->
-            <!-- <div class="pattern-bgrnd">  -->
-
-            <!-- Design Progress Section
-            <div class="design-progress">
-                <div class="content-wrapper">
-                        <section id="process" class="container">
-                            <a href="#how">how I design</a>
-                            <div class="design-flex">
-                                
-                                <div class="photo-container">
-                                    <img src="assets/bunny_sketch.png" alt="bojji art">
-                                </div>
-
-                                <div class="tools-grid">
-                                    <div class="tool">
-                                        <img src="assets/svg_files/miro.svg" alt="Miro">
-                                    </div>
-                                    <div class="tool">
-                                        <img src="assets/svg_files/procreate.svg" alt="Procreate">
-                                    </div>
-                                    <div class="tool">
-                                        <img src="assets/svg_files/illustrator.svg" alt="Illustrator">
-                                    </div>
-                                    <div class="tool">
-                                        <img src="assets/svg_files/freeform.svg" alt="Freeform">
-                                    </div>
-                                    <div class="tool">
-                                        <img src="assets/svg_files/photoshop.svg" alt="Photoshop">
-                                    </div>
-                                    <div class="tool">
-                                        <img src="assets/svg_files/figma.svg" alt="Figma">
-                                    </div>
-                                </div>
-                        </section>
-                </div>
-            </div>  -->
-
-<!-- About Section -->
-<!-- <div class="about-section">
-    <section id="about" class="container">
-        <div class="content-wrapper">
-            <div class="text-container">
-                <h2>about daisy</h2>
-                <p>
-                    <strong>Hi my name is Daisy!</b></strong><br>
-                    I'm a full time student at Chapman University'25 where im finishing up my B.S. in Software Engineering and a Minor in Peace and Justice Studies. 
-                    I'm a self-proclaimed creative technologist and aspiring designer, researcher, and front-end
-                    developer.
-                </p>
-                <div class="image-container">
-                    <img id="minime" src="assets/minier_me.png" alt="daisy's 2009 yearbook photo">
-                </div>
-                <p>
-                    At Chapman, I work as a UX Researcher for the UIdeas Lab, where I conduct user research and develop 
-                    prototypes for the furthering in accessibility and equity of education for children. I also do freelance 
-                    graphic design work for student clubs like Computer Science Club, The Society of Women Engineers, and Chess Club.
-                </p>
-
-                    <div class="media-row">
-                        <div class="image-container">
-                            <img id="swe-tabling" src="assets/irl-photos/swe-tabling-table.JPEG" alt="SWE-tabling-stickers">
-                        </div>
-                    
-                        <div class="image-container">
-                            <img id="cs-club-meeting" src="assets/irl-photos/cs-club.jpg" alt="cs-club-instagram-photo">
-                        </div>
-                    </div>
-
-                    
-                <p>
-                    When i'm not working on Software and conducting research I like to create all kinds of art!
-                    In my free time I like to swe, also like to draw, read, and I enojoy watching anime and reading manga.
-                    I also play guitar, and love to skate! My most new hobby has been 3d modeling and sculpting in Nomad.
-                </p>
-
-                <div class = media-row>
-                    <div class="video-container">
-                        <video width="320" height="240" autoplay muted loop>
-                            <source src="assets/irl-photos/daisy-skating.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    
-                    <div class="image-container">
-                        <img id="pete-3d" src="assets/irl-photos/3d-pete.PNG" alt="photo-of-resin-figure">
-                    </div>
-
-                    <div class="video-container">
-                        <video width="320" height="240" autoplay muted loop>
-                            <source src="assets/irl-photos/daisy-sews.mp4" type="video/mp4">
-                        </video>
-                    </div>
-
-                </div>
-
-                
-
-                <p>
-                I'm taking steps towards landing my first role! My eventual career goal is to go back to school for HCI or UX/UI!
-                </p>
-
-                <p>To find out more about me and my journey in tech, feel free to check out my resume or bio.</p>
-                <div class="social-media-buttons-container">
-                    <a href="assets/fernandezreyes_resume.pdf" class="icon-button"> my resume </a>
-                    <a href="about.html" class="icon-button"> about </a>
-                </div>
-            </div>
-        </div>
-    </section>
-</div> -->
-
-<!-- Background Pattern Closing Div -->
-<!-- </div> -->
-
-        <!-- Penultimate Section -->
-        <div class="penultimate-section">
-            <section id="contact" class="content-wrapper">
-                <div class="contact-container">
-                    <!-- Left Side: Contact Links -->
-                    <div class="contact-links">
-                        <p> Thanks for stopping by! Feel free to connect, check out my work, or leave a message!</p>
-                        <div class="doodle-button-icons">
-                            <a href="https://github.com/daisyb3ll" class="doodle-button">
-                                <img src = "assets/contact_assets/PNG/github-icon-doodle.png" alt = "Github">
-                            </a>
-                            <a href="www.linkedin.com/in/daisyfernandezreyes" class="doodle-button">
-                                <img src="assets/contact_assets/PNG/linkedin-icon-doodle.png" alt="linkedin">
-                            </a>
-                            <a href="https://www.instagram.com/da.s003" class="doodle-button">
-                                <img src="assets/contact_assets/PNG/instagram-icon-doodle.png" alt="instagram">
-                            </a>
-
-                            <p>To find out more about me and my journey in tech, feel free to check out my resume or bio.</p>
-
-                            <div class="social-media-buttons-container">
-                                <!-- <a href="assets/daisyfernandezreyes_resume_0429.pdf" class="icon-button"> my resume </a> -->
-                                <a href="about.html" class="icon-button"> about </a>
-                                <a  href = "my-resume.html" class = "icon-button"> resume </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Right Side: Contact Form -->
-                    <div class="contact-form-container">
-                        <form id="contact-form" action="https://formspree.io/f/mwpvgoyk" method="POST">
-                            <div class="form-group">
-                                <label for="name">Name:</label>
-                                <input type="text" id="name" name="name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email:</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Message:</label>
-                                <textarea id="message" name="message" rows="5" required></textarea>
-                            </div>
-                            <button type="submit">Send Message</button>
-                        </form>
-                    </div>
-                </div>
-            </section>
+            </p>
         </div>
     </main>
 
-    <footer>
-        <section id="footer" class="container">
-            <a href="index.html">
-                <div class="logo">
-                    <img src="assets/daisyland-branding/daisy-icon.png" alt="daisy logo">
+    <section class="starting-background">
+        <!-- Optional spacer to reveal torn edge if needed -->
+        <div style="height: 100px;"></div>
+    </section>
+
+    <section class="pattern-bgrnd ">
+        <div class="container">
+
+            <!-- spark! emotion garden ux/ui work -->
+            <section class="featured-project">
+                <div class="project-image" data-aos="fade-left" data-aos-duration="800">
+                    <img src="projects/Spark!Garden/Screenshot 2025-07-23 at 3.40.39 AM.png"
+                        alt="Spark! Mood Tracker thumbnail" />
                 </div>
-            </a>
-            <p>crafted with curiosity & creativity<br>hosted with love on github pages <br>© 2024 daisyland</p>
-        </section>
-    </footer>
+                <div class="project-text" data-aos="fade-right" data-aos-duration="800">
+                    <p class="project-role">UI Interaction Design & UX Research</p>
+                    <h2 class="project-title">Spark! Mood Tracker</h2>
+                    <p class="project-description">
+                        A lightweight daily mood tracker built to promote emotional reflection through playful design
+                        and accessibility-first thinking.
+                    </p>
+                    <a href="your-project-link.html" class="project-link"> see more </a>
+                </div>
+                <!-- DOODLEOVERLAYS!!!  -->
+                <div class="doodle-overlay">
+                    <img src="/assets/doodle-overlays/Untitled_Artwork 38.png" alt="stars" />
+                    <img src="/projects/lamp-assets/storyboarding.png" alt="lamp storyaboarding illustrations" />
+                </div>
+            </section>
 
+
+
+            <!-- LAMP -->
+            <section class="featured-project LAMP reverse">
+                <div class="project-image" data-aos="fade-left" data-aos-duration="800">
+                    <img src="projects/lamp-assets/Layer 2.png" alt="Listen: Album and Museum Portfoluio Thumbnail" />
+                </div>
+                <div class="project-text" data-aos="fade-right" data-aos-duration="800">
+                    <p class="project-role">UI/UX DESIGN · Frontend Development </p>
+                    <h2 class="project-title">Listen:Album Museum & Portfolio</h2>
+                    <p class="project-description">
+                        LAMP is a social platform that reimagines music appreciation and connection. Built for the
+                        lovers, critics, and casual
+                        listeners, it’s designed to help users catalog their music journey.
+                    </p>
+                    <a href="your-project-link.html" class="project-link"> Case Study & Retrospective</a>
+                </div>
+            </section>
+
+            <!-- Zac Can't Have Peanuts -->
+            <section class="featured-project Zac">
+                <div class="project-image" data-aos="fade-left" data-aos-duration="800">
+                    <img src="projects/cant-have-peanuts-assets/CantHavePeanutsCover copy.png"
+                        alt="Zac Can't Have Peanuts Thumbnail" />
+                </div>
+                <div class="project-text" data-aos="fade-right" data-aos-duration="800">
+                    <p class="project-role">Game UI Design · Narritive Lead </p>
+                    <h2 class="project-title">Zac Can't Have Peanuts!</h2>
+                    <p class="project-description">
+                        Join Zac on his first day of third grade hes been excited all summer, but this time he has a
+                        brand new announcement!
+                        What will his class think? Can he still hang out with his friends - and what will everyone think
+                        about
+                        his new rules ?
+                    </p>
+                    <a href="your-project-link.html" class="project-link"> read what happens next! </a>
+                </div>
+            </section>
+
+            <!-- Covalent Therapy -->
+            <section class="featured-project covalent reverse">
+                <div class="project-image" data-aos="fade-left" data-aos-duration="800">
+                    <img src="assets/covalenttheray_cards.png" alt="Covalent Therapy thumbnail" />
+                </div>
+                <div class="project-text" data-aos="fade-right" data-aos-duration="800">
+                    <p class="project-role"> Creative Direction · Graphic Design </p>
+                    <h2 class="project-title">Covalent Therapy</h2>
+                    <p class="project-description">
+                        Covalent Therapy is a freelance graphic design and branding project I completed for a client
+                        launching a private
+                        marriage and family therapy practice.
+                        My task was to create a cohesive brand identity and promotional materials that reflected the
+                        core values of the
+                        practice. I chose a risograph-inspired visual style — complimentary, layered, and textured— to
+                        echo the practice’s
+                        namesake and philosophy.
+                    </p>
+                    <a href="your-project-link.html" class="project-link"> oo la la! </a>
+                </div>
+            </section>
+
+            <!-- Dragon Project! -->
+            <section class="featured-project dragon">
+                <div class="project-image" data-aos="fade-left" data-aos-duration="800">
+                    <img src="assets/dragon_design_1.png" alt="Dragon Project Thumbnail" />
+                </div>
+                <div class="project-text" data-aos="fade-right" data-aos-duration="800">
+                    <p class="project-role"> Lead Designer · Fabrication Prototyping· Project Management · Youth
+                        Advocate </p>
+                    <h2 class="project-title"> Halloween with Higher Ground</h2>
+                    <p class="project-description">
+                        <bold>What do you want to be for Halloween?</bold>
+                        I Led the engineering design and fabrication of a life-size dragon costume for a local youth
+                        organization. For this
+                        project, I utilized a combination of 3D modeling, 3D printing, and traditional fabrication
+                        techniques to create a
+                        functional and stylish halloween costume. I collaborated with a cross-functional team to ensure
+                        the costume was safe,
+                        comfortable, and durable- through this we brought a child's imagination to life by designing and
+                        building a custom
+                        dragon costume. Combined artistic vision with technical expertise to create a unique and
+                        captivating piece. Successfully
+                        integrated electronics and mechanics into the costume to enhance the overall experience.
+                    </p>
+                    <a href="your-project-link.html" class="project-link"> show me more!</a>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <section class="penultimate-section">
+        <!-- Optional spacer to reveal the torn edge -->
+        <div style="height: 100px;"></div>
+    </section>
+
+    <!-- animatin things mueheh -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-
-    document.addEventListener("DOMContentLoaded", function () {
-        document.body.style.opacity = "1"; // Ensure page starts visible
-
-        document.querySelectorAll("a").forEach(link => {
-            link.addEventListener("click", function (event) {
-                let href = this.getAttribute("href");
-
-                // ✅ Ignore links that open in a new tab or external websites
-                if (this.target === "_blank" || href.startsWith("http")) return;
-
-                // ✅ If the link is an internal section (e.g., #about), smooth scroll instead of fading out
-                if (href.startsWith("#")) {
-                    event.preventDefault();
-                    document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
-                    return;
-                }
-
-                event.preventDefault(); // Stop default navigation
-                document.body.style.opacity = "0"; // Fade out
-
-                setTimeout(() => {
-                    window.location.href = href; // Navigate after fade-out
-                }, 500); // Delay matches transition time
-            });
-        });
-    });
-
-    document.addEventListener("DOMContentLoaded", function () {
-        
-        const minime = document.getElementById("minime");
-        if (minime) {
-            minime.addEventListener("click", function () {
-                minime.src = minime.src.includes("minier_me.png")
-                    ? "assets/daisy-older.png"
-                    : "assets/minier_me.png";
-            });
-        }
-    });
-    
-
-    document.addEventListener("DOMContentLoaded", function () {
-        if (window.innerWidth <= 768) {
-            const projectSquares = document.querySelectorAll(".projects-grid .project-square");
-
-            const observer = new IntersectionObserver((entries) => {
-                // Find the entry closest to the horizontal center
-                let closest = null;
-                let closestDistance = Infinity;
-                const centerX = window.innerWidth / 2;
-
-                entries.forEach(entry => {
-                    const rect = entry.boundingClientRect;
-                    const elementCenterX = rect.left + rect.width / 2;
-                    const distanceFromCenter = Math.abs(centerX - elementCenterX);
-
-                    if (entry.isIntersecting && distanceFromCenter < closestDistance) {
-                        closestDistance = distanceFromCenter;
-                        closest = entry.target;
-                    }
-                });
-
-                // First remove .reveal from all
-                projectSquares.forEach(el => el.classList.remove("reveal"));
-
-                // Then add .reveal to the one closest to center
-                if (closest) {
-                    closest.classList.add("reveal");
-                }
-            }, {
-                threshold: 1 // triggers when 50% of the element is visible
-            });
-
-            projectSquares.forEach(square => observer.observe(square));
-        }
-
-    });
-
+        AOS.init();
     </script>
 
-</body> 
+    <script>
+        (function (d) {
+            var config = {
+                kitId: 'gdf0bga',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
+
+
+</body>
+
+<!-- <footer>
+    <section id="footer" class="container">
+        <a href="index.html">
+            <div class="logo">
+                <img src="assets/contact_assets/daisy-nav-hero.svg" alt="daisy logo" class = "footer daisy">
+            </div>
+        </a>
+        <p>crafted with curiosity & creativity<br>hosted with love on github pages <br>© 2024 daisyland</p>
+    </section>
+</footer> -->
+
+<footer class="minimal-footer">
+    <div class="footer-left">
+        <p>crafted with curiosity & creativity. hosted with love on github pages </p>
+        <p class="footer-update">© 2025 daisyland all rights reserved</p>
+        <p class ="footer-update">Last updated: July 2025</p>
+    </div>
+
+    <div class="footer-right">
+        <a href="https://github.com/yourusername" target="_blank">github</a>
+        <a href="your-resume.pdf" target="_blank">resume</a>
+        <a href="https://www.linkedin.com/in/yourlinkedin" target="_blank">linkedin</a>
+        <a href="art.html">art</a>
+    </div>
+</footer>
 
 </html>

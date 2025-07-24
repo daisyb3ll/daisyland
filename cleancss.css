@@ -1,0 +1,562 @@
+/* font-family: "heisei-maru-gothic-std",
+sans-serif;
+font-weight: 400;
+font-style: normal;
+
+font-family: "heisei-maru-gothic-std",
+sans-serif;
+font-weight: 800;
+font-style: normal; */
+
+/* -----------------------------
+    Global Styles
+----------------------------- */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background: white;
+}
+
+/* -----------------------------
+        Navbar
+  ----------------------------- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 124px;
+    /* padding: 20px 40px; */
+    /* font-size: 76px; */
+    margin-right: 5cap;
+}
+
+.logo {
+    margin-left:5cap;
+    height: 100px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    /* font-weight: 700; */
+    font-size: 20px;
+    color: #0049D1;
+    text-decoration: none;
+    border-radius: 16px;
+    transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
+}
+
+.nav-links a:hover {
+    background-color: #0049D1;
+    color: white;
+}
+
+.cta {
+    background-color: #0049D1;
+    color: white;
+    padding: 10px 24px;
+    font-size: 16px;
+    /* font-weight: 700; */
+    border-radius: 16px; }
+
+/* -----------------------------
+        Hero Section
+  ----------------------------- */
+.hero {
+    /* padding:40px 60px 100px; */
+    background: white;
+    /* border: 3px solid red; */
+    gap: 10px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+/* ==================
+specifically hero gif
+===================== */
+.illustration-hero {
+    display: flex;
+    align-items: flex-start;
+    /* aligns the inner .svg-snap to the top */
+    justify-content: center; }
+
+/* Prevent global .illustration rules from overriding it */
+@media (min-width: 769px) {
+    .illustration-hero {
+        align-items: flex-start;
+    } }
+
+/* -----------------------------
+        Intro Section
+  ----------------------------- */
+.intro {
+    flex: 1;
+    font-size: 36px;
+    font-family: Poppins;
+    font-weight: 400;
+    /* border: 3px solid yellow; */
+    width: 582px;
+}
+.intro p {
+    margin: 0 0 10px 0;
+}
+.subtitle {
+    font-size: 36px;
+    margin-top: 0px;
+    text-align: center;
+    font-weight: 400;
+}
+
+.name {
+    font-size: 80px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    margin: 0;
+}
+
+.asterisk {
+    font-size: 14px;
+    display: block;
+    margin-top: 5px;
+}
+
+/* -----------------------------
+        Illustration
+  ----------------------------- */
+.illustration {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 300px;
+        /* border: solid yellowgreen; */
+        margin-top: 0;
+        /* <- add this explicitly */
+}
+
+.illustration img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    /* border: solid green; */
+}
+/* ------------
+gif svgs 
+*/
+
+
+.svg-snap {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+}
+
+/* Base frame styling */
+.svg-snap img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    pointer-events: none;
+    opacity: 0;
+
+    /* preload animation, but don't start it */
+    animation-duration: 3s;
+    animation-timing-function: steps(1);
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
+}
+
+/* Frame 1 shows by default */
+.frame-1 {
+    opacity: 1;
+}
+
+/* Apply keyframes but pause them until hover */
+.frame-1 {
+    animation-name: showFrame1;
+}
+
+.frame-2 {
+    animation-name: showFrame2;
+}
+
+.frame-3 {
+    animation-name: showFrame3;
+}
+
+/* On hover, run the animations */
+.svg-snap:hover .frame {
+    animation-play-state: running;
+}
+
+@keyframes showFrame1 {
+
+    0%,
+    33.333% {
+        opacity: 1;
+    }
+
+    33.334%,
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes showFrame2 {
+
+    0%,
+    33.333% {
+        opacity: 0;
+    }
+
+    33.334%,
+    66.666% {
+        opacity: 1;
+    }
+
+    66.667%,
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes showFrame3 {
+
+    0%,
+    66.666% {
+        opacity: 0;
+    }
+
+    66.667%,
+    100% {
+        opacity: 1;
+    }
+}
+
+/* ~~~~~~~~~~~~~~~
+background images.     
+~~~~~~~~~~~~~~~~~~ */
+
+/* starting */
+.starting-background {
+    background-size: contain;
+    background-image: url("/assets/starting_blank.png");
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    /* border: solid red; */
+
+
+    width: 100vw;
+    background-position: top center;
+    background-size: 100% auto;
+        /* shows full-width torn edge */
+
+
+}
+
+/* middle with repeat bacground */
+.pattern-bgrnd {
+    background-image: url("../assets/full-blank.png");
+    background-repeat: repeat;
+    background-color: #f8f8f8;
+    min-height: 100vh;
+}
+
+
+/* final */
+.penultimate-section {
+    background-image: url("../assets/ending_blank.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100vw;
+    background-position: bottom center;
+    background-size: 100% auto;
+}
+
+
+/* ~~~~~~~~~~~~~
+doodle overlays!
+~~~~~~~~~~~~~~*/
+.doodle-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    /* higher than background but lower than navbar/text */
+    pointer-events: none;
+    /* allows clicking 'through' the doodles */
+}
+
+.doodle-overlay img {
+    position: absolute;
+    opacity: 0.2;
+    /* adjust how subtle/strong your doodles are */
+    width: 100px;
+    /* or however big */
+}
+
+.doodle-overlay img:nth-child(1) {
+    top: 20%;
+    left: 10%;
+}
+
+.doodle-overlay img:nth-child(2) {
+    bottom: 15%;
+    right: 5%;
+}
+/* ~~~~~~~~~~
+fav projects 
+~~~~~~~~~~~*/
+
+/* default projet layout */
+.featured-project {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.featured-project.reverse {
+    flex-direction: row-reverse;
+}
+
+.project-image {
+    flex: 1;
+    max-width: 500px;
+    aspect-ratio: 1 / 1;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.project-text {
+    flex: 1;
+    max-width: 500px;
+}
+
+.project-role {
+    text-transform: lowercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    color: #999999;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.project-title {
+    font-family: Poppins;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #0049D1;
+    margin-bottom: 1rem;
+}
+
+.project-description {
+    font-family: Poppins;
+    font-weight: 200;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.project-link {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #0049D1;
+    text-decoration: none;
+    position: relative;
+}
+
+.project-link::after {
+    content: "⌯⌲";
+    margin-left: 6px;
+    transition: transform 0.2s ease;
+}
+
+.project-link:hover::after {
+    transform: translateX(4px);
+}
+
+/* LAMP project layout  */
+
+.featured-project.LAMP{
+    font-family: 'Coral Pixels', sans-serif;
+}
+
+.featured-project.LAMP .project-title {
+    font-family: 'Coral Pixels', sans-serif;
+}
+
+.featured-project.LAMP.project-role {
+    font-family: 'Coral Pixels', sans-serif;
+    font-style: italic;
+    color: #999;
+}
+.featured-project.LAMP .project-description {
+    font-family: 'Coral Pixels', sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #444;
+}
+
+/* ZAC CANT HAVE PEANUTS PROJECT STYLING */
+
+.featured-project.Zac{
+    font-family: 'Schoolbell', sans-serif;
+}
+
+.featured-project.Zac .project-title {
+    font-family: 'Schoolbell', sans-serif; 
+}
+
+.featured-project.Zac.project-role {
+    font-family: 'Schoolbell', sans-serif;
+    font-style: italic;
+    color: #999;
+}
+
+.featured-project.Zac .project-description {
+    font-family: 'Schoolbell',sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #444;
+}
+
+/* COVALENT THERAPY!!!! ROCK AND ROLL BABY*/
+
+.featured-project.covalent {
+    font-family: 'heisei-maru-gothic-std', sans-serif;
+}
+
+.featured-project.covalent .project-title {
+    font-family: 'heisei-maru-gothic-std', sans-serif;
+}
+
+.featured-project.covalent .project-role {
+    font-family: 'heisei-maru-gothic-std', sans-serif;
+    font-style: italic;
+    color: #999;
+}
+
+.featured-project.covalent .project-description {
+    font-family: 'heisei-maru-gothic-stdn', sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #444;
+}
+
+
+/* ===========
+FOOTERSTYLING
+=============*/
+
+.footer-daisy {
+    width: 100px;
+    /* or try 80px */
+    height: auto;
+    margin: 0 auto 20px;
+    display: block;
+    opacity: 0.9;
+    /* optional: make it more subtle */
+}
+
+.minimal-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px 5vw;
+    color: #444;
+    font-size: 0.9rem;
+    flex-wrap: wrap;
+}
+
+.minimal-footer a {
+    color: #444;    
+    text-decoration: none;
+    margin-left: 16px;
+    display: inline-block;
+}
+
+.minimal-footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-left {
+    max-width: 60%;
+}
+
+.footer-update {
+    opacity: 0.6;
+    font-size: 0.8rem;
+    margin-top: 4px;
+}
+
+.footer-right {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 12px;
+}
+/* ~~~~~~~~~~~~
+responsivity!!! -> for mobile and stuf yayay
+~~~~~~~~~~~~~ */
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .intro h1 {
+        font-size: 48px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .illustration {
+        margin-top: 20px;
+    } }
+    .illustration {
+        margin-top: 20px;
+        align-self: center;
+    }

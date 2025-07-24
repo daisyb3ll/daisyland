@@ -1,0 +1,218 @@
+
+/* global stypings (mr worldwide mueheh) */
+body {
+    font-family: poppins;
+    /* text-transform: lowercase; */
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    color: #999999;
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+}
+
+/* -----------------------------
+        Navbar
+  ----------------------------- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 124px;
+    /* padding: 20px 40px; */
+    /* font-size: 76px; */
+    margin-right: 5cap;
+}
+
+.logo {
+    margin-left: 5cap;
+    height: 100px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    /* font-weight: 700; */
+    font-size: 20px;
+    color: #0049D1;
+    text-decoration: none;
+    border-radius: 16px;
+    transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
+}
+
+.nav-links a:hover {
+    background-color: #0049D1;
+    color: white;
+}
+
+.cta {
+    background-color: #0049D1;
+    color: white;
+    padding: 10px 24px;
+    font-size: 16px;
+    /* font-weight: 700; */
+    border-radius: 16px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+/* ==============
+music widget hehe
+=============== */
+
+.connections{
+    display: flex;
+    justify-content:space-evenly;
+    align-items: flex-start;
+    padding: 20px 5vw;
+    color: #444;
+    font-size: 0.9rem;
+    flex-wrap: wrap
+}
+
+.spotify-embed {
+    max-width: 500px;;
+}
+
+/* ~~~~~~~~~~~~~~~
+background images.     
+~~~~~~~~~~~~~~~~~~ */
+
+/* starting */
+.starting-background {
+    background-size: contain;
+    background-image: url("/assets/starting_blank.png");
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    /* border: solid red; */
+    width: 100vw;
+    background-position: top center;
+    background-size: 100% auto;
+    /* shows full-width torn edge */
+
+
+}
+
+/* middle with repeat bacground */
+.pattern-bgrnd {
+    background-image: url("../assets/full-blank.png");
+    background-repeat: repeat;
+    background-color: #f8f8f8;
+    min-height: 100vh;
+}
+
+
+/* final */
+.penultimate-section {
+    background-image: url("../assets/ending_blank.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100vw;
+    background-position: bottom center;
+    background-size: 100% auto;
+}
+
+
+/* ~~~~~~~~~~~~~
+doodle overlays!
+~~~~~~~~~~~~~~*/
+.doodle-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    /* higher than background but lower than navbar/text */
+    pointer-events: none;
+    /* allows clicking 'through' the doodles */
+}
+
+.doodle-overlay img {
+    position: absolute;
+    opacity: 0.2;
+    /* adjust how subtle/strong your doodles are */
+    width: 100px;
+    /* or however big */
+}
+
+.doodle-overlay img:nth-child(1) {
+    top: 20%;
+    left: 10%;
+}
+
+.doodle-overlay img:nth-child(2) {
+    bottom: 15%;
+    right: 5%;
+}
+
+
+/* ####################
+intro paragraph styling
+###################### */
+
+
+/* ===========
+FOOTERSTYLING
+=============*/
+
+.footer-daisy {
+    width: 100px;
+    /* or try 80px */
+    height: auto;
+    margin: 0 auto 20px;
+    display: block;
+    opacity: 0.9;
+    /* optional: make it more subtle */
+}
+
+.minimal-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px 5vw;
+    color: #444;
+    font-size: 0.9rem;
+    flex-wrap: wrap;
+}
+
+.minimal-footer a {
+    color: #444;
+    text-decoration: none;
+    margin-left: 16px;
+    display: inline-block;
+}
+
+.minimal-footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-left {
+    max-width: 60%;
+}
+
+.footer-update {
+    opacity: 0.6;
+    font-size: 0.8rem;
+    margin-top: 4px;
+}
+
+.footer-right {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 12px;
+}
