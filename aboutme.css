@@ -1,13 +1,14 @@
 
 /* global stypings (mr worldwide mueheh) */
 body {
-    font-family: poppins;
+    font-family: "Poppins", cursive;
     /* text-transform: lowercase; */
     font-size: 0.85rem;
     letter-spacing: 1px;
-    color: #999999;
+    color:#696969;
     font-weight: 300;
     margin-bottom: 0.5rem;
+    z-index : 0;
 }
 
 /* -----------------------------
@@ -129,41 +130,103 @@ background images.
 /* ~~~~~~~~~~~~~
 doodle overlays!
 ~~~~~~~~~~~~~~*/
-.doodle-overlay {
+.doodle-overlay{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 5;
-    /* higher than background but lower than navbar/text */
+    z-index: -1;
+    /* behind everything else */
     pointer-events: none;
-    /* allows clicking 'through' the doodles */
+    /* so users can click through */
+    overflow: hidden;
 }
 
 .doodle-overlay img {
     position: absolute;
-    opacity: 0.2;
-    /* adjust how subtle/strong your doodles are */
-    width: 100px;
-    /* or however big */
+    opacity: 0.1;
+    /* adjust how strong the doodle looks */
+    width: auto;
+    height: 100px;
+    object-fit: contain;
 }
 
+
+/* You can place each doodle wherever you want on the page: */
 .doodle-overlay img:nth-child(1) {
-    top: 20%;
-    left: 10%;
+    top: 10%;
+    left: 5%;
 }
 
 .doodle-overlay img:nth-child(2) {
-    bottom: 15%;
-    right: 5%;
+    bottom: 10%;
+    right: 10%;
+}
+
+.doodle {
+    position: absolute;
+    width: 120px;
+    opacity: 0.08;
+}
+
+/* LEFT SIDE */
+.doodle.left {
+    left: 0;
+}
+
+.doodle.left.top {
+    top: 100px;
+}
+
+.doodle.left.bottom {
+    top: 1200px;
+    /* adjust based on scroll height */
+}
+
+/* RIGHT SIDE */
+.doodle.right {
+    right: 0;
+}
+
+.doodle.right.top {
+    top: 300px;
+}
+
+.doodle.right.top.fish{
+    width:190px;
+    height:auto;
+    right:8vh;
+}
+
+/* position: absolute;
+top: 300px;
+right: 1vw;
+]width: 120px;
+opacity: 0.08;
+transform: rotate(5deg);
+optional: lil flair */
+
+.doodle.right.bottom {
+    top: 1600px;
 }
 
 
 /* ####################
 intro paragraph styling
 ###################### */
-
+.intro {
+    flex: 1;
+    font-size: 16px;
+    font-family: Poppins, sans-serif;
+    font-weight: 400;
+    padding: 0 7vw;
+    /* ← adds space on left/right side */
+    margin-top: 3rem;
+    /* optional: push it down */
+    z-index: 1;
+    /* make sure it's above background doodles */
+}
 
 /* ===========
 FOOTERSTYLING
@@ -184,13 +247,13 @@ FOOTERSTYLING
     justify-content: space-between;
     align-items: flex-start;
     padding: 20px 5vw;
-    color: #444;
+    color: #696969;
     font-size: 0.9rem;
     flex-wrap: wrap;
 }
 
 .minimal-footer a {
-    color: #444;
+    color: #696969;
     text-decoration: none;
     margin-left: 16px;
     display: inline-block;
@@ -216,3 +279,99 @@ FOOTERSTYLING
     justify-content: flex-end;
     gap: 12px;
 }
+
+/* %^%^&*&^%$#$%^&*(
+Resume section mueheh
+#$%^&*()(*&^%$#@#$ */
+
+.experience-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    max-width: 500px;
+    flex: 1;
+}
+
+.image-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Adjust the experience section for side layout */
+.experience-section {
+    flex: 1;
+    max-width: 600px;
+    padding: 1rem;
+}
+
+
+.experience-section {
+    font-family: 'Poppins', sans-serif;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.experience-section h2 {
+    font-size: 1 rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    color: #696969;
+}
+
+.experience-entry {
+    margin-bottom: 2rem;
+}
+
+.role {
+    font-size: 1 rem;
+    font-weight: 600;
+    color: #696969;
+    margin: 0;
+}
+
+.org {
+    font-weight: 400;
+    font-size: 1 rem;
+    color: #696969;
+    margin: 0.3rem 0 0.4rem;
+}
+
+.project-date {
+    font-family: 'poppins', monospace;
+    font-size: 1 rem;
+    color: #696969;
+    /* display: flex; */
+    justify-content: space-between;
+    align-items: center;
+    white-space: nowrap;
+}
+/* 
+.project-date .project {
+    flex-shrink: 0;
+} */
+
+.project-date .dots {
+    flex: 1;
+    height: 1px;
+    border-bottom: 1px dotted #696969;
+    /* margin: 0 0.5rem; */
+    transform: translateY(-2px);
+}
+/* 
+.project-date .date {
+    flex-shrink: 0;
+} */
