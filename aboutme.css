@@ -303,39 +303,43 @@ FOOTERSTYLING
 /* %^%^&*&^%$#$%^&*(
 Resume section mueheh
 #$%^&*()(*&^%$#@#$ */
-
 .experience-wrapper {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     align-items: flex-start;
-    gap: 60px;
+    gap: 40px;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem 1rem;
+    padding: 4rem 5vw;
 }
 
-.image-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-    max-width: 500px;
+.experience-images {
     flex: 1;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.image-grid img {
+.experience-images img {
     width: 100%;
     height: auto;
-    border-radius: 8px;
     object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-/* Adjust the experience section for side layout */
 .experience-section {
+    flex: 2;
+    max-width: 700px;
+}
+/* Adjust the experience section for side layout */
+/* .experience-section {
     flex: 1;
     max-width: 600px;
     padding: 1rem;
-}
+} */
 
 
 .experience-section {
