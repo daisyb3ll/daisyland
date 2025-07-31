@@ -305,8 +305,8 @@ Resume section mueheh
 #$%^&*()(*&^%$#@#$ */
 .experience-wrapper {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+    /* centers the full block */
     align-items: flex-start;
     gap: 40px;
     max-width: 1200px;
@@ -316,23 +316,44 @@ Resume section mueheh
 
 .experience-images {
     flex: 1;
-    max-width: 400px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    max-width: 50%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 150px;
+    gap: 1rem;
 }
 
-.experience-images img {
+.experience-images .tile {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
     border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Make some tiles bigger for the collage vibe */
+.experience-images .tall {
+    grid-row: span 2;
+}
+
+.experience-images .wide {
+    grid-column: span 2;
+}
+
+/* Make sure videos behave like images */
+.experience-images video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
 }
 
 .experience-section {
-    flex: 2;
-    max-width: 700px;
+    flex: 1;
+    max-width: 50%;
+    padding-left: 2rem;
+    /* nudges it away from image side */
 }
 /* Adjust the experience section for side layout */
 /* .experience-section {
@@ -345,7 +366,7 @@ Resume section mueheh
 .experience-section {
     font-family: 'Poppins', sans-serif;
     max-width: 720px;
-    margin: 0 auto;
+    margin-left:em;
     padding: 2rem 1rem;
 }
 
@@ -399,3 +420,13 @@ Resume section mueheh
 .project-date .date {
     flex-shrink: 0;
 } */
+
+@media screen and (max-width: 768px) {
+    .experience-wrapper {
+        flex-direction: column;
+    }
+
+    .experience-images {
+        grid-template-columns: 1fr;
+    }
+}
