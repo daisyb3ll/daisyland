@@ -34,9 +34,10 @@
 
     <div class="doodle-overlay">
         <!-- <img src="assets/doodle-overlays/Untitled_Artwork 38.png" alt="daisy doodle"> -->
-        <img src="assets/doodle-overlays/SVG/discovering-computer.svg" class="doodle left top">
-        <img src="assets/doodle-overlays/SVG/out-of-water.svg" class="doodle right top fish">
-        <!-- <img src ="assets/portfolio_assets/sketchbook/2021doodles.jpg" class="doodle right top"> -->
+        <img src="assets/doodle-overlays/SVG/discovering-computer.svg" class="doodle left mac top parallax" data-speed="0.3">
+        <img src="assets/doodle-overlays/SVG/out-of-water.svg" class="doodle right top fish parallax" data-speed="0.3">
+        <img src="assets/doodle-overlays/untitled_artwork_38.png" class="doodle left bottom hmmm parallax" data-speed="0.3">
+
         <!-- <img src="assets/portfolio_assets/sketchbook/2021doodles.jpg" class="doodle left bottom"> -->
     </div>
 
@@ -46,27 +47,27 @@
                     <b>creative technologist</b>, <b>software developer</b>,<b>designer</b>, and chronic <b>doodler</b>.
                     <br> -->
                         I always a very artsy creative kid. I did local art contests, designed things for my local library, and doodled all the time.
-                        I surprised everyone (including myself). with my undergrad pathway, where out of my curiosity for tech I studied Software Engineering.
+                        I surprised everyone (including myself) with my undergrad pathway, where out of my curiosity for tech I studied Software Engineering.
                         <br></br>
-                        Though initially super excited to be learning something I'd alwasts been interested in, I was discouraged by the seeming lack of creativity and art. <br>
-                        Despite having sworn to dedicate myself wholy to my new venture- I found myself gravitating towards creative roles and involvements anyway.Oops. 
+                        Though initially super excited to be learning something I'd always been interested in, I was discouraged by the seeming lack of creativity and art in tech.<br>
+                        Despite having sworn to dedicate myself wholy to my new venture- I found myself gravitating towards creative roles and involvements anyway.
+                        <br></br>
+                        Oops. 
                         <br></br>
                         While in school worked I in a fabriaction and design lab, joined a mariachi band, started a couple student orgs and served club positons as a graphic designer,
                         and eventually found myself working as a Student Researcher for the UIdeas Lab on projects focused on developing tools for children with ADHD and Hyperactivity. 
-                        <br></br>
-                        I used to feel very torn between my curiosity for tech, and my love for creativity and art.With the programming and devleopingpathway becoming more and more 
-                        competitve every year - I had started to feel like I was out of my depth (It was a very fish-out-of-water, maybe fish out of ocean realization).
+                        <br></br> 
+                        I used to feel very torn between my curiosity for tech, and my love for creativity and art. With the programming and devleoping pathway becoming more and more 
+                        competitve every year - I had started to feel like I was out of my depth (It was a very fish-out-of-water, maybe even fish out of ocean realization).
                         <br></br>
                         UX has been one of the most delightful pathways I've decided to explore! Since discovering UX, I've rekindled my love for 
                         developing, desing,and doodling, and embraced my inital curiosity for tech and creative passion in designing and developing for fun! 
                         <br></br>
-                        When im not working I'll be 
-
-                        When I'm not working you can find me reading manga, drawing, catch me trying to be rockstar level good at guitaur ( I cant play bar chord, but I have hope), playing at city planner / farmer/ licensed contrator/ demolition expert in my minecraft world.
+                        When I'm not working you can find me reading manga, drawing, catch me trying to be rockstar level good at guitaur (I can't play bar chord, but I have hope), playing at city planner / farmer/ licensed contrator/ demolition expert in my minecraft world.
 
                     <div class = "connections">
-                        <a href="your-resume.pdf" target="_blank">resume</a>
-                        <a href="https://www.linkedin.com/in/yourlinkedin" target="_blank">linkedin</a>
+                        <a href="assets/documents/daisyfernandezreyes-emerging-product-designer-resume.pdf" target="_blank">resume</a>
+                        <a href="https://www.linkedin.com/in/daisyfernandezreyes/" target="_blank">linkedin</a>
                     </div>
                 </div>
             </div>
@@ -141,7 +142,15 @@
 
 </section>
 
-
+<script>
+    window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY;
+        document.querySelectorAll('.doodle.parallax').forEach(el => {
+            const speed = parseFloat(el.dataset.speed);
+            el.style.transform = `translateY(${scrollY * speed}px)`;
+        });
+    });
+</script>
 
 </body>
 
@@ -153,10 +162,12 @@
     </div>
 
     <div class="footer-right">
-        <a href="https://github.com/yourusername" target="_blank">github</a>
-        <a href="your-resume.pdf" target="_blank">resume</a>
-        <a href="https://www.linkedin.com/in/yourlinkedin" target="_blank">linkedin</a>
+        <a href="https://github.com/daisyb3ll" target="_blank">github</a>
+        <a href="assets/documents/daisyfernandezreyes-emerging-product-designer-resume.pdf" target="_blank">resume</a>
+        <a href="https://www.linkedin.com/in/daisyfernandezreyes/" target="_blank">linkedin</a>
         <a href="art.html">art</a>
     </div>
 </footer>
+
+
 </html>

@@ -150,7 +150,17 @@ doodle overlays!
     width: auto;
     height: 100px;
     object-fit: contain;
+    pointer-events: none;
 }
+
+.doodle.parallax {
+    position: absolute;
+    opacity: 0.1;
+    /* ← make it visible */
+    width: 300px;
+    /* ← make it big */
+}
+
 
 
 /* You can place each doodle wherever you want on the page: */
@@ -172,7 +182,7 @@ doodle overlays!
 
 /* LEFT SIDE */
 .doodle.left {
-    left: 0;
+    left: 300px;
 }
 
 .doodle.left.top {
@@ -180,7 +190,8 @@ doodle overlays!
 }
 
 .doodle.left.bottom {
-    top: 1200px;
+    top: 500px;
+    left: 8vh;
     /* adjust based on scroll height */
 }
 
@@ -197,6 +208,15 @@ doodle overlays!
     width:190px;
     height:auto;
     right:8vh;
+}
+.doodle.left.top.mac {
+    width: auto;
+    height: 100px;
+}
+
+.doodle.left.bottom.hmmm {
+    width: auto;
+    height: 200px;
 }
 
 /* position: absolute;
