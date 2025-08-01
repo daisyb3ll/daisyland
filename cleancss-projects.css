@@ -377,7 +377,6 @@ fav projects
     height: 100%;
     object-fit: cover;
     border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
 .project-text {
@@ -429,26 +428,64 @@ fav projects
     transform: translateX(4px);
 }
 
-/* LAMP project layout  */
 
-.featured-project.LAMP {
-    font-family: 'Coral Pixels', sans-serif;
+/* Pedrito project layout  */
+
+.featured-project.Pedrito {
+    font-family: 'Arial', sans-serif;
+    font-style: normal;
 }
 
-.featured-project.LAMP .project-title {
-    font-family: 'Coral Pixels', sans-serif;
+.featured-project.Pedrito .project-title .pedrito {
+    font-family: "subway-paris-std", sans-serif;
+    color: #000000;
+    text-transform: uppercase;
+    font-size:100px;
 }
 
-.featured-project.LAMP.project-role {
-    font-family: 'Coral Pixels', sans-serif;
-    font-style: italic;
+.featured-project.Pedrito .project-title .thepanther {
+    font-family: "Arial", sans-serif;
+    text-transform:uppercase;
+    font-weight: 400;
+    color: #444;
+    display: block;
+}
+.featured-project.Pedrito.project-role {
+    font-family: 'Arial', sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.featured-project.Pedrito .project-description {
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #444;
+}
+
+
+
+/* THE BIGO   */
+
+.featured-project.THEBIGO {
+    font-family: 'Doto', sans-serif;
+}
+
+.featured-project.THEBIGO .project-title {
+    font-family: 'Tiny5', sans-serif;
+}
+
+.featured-project.THEBIGO.project-role {
+    font-family: 'Pixelify Sans', sans-serif;
     color: #999;
 }
 
-.featured-project.LAMP .project-description {
-    font-family: 'Coral Pixels', sans-serif;
+.featured-project.THEBIGO .project-description {
+    font-family: 'Doto', sans-serif;
     font-size: 1rem;
     line-height: 1.7;
+    font-weight: 900;
+
     color: #444;
 }
 

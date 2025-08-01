@@ -219,6 +219,7 @@ doodle overlays!
     height: 200px;
 }
 
+
 /* position: absolute;
 top: 300px;
 right: 1vw;
@@ -311,7 +312,6 @@ Resume section mueheh
     gap: 40px;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 4rem 5vw;
 }
 
 .experience-images {
@@ -321,6 +321,7 @@ Resume section mueheh
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: 150px;
     gap: 1rem;
+    padding-left: 4rem;
 }
 
 .experience-images .tile {

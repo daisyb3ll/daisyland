@@ -11,10 +11,21 @@
     <link rel="stylesheet" href="cleancss-projects.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://use.typekit.net/ldr5vzi.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bungee+Tint&family=Chokokutai&family=Comfortaa:wght@300..700&family=Coral+Pixels&family=Darumadrop+One&family=Dongle&family=Doto:wght@100..900&family=East+Sea+Dokdo&family=Gaegu&family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IM+Fell+Double+Pica:ital@0;1&family=Jersey+15&family=Kirang+Haerang&family=Lacquer&family=Lexend+Deca:wght@100..900&family=Playwrite+VN+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Dirt&family=Schoolbell&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Special+Elite&family=Syne+Mono&family=Tiny5&family=Yomogi&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bungee+Tint&family=Chokokutai&family=Comfortaa:wght@300..700&family=Coral+Pixels&family=Darumadrop+One&family=Dongle&family=DotGothic16&family=Doto:wght@100..900&family=East+Sea+Dokdo&family=Gaegu&family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IM+Fell+Double+Pica:ital@0;1&family=Jersey+15&family=Kirang+Haerang&family=Lacquer&family=Lexend+Deca:wght@100..900&family=Pixelify+Sans:wght@400..700&family=Playwrite+VN+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Dirt&family=Schoolbell&family=Silkscreen:wght@400;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Special+Elite&family=Syne+Mono&family=Tiny5&family=Yomogi&display=swap');
     </style>
-    <script src="https://cdn.jsdelivr.net/npm/motion@latest/dist/motion.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/motion@latest/dist/motion.js">
+        (function (d) {
+            var config = {
+                kitId: 'gdf0bga',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
 </head>
@@ -55,20 +66,22 @@
         <div class="container">
 
             <!-- pedrito the panther -->
-            <section class="featured-project">
+            <section class="featured-project Pedrito">
                 <div class="project-image" data-aos="fade-left" data-aos-duration="800">
-                    <img src="projects/pedrito-assets/og-pete.png" -->
-                        alt="Spark! Mood Tracker thumbnail" />
+                    <img src="projects/pedrito-assets/og-pete.png" alt="Pedtrito the Panther thumbnail" />
                 </div>
                 <div class="project-text" data-aos="fade-right" data-aos-duration="800">
                     <p class="project-role">UI/UX DESIGN · PERSONAL PROJECT</p>
-                    <h2 class="project-title">pedrito the panther</h2>
+                        <h2 class="project-title">
+                            <span class="pedrito">PEDRITO</span>
+                            <span class="thepanther">the panther</span>
+                        </h2>
                     <p class="project-description">
-                        A lightweight daily mood tracker built to promote emotional reflection through playful design
-                        and
-                        accessibility-first thinking.
+                    Originally created as a redesign exercise for my uni's mascot, Pedrito the Panther (dubbed "the nicer pete" by students)
+                    is my own rendition of our school's mascot- prideful in his school and community, and as such involves himself in all
+                    aspects of student life at Chapman University.
                     </p>
-                    <a href="your-project-link.html" class="project-link"> see more </a>
+                    <a href="your-project-link.html" class="project-link"> miau! 😼</a>
                 </div>
                 <!-- DOODLEOVERLAYS!!!  -->
                 <!-- <div class="doodle-overlay">
@@ -80,23 +93,32 @@
 
 
             <!-- LAMP -->
-            <section class="featured-project LAMP reverse">
+            <section class="featured-project THEBIGO reverse">
                 <div class="project-image" data-aos="fade-left" data-aos-duration="800">
-                    <img src="projects/lamp-assets/Layer 2.png" alt="Listen: Album and Museum Portfoluio Thumbnail" />
+                    <img src="assets/thebigo/losing-page.png" alt="Listen: Album and Museum Portfoluio Thumbnail" />
                 </div>
                 <div class="project-text" data-aos="fade-right" data-aos-duration="800">
                     <p class="project-role">UI/UX DESIGN · Frontend Development </p>
-                    <h2 class="project-title">Listen:Album Museum & Portfolio</h2>
+                    <h2 class="project-title">The Big O!; Data Structures Simulator</h2>
                     <p class="project-description">
-                        LAMP is a social platform that reimagines music appreciation and connection. Built for the
-                        lovers, critics, and casual
-                        listeners, it’s designed to help users catalog their music journey.
+                    Intro to Data Structures Simulator! Earn the degree- or else!!
+                    <br></br>
+                    Data Structures Simulator, is a project my best friend/ roommate/ peer/ classmate/ teammate Sarah Yoon and I
+                    worked on as a part of our submission for TreeHacks. 
+                    As game enthusiasts (Sarah- game development minor, Daisy- video game enjoyer), we were very excited about our project-
+                    which we created as a part of the education track of the event.
+                    In our game- you get to be a part of our school's data structure class, and embark on your own journey to learning data
+                    structures runtimes. Taught by our very own professor,Rene (hello prof.rene if you see this please don't fail me
+                    please).
+                    
+                    <br></br>
+                    Created for Stanford's Treehacks'23.
                     </p>
-                    <a href="your-project-link.html" class="project-link"> Case Study & Retrospective</a>
+                    <a href="https://devpost.com/software/the-big-o-data-structures-simulator-game?ref_content=my-projects-tab&ref_feature=my_projects" class="project-link"> Tree Hacks Submission on Devpost</a>
                 </div>
             </section>
 
-            <!-- Zac Can't Have Peanuts -->
+            <!-- Zac Can't Have Peanuts
             <section class="featured-project Zac">
                 <div class="project-image" data-aos="fade-left" data-aos-duration="800">
                     <img src="projects/cant-have-peanuts-assets/CantHavePeanutsCover copy.png"
@@ -114,9 +136,9 @@
                     </p>
                     <a href="your-project-link.html" class="project-link"> read what happens next! </a>
                 </div>
-            </section>
+            </section> -->
 
-            <!-- Covalent Therapy -->
+            <!-- Covalent Therapy
             <section class="featured-project covalent reverse">
                 <div class="project-image" data-aos="fade-left" data-aos-duration="800">
                     <img src="assets/covalenttheray_cards.png" alt="Covalent Therapy thumbnail" />
@@ -136,9 +158,9 @@
                     </p>
                     <a href="your-project-link.html" class="project-link"> oo la la! </a>
                 </div>
-            </section>
+            </section> -->
 
-            <!-- Dragon Project! -->
+            <!-- Dragon Project!
             <section class="featured-project dragon">
                 <div class="project-image" data-aos="fade-left" data-aos-duration="800">
                     <img src="assets/dragon_design_1.png" alt="Dragon Project Thumbnail" />
@@ -163,7 +185,7 @@
                     </p>
                     <a href="your-project-link.html" class="project-link"> show me more!</a>
                 </div>
-            </section>
+            </section> -->
         </div>
     </section>
 
@@ -203,6 +225,7 @@
 
 <footer class="minimal-footer">
     <div class="footer-left">
+        <p>thanks for checking out my projects!</p>
         <p>crafted with curiosity & creativity. hosted with love on github pages </p>
         <p class="footer-update">© 2025 daisyland all rights reserved</p>
         <p class="footer-update">Last updated: July 2025</p>
