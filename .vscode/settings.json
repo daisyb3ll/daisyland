@@ -2,5 +2,6 @@
     "files.associations": {
         "*.ttml": "xml",
         "*.ttss": "css"
-    }
+    },
+    "livePreview.defaultPreviewPath": "/side-projects.html"
 }

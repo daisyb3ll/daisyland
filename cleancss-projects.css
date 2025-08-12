@@ -22,7 +22,7 @@ body {
         Navbar
   ----------------------------- */
 .navbar {
-    position: fixed;
+    position:absolute;
     top: 0;
     left: 0;
     width: 90%;
@@ -357,7 +357,7 @@ fav projects
     gap: 4rem;
     align-items: center;
     justify-content: center;
-    padding: 6rem 2rem;
+    padding: 2rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -463,8 +463,6 @@ fav projects
     color: #444;
 }
 
-
-
 /* THE BIGO   */
 
 .featured-project.THEBIGO {
@@ -489,47 +487,43 @@ fav projects
     color: #444;
 }
 
-/* ZAC CANT HAVE PEANUTS PROJECT STYLING */
+/* PRINCIPLES OF OBJECT ORINETED PROGRAMMING */
 
-.featured-project.Zac {
-    font-family: 'Schoolbell', sans-serif;
+.featured-project.OOP .project-image img {
+    margin-top: 5em;
+    /* or a % like 80% */
+    height: auto;
+    /* keeps original proportions */
+    /* makes sure nothing is cropped */
+    display: block;
+    /* removes inline spacing issues */
+    max-width: 100%;
+    /* responsive safeguard */
+    width: 100%;
+    object-fit: cover;
 }
 
-.featured-project.Zac .project-title {
-    font-family: 'Schoolbell', sans-serif;
+/* Pedrito project layout  */
+
+.featured-project.OOP {
+    font-family:"Gaegu", sans-serif;
+    font-style: normal;
 }
 
-.featured-project.Zac.project-role {
-    font-family: 'Schoolbell', sans-serif;
-    font-style: italic;
-    color: #999;
+.featured-project.OOP .project-title  {
+    font-family: "Gaegu", sans-serif;
+    color: #000000;
+    text-transform: uppercase;
 }
 
-.featured-project.Zac .project-description {
-    font-family: 'Schoolbell', sans-serif;
-    font-size: 1rem;
-    line-height: 1.7;
-    color: #444;
+.featured-project.OOP.project-role {
+    font-family: 'Gaegu', sans-serif;
+    font-weight: 900;
+    font-style: normal;
 }
 
-/* COVALENT THERAPY!!!! ROCK AND ROLL BABY*/
-
-.featured-project.covalent {
-    font-family: 'heisei-maru-gothic-std', sans-serif;
-}
-
-.featured-project.covalent .project-title {
-    font-family: 'heisei-maru-gothic-std', sans-serif;
-}
-
-.featured-project.covalent .project-role {
-    font-family: 'heisei-maru-gothic-std', sans-serif;
-    font-style: italic;
-    color: #999;
-}
-
-.featured-project.covalent .project-description {
-    font-family: 'heisei-maru-gothic-stdn', sans-serif;
+.featured-project.OOP .project-description {
+    font-family: 'Gaegu', sans-serif;
     font-size: 1rem;
     line-height: 1.7;
     color: #444;
@@ -644,15 +638,47 @@ responsivity!!! -> for mobile and stuf yayay
 
 .overlay-text p {
     z-index: 1;
-    color: white;
+    color: rgb(255, 255, 255);
     font-family: Poppins;
     padding-top: 140px;
 
 }
 
 .overlay-text h1 {
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 3rem;
     margin: 0;
-    font-family: Poppins;
+    font-family: "Poppins";
+}
+
+.overlay-text h2 {
+    color: rgb(255, 255, 255);
+    /* font-size: 3rem; */
+    margin: 0;
+    font-family: "Poppins";
+}
+
+.typewriter {
+    display: inline-block;
+    border-right: 2px solid #ffffff;
+    /* the caret */
+    white-space: nowrap;
+    /* keep text on one line */
+    overflow: hidden;
+    /* hide overflow while typing */
+}
+@keyframes blinkCaret {
+
+    0%,
+    100% {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: rgb(255, 255, 255);
+    }
+}
+
+.typewriter {
+    animation: blinkCaret 0.75s step-end infinite;
 }
