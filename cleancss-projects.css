@@ -228,6 +228,75 @@ gif svgs
     animation-play-state: running;
 }
 
+
+/* status chips */
+.status-chip {
+    display: inline-block;
+    background-color: #005eff71;
+    /* warm yellow */
+    color: #ffffff;
+    /* dark text for contrast */
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.25em 0.75em;
+    border-radius: 999px;
+    /* fully rounded pill shape */
+    letter-spacing: 0.5px;
+    user-select: none;
+    /* no accidental text highlight */
+}
+
+.status-chip.unready {
+    font-family: "Arial Black";
+    display: inline-block;
+    background-color: #ff4800;
+    /* warm yellow */
+    color: #ffffff;
+    /* dark text for contrast */
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.25em 0.75em;
+    border-radius: 999px;
+    /* fully rounded pill shape */
+    letter-spacing: 0.5px;
+    user-select: none;
+    /* no accidental text highlight */
+}
+
+/* SPARK project layout  */
+
+.featured-project.SPARK .project-image img {
+    margin-top: 5em;
+    /* or a % like 80% */
+    height: auto;
+    /* keeps original proportions */
+    /* makes sure nothing is cropped */
+    display: block;
+    /* removes inline spacing issues */
+    max-width: 100%;
+    /* responsive safeguard */
+    width: 100%;
+    object-fit: cover;
+}
+
+/* LAMP project layout  */
+.status-chip .LAMP {
+    font-family: Poppins;
+    display: inline-block;
+    background-color: #005eff71;
+    /* warm yellow */
+    color: #ffffff;
+    /* dark text for contrast */
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.25em 0.75em;
+    border-radius: 999px;
+    /* fully rounded pill shape */
+    letter-spacing: 0.5px;
+    user-select: none;
+    /* no accidental text highlight */
+}
+
 @keyframes showFrame1 {
 
     0%,

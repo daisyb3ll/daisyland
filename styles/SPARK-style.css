@@ -1,18 +1,8 @@
-/* font-family: "heisei-maru-gothic-std",
-sans-serif;
-font-weight: 400;
-font-style: normal;
-
-font-family: "heisei-maru-gothic-std",
-sans-serif;
-font-weight: 800;
-font-style: normal; */
-
 /* -----------------------------
     Global Styles
 ----------------------------- */
 body {
-    margin:5em;
+    margin: 0;
     font-family: 'Poppins', sans-serif;
     color: #333;
     background: white;
@@ -67,80 +57,45 @@ body {
     border-radius: 16px;
 }
 
-.fixed-logo {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    z-index: 100;
-}
-
-.logo img {
-    height: 4rem;
-}
-
-
-p {
-    color: #333;
-    font-family: 'Poppins';
-    line-height: 1.6;
-    font-size: 1.3rem;
-    margin-bottom: 15px;
-}
-
-h1 {
-    margin-top: 2em;
-    font-size: 2.5rem;
-    margin: 0;
-}
-
-h3 {
-    font-weight: 500;
-    font-size: 1.5rem;
-    margin-top: 0.5rem;
-}
-
-h4 {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 0.3rem;
-    text-transform: lowercase;
-}
-
+/* ++++++++++++
+PROJECT IMAGE
++++++++++++++*/
 .banner-image img {
-    width: 100%;
-    object-fit: cover;
+    object-fit:cove;
+    justify-content: center;
+    display: block;
+    /* Convert the image to a block-level element */
+    margin: 0 auto;
+    width: 80%;
 }
 
+/*~~~~~~CASESTUDY CONTENTS~~~~ */
 .case-content {
     display: flex;
     flex-direction: column;
     gap: 40px;
     padding: 1em;
+    /* border: solid 3px green; */
+    margin: 6em;
 }
-
 .problem-statement {
     display: flex;
     flex-direction: row;
     gap: 40px;
     margin: 40px 0;
+    /* border: 3px solid pink; */
 }
 
 .audience-section {
-    display: flex;
-    flex-direction: row;
+        display: flex;
+        width: 100%;
+        gap: 20px;
+        display: flex;
+        flex-direction: row;
+        /* border: 3px solid yellow; */
 }
 
-.image-box {
-    width: 600px;
-    height: 350px;
-}
-.image-box #hug-icon {
-    /* width: auto; */
-    height: 500px;
-    display: flex;
-    justify-content: space-between;
-}
-
+/* cards */
 
 .card-stack-diagonal {
     position: relative;
@@ -226,6 +181,22 @@ h4 {
     display: block;
     margin-top: 10px;
 }
+
+
+/* ##########
+IMAGE GRID
+####### ####*/
+.image-box {
+    width: 600px;
+    height: 350px;
+}
+.image-box #hug-icon {
+    /* width: auto; */
+    height: 500px;
+    display: flex;
+    justify-content: space-between;
+}
+
 .image-grid {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -238,6 +209,7 @@ h4 {
     height: auto;
     /* ← allow dynamic height */
 }
+
 .img {
     overflow: hidden;
 }
@@ -256,31 +228,60 @@ h4 {
     height: auto;
     object-fit: cover;
     display: block;
-    box-shadow: 0 10px 6px rgba(0, 42, 255, 0.067);
 }
 
 .img-2 {
     grid-row: 1 / 2;
     grid-column: 2 / 3;
-    box-shadow: 0 10px 6px rgba(0, 42, 255, 0.067);
 }
 
 .img-3 {
     grid-row: 2 / 3;
     grid-column: 2 / 3;
-    box-shadow: 0 10px 6px rgba(0, 42, 255, 0.067);
 }
 
 .img-4 {
     grid-row: 3 / 4;
     grid-column: 2 / 3;
-    box-shadow: 0 10px 6px rgba(0, 42, 255, 0.067);
 }
 
+.summary{
+    flex: 1;
+    gap: 60px;
+    /* margin: 60px auto; */
+}
+
+
+/* info column by intro */
+.info-column {
+    border: 3px solid orange;
+    flex: 1;
+}
+.info-pair {
+    margin-bottom: 20px;
+}
+
+.info-pair strong {
+    font-size: 1rem;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.info-pair p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+
+/* %%%%%%%%%%%%%%%%%%%%%%
+final design deliverables 
+%%%%%%%%%%%%%%%%%%%%%%%%% */
 .research-section {
     max-width: 100%;
     font-family: "Poppins", sans-serif;
-    color: #42210B;
+    color: #333;
 }
 
 .research-section h4 {
@@ -302,14 +303,14 @@ h4 {
     border-radius: 0px;
     transition: all 0.3s ease;
     cursor: pointer;
-    box-shadow: 0 10px 6px rgba(0, 42, 255, 0.067);
+    box-shadow: 0 10px 6px #33333318;
 }
 
 .video-box {
     max-height: 500px;
     width: 100%;
     overflow: hidden;
-    box-shadow: 0 10px 6px rgba(0, 42, 255, 0.067);
+    box-shadow: 0 10px 6px #33333318;
 }
 
 .video-box video {
@@ -331,120 +332,6 @@ h4 {
 .research-card.expanded {
     flex: 4;
 }
-
-footer {
-    padding-top: 80px;
-    font-family: 'Poppins';
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 1em;
-}
-
-.doodle-icon-buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-.doodle-button {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    padding: 5px;
-    border: none;
-    outline: none;
-    background-color: transparent;
-    border-radius: 50%;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.doodle-button img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    opacity: 0.9;
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-}
-
-.doodle-button:hover {
-    transform: translateY(-5px) rotate(-3deg);
-}
-
-.doodle-button:hover img {
-    opacity: 1;
-    transform: scale(1.1);
-}
-
-.project-intro {
-    display: flex;
-    justify-content: space-between;
-    gap: 60px;
-    max-width: 1100px;
-    margin: 60px auto;
-    padding: 0 20px;
-    font-family: 'Helvetica Neue', sans-serif;
-    color: #222;
-}
-
-.project-column,
-.info-column {
-    flex: 1;
-}
-
-h5 {
-    letter-spacing: 2px;
-    font-size: 0.9rem;
-    font-weight: 400;
-    margin-bottom: 10px;
-}
-
-hr {
-    border: none;
-    border-top: 1px solid #ccc;
-    margin-bottom: 20px;
-}
-
-h2 {
-    font-size: 2.2rem;
-    margin-bottom: 15px;
-    font-weight: 600;
-}
-
-.description {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    max-width: 500px;
-}
-
-.info-pair {
-    margin-bottom: 20px;
-}
-
-.info-pair strong {
-    font-size: 1rem;
-    font-weight: 600;
-    display: block;
-    margin-bottom: 4px;
-}
-
-.info-pair p {
-    margin: 0;
-    font-size: 1rem;
-    line-height: 1.5;
-}
-
-.image-box img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    border-radius: 0px;
-}
-
-
 /* ===========
 FOOTERSTYLING
 =============*/
@@ -464,13 +351,13 @@ FOOTERSTYLING
     justify-content: space-between;
     align-items: flex-start;
     padding: 20px 5vw;
-    color: #444;
+    color: #333;
     font-size: 0.9rem;
     flex-wrap: wrap;
 }
 
 .minimal-footer a {
-    color: #444;
+    color: #333;
     text-decoration: none;
     margin-left: 16px;
     display: inline-block;
@@ -495,102 +382,4 @@ FOOTERSTYLING
     flex-wrap: wrap;
     justify-content: flex-end;
     gap: 12px;
-}
-
-@media (max-width: 1024px) {
-
-    html,
-    body {
-        overflow-x: hidden;
-    }
-
-    .problem-statement,
-    .project-intro,
-    .audience-section,
-    .research-grid,
-    .image-grid {
-        flex-direction: column;
-        display: flex;
-        width: 100%;
-        gap: 20px;
-    }
-
-    .image-box,
-    .image-box img,
-    .img,
-    .img img,
-    .research-card,
-    .research-card img {
-        width: 100%;
-        height: auto;
-        object-fit: contain;
-    }
-
-    .card-stack-diagonal {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-        width: 100%;
-        padding: 1rem;
-        box-sizing: border-box;
-    }
-
-    .card {
-        position: static;
-        width: 100%;
-        max-width: 700px;
-        height: auto;
-        box-sizing: border-box;
-        padding: 1.5rem;
-        border-radius: 20px;
-    }
-
-    .card-content {
-        font-size: 1rem;
-    }
-
-    .img-1,
-    .img-2,
-    .img-3,
-    .img-4 {
-        grid-column: auto;
-        grid-row: auto;
-    }
-
-    .image-grid {
-        display: flex;
-        flex-direction: column;
-        height: auto;
-    }
-}
-
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-        align-items: flex-start;
-    }
-
-    .project-intro,
-    .overview,
-    .case-content {
-        padding: 0 10px;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5 {
-        font-size: 90%;
-        flex-wrap: wrap;
-    }
-
-    p,
-    .description,
-    .info-pair p {
-        font-size: 1rem;
-    }
-    
 }
