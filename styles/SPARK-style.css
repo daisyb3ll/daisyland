@@ -4,7 +4,7 @@
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    color: #333;
+    color: #444;
     background: white;
 }
 
@@ -61,12 +61,14 @@ body {
 PROJECT IMAGE
 +++++++++++++*/
 .banner-image img {
-    object-fit:cove;
+    object-fit:cover;
     justify-content: center;
     display: block;
+    border-radius: 30px;
     /* Convert the image to a block-level element */
     margin: 0 auto;
-    width: 80%;
+    /* width: 80%; */
+    height:600px;
 }
 
 /*~~~~~~CASESTUDY CONTENTS~~~~ */
@@ -75,15 +77,19 @@ PROJECT IMAGE
     flex-direction: column;
     gap: 40px;
     padding: 1em;
-    /* border: solid 3px green; */
-    margin: 6em;
+    border: solid 3px green;
+
+    /* new stuff */
+    max-width: 800px;
+    margin: 0 auto;
+    /* centers it horizontally */
 }
 .problem-statement {
     display: flex;
     flex-direction: row;
     gap: 40px;
     margin: 40px 0;
-    /* border: 3px solid pink; */
+    border: 3px solid pink;
 }
 
 .audience-section {
@@ -92,7 +98,7 @@ PROJECT IMAGE
         gap: 20px;
         display: flex;
         flex-direction: row;
-        /* border: 3px solid yellow; */
+        border: 3px solid yellow;
 }
 
 /* cards */
@@ -114,7 +120,7 @@ PROJECT IMAGE
     cursor: pointer;
     transition: all 0.3s ease;
     padding: 20px;
-    color: #42210B;
+    color: #444;
     font-family: "Poppins", sans-serif;
     overflow: hidden;
     display: flex;
@@ -186,48 +192,52 @@ PROJECT IMAGE
 /* ##########
 IMAGE GRID
 ####### ####*/
-.image-box {
-    width: 600px;
-    height: 350px;
-}
-.image-box #hug-icon {
-    /* width: auto; */
-    height: 500px;
-    display: flex;
-    justify-content: space-between;
-}
-
 .image-grid {
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-auto-rows: auto;
-    /* ← new magic */
     gap: 20px;
-    width: 90%;
-    max-width: 75%;
-    margin: 0 auto;
+    flex: 1;
+    width: auto;
+    max-width: none;
+    margin: 0;
     height: auto;
-    /* ← allow dynamic height */
 }
 
+/* Shared base for all grid item containers */
 .img {
     overflow: hidden;
+    height: auto;
+    /* Allow height to be determined by content or grid */
 }
 
-.img img {
+/* All images and videos inside the grid will fill their container */
+.img img,
+.img video {
     width: 100%;
     height: 100%;
-    object-fit: contain;
     display: block;
 }
 
+/* Main tall image: fill and crop */
+.img-1 img {
+    object-fit: cover;
+}
+
+/* Side images: fit without cropping */
+.img-2 img,
+.img-3 img,
+.img-4 img,
+.img-3 video {
+    /* Apply this rule to the video as well */
+    object-fit: contain;
+    background-color: #f9f9f9;
+}
+
+/* Special layout rules for the grid cells */
 .img-1 {
     grid-row: 1 / span 3;
     grid-column: 1 / 2;
-    width: auto;
-    height: auto;
-    object-fit: cover;
-    display: block;
 }
 
 .img-2 {
@@ -244,7 +254,6 @@ IMAGE GRID
     grid-row: 3 / 4;
     grid-column: 2 / 3;
 }
-
 .summary{
     flex: 1;
     gap: 60px;
@@ -281,7 +290,7 @@ final design deliverables
 .research-section {
     max-width: 100%;
     font-family: "Poppins", sans-serif;
-    color: #333;
+    color: #444;
 }
 
 .research-section h4 {
@@ -303,14 +312,14 @@ final design deliverables
     border-radius: 0px;
     transition: all 0.3s ease;
     cursor: pointer;
-    box-shadow: 0 10px 6px #33333318;
+    box-shadow: 0 10px 6px #44444418;
 }
 
 .video-box {
     max-height: 500px;
     width: 100%;
     overflow: hidden;
-    box-shadow: 0 10px 6px #33333318;
+    box-shadow: 0 10px 6px #44444418;
 }
 
 .video-box video {
@@ -351,13 +360,13 @@ FOOTERSTYLING
     justify-content: space-between;
     align-items: flex-start;
     padding: 20px 5vw;
-    color: #333;
+    color: #444;
     font-size: 0.9rem;
     flex-wrap: wrap;
 }
 
 .minimal-footer a {
-    color: #333;
+    color: #444;
     text-decoration: none;
     margin-left: 16px;
     display: inline-block;
@@ -382,4 +391,9 @@ FOOTERSTYLING
     flex-wrap: wrap;
     justify-content: flex-end;
     gap: 12px;
+}
+
+.more-studies {
+    background-color: #0049D1;
+    height:300px;
 }

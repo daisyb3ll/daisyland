@@ -313,6 +313,67 @@ Resume section mueheh
     max-width: 1200px;
     margin: 0 auto;
 }
+.experience-item {
+    position: relative;
+    display: inline-block;
+    overflow: hidden; /* ⬅ keeps overlay inside */
+    border-radius: 12px; /* match your image’s radius */
+}
+.experience-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    /* ⬅ match container */
+    transition: transform 0.3s ease-in-out;
+    display: block;
+}
+.experience-item-overlay {
+    font-family:Gaegu;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    /* ⬅ stack items vertically */
+    justify-content: center;
+    /* centers vertically */
+    align-items: center;
+    /* centers horizontally */
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    padding: 1rem;
+    /* adds some breathing room */
+    box-sizing: border-box;
+}
+
+/* Make sure text does not overflow */
+.experience-item-overlay h3,
+.experience-item-overlay p {
+    margin: 5px 0;
+    max-width: 85%;
+    /* Ensures text does not touch edges */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    text-align: center;
+}
+
+/* Show overlay on hover */
+.experience-item:hover .experience-item-overlay {
+    opacity: 1;
+}
+
+/* Slight zoom effect */
+.experience-item:hover img {
+    transform: scale(1.05);
+}
 
 .experience-images {
     flex: 1;
@@ -333,11 +394,11 @@ Resume section mueheh
 }
 
 /* Make some tiles bigger for the collage vibe */
-.experience-images .tall {
+.experience-images .experience-item.tall {
     grid-row: span 2;
 }
 
-.experience-images .wide {
+.experience-images .experience-item.wide {
     grid-column: span 2;
 }
 
