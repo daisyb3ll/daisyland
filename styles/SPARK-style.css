@@ -4,10 +4,10 @@
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    color: #444;
-    background: white;
+    color: #333;
+    background: #fff;
+    line-height: 1.6;
 }
-
 /* -----------------------------
         Navbar
   ----------------------------- */
@@ -71,144 +71,123 @@ PROJECT IMAGE
     height:600px;
 }
 
-/*~~~~~~CASESTUDY CONTENTS~~~~ */
 .case-content {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    padding: 1em;
-    border: solid 3px green;
-
-    /* new stuff */
-    max-width: 800px;
+    max-width: 850px;
     margin: 0 auto;
-    /* centers it horizontally */
-}
-.problem-statement {
-    display: flex;
-    flex-direction: row;
-    gap: 40px;
-    margin: 40px 0;
-    border: 3px solid pink;
-}
-
-.audience-section {
-        display: flex;
-        width: 100%;
-        gap: 20px;
-        display: flex;
-        flex-direction: row;
-        border: 3px solid yellow;
-}
-
-/* cards */
-
-.card-stack-diagonal {
-    position: relative;
-    width: 350px;
-    height: 300px;
-    margin: 60px auto;
-    padding: 2em;
-}
-
-.card {
-    position: absolute;
-    width: 200px;
-    height: 300px;
-    border-radius: 12px;
-    box-shadow: 0 10px 6px rgba(0, 42, 255, 0.067);
-    cursor: pointer;
-    transition: all 0.3s ease;
-    padding: 20px;
-    color: #444;
-    font-family: "Poppins", sans-serif;
-    overflow: hidden;
+    padding: 0 1.5rem 4rem;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    gap: 3rem;
+
+    font-family: "Poppins", sans-serif;
+    color: #333;
+    line-height: 1.65;
+
+    font-size: 1.125rem;
+    /* = 18px base, instead of 16px */
 }
 
-.card-content {
-    display: block;
-    font-size: 0.85rem;
-    line-height: 1.4;
-    word-break: break-word;
-    overflow-wrap: break-word;
-    hyphens: auto;
-    max-height: 100%;
-    width: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
+/* ========================
+SPARK case study text styling
+======================== */
+
+/* scope only inside spark case study */
+.case-content.spark {
+    font-family: "Poppins", sans-serif;
+    color: #333;
+    line-height: 1.65;
 }
 
-.card-content h2 {
-    font-size: 1.3rem;
+/* Eyebrow (like “ui interaction design & ux research”) */
+.case-content.spark .eyebrow,
+.case-content.spark h5 {
+    text-transform: lowercase;
+    letter-spacing: 0.08em;
     font-weight: 600;
-    line-height: 1.2;
-    margin: 0;
-    white-space: normal;
-}
-
-.card-content p {
+    color: #9aa0a6;
     font-size: 1rem;
-    font-weight: 300;
-    line-height: 1.5;
-    margin: 0;
-    white-space: normal;
+    /* keep your margins */
 }
 
-.green {
-    background-color: #ffdd61;
-    top: 0;
-    left: 100px;
-    z-index: 1;
+/* Big blue title */
+.case-content.spark h1 {
+    font-weight: 800;
+    /* EDIT: heavier like thumbnail */
+    color: #0049D1;
+    letter-spacing: -0.01em;
+    /* EDIT: tighter kerning */
+    font-size: clamp(2.5rem, 5vw, 3.25rem);
+    /* EDIT: bigger like card */
+    line-height: 1.15;
+    /* margins untouched */
 }
 
-.blue {
-    background-color: #48bcff;
-    top: 20px;
-    left: 50px;
-    z-index: 2;
+/* Section headings */
+.case-content.spark h2,
+.case-content.spark h3 {
+    font-weight: 700;
+    /* EDIT: bold headings */
+    color: #0049D1;
+    line-height: 1.25;
+    /* margins untouched */
 }
 
-.orange {
-    background-color: #46e866;
-    top: 40px;
-    left: 0;
-    z-index: 3;
+/* Body text (just font style, margins untouched) */
+.case-content.spark p,
+.case-content.spark li {
+    font-weight: 200;
+    /* EDIT: lighter like card description */
+    font-size: 1.125rem;
+    /* EDIT: ~18px for readability */
+    line-height: 1.7;
+    color: #333;
 }
 
-.card.active {
-    transform: scale(1.05);
-    z-index: 4 !important;
+/* Links */
+.case-content.spark a {
+    color: #0049D1;
+    font-weight: 600;
+    text-decoration: none;
 }
 
-.card.active .card-content {
-    display: block;
-    margin-top: 10px;
+.case-content.spark a:hover {
+    text-decoration: underline;
 }
 
+/* Chips */
+.case-content.spark .status-chip {
+    margin-top: 1rem;
+    margin-right: 0.5rem;
+    background-color: #005eff71;
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.25em 0.75em;
+    border-radius: 999px;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
 
 /* ##########
 IMAGE GRID
 ####### ####*/
+/* -----------------------------
+Image Grid
+----------------------------- */
 .image-grid {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-auto-rows: auto;
-    gap: 20px;
-    flex: 1;
-    width: auto;
-    max-width: none;
-    margin: 0;
-    height: auto;
+    gap: 1rem;
+    margin: 2rem 0;
 }
 
-/* Shared base for all grid item containers */
-.img {
-    overflow: hidden;
+.image-grid img,
+.image-grid video {
+    width: 100%;
     height: auto;
-    /* Allow height to be determined by content or grid */
+    border-radius: 12px;
+    object-fit: cover;
+    background-color: #f9f9f9;
 }
 
 /* All images and videos inside the grid will fill their container */
@@ -229,7 +208,6 @@ IMAGE GRID
 .img-3 img,
 .img-4 img,
 .img-3 video {
-    /* Apply this rule to the video as well */
     object-fit: contain;
     background-color: #f9f9f9;
 }
@@ -254,35 +232,21 @@ IMAGE GRID
     grid-row: 3 / 4;
     grid-column: 2 / 3;
 }
-.summary{
-    flex: 1;
-    gap: 60px;
-    /* margin: 60px auto; */
-}
 
-
-/* info column by intro */
-.info-column {
-    border: 3px solid orange;
-    flex: 1;
-}
-.info-pair {
-    margin-bottom: 20px;
-}
-
-.info-pair strong {
-    font-size: 1rem;
+/* Section Headings */
+h5 {
+    text-transform: lowercase;
+    letter-spacing: 1px;
     font-weight: 600;
-    display: block;
-    margin-bottom: 4px;
+    color: #999;
+    font-size: 0.9rem;
 }
 
-.info-pair p {
-    margin: 0;
-    font-size: 1rem;
-    line-height: 1.5;
+hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 1rem 0;
 }
-
 
 /* %%%%%%%%%%%%%%%%%%%%%%
 final design deliverables 
@@ -326,7 +290,6 @@ final design deliverables
     width: 100%;
     height: 100%;
     object-fit: contain;
-    /* or "cover" if you want a full fill effect */
     display: block;
 }
 
@@ -341,18 +304,16 @@ final design deliverables
 .research-card.expanded {
     flex: 4;
 }
+
 /* ===========
 FOOTERSTYLING
 =============*/
-
 .footer-daisy {
     width: 100px;
-    /* or try 80px */
     height: auto;
     margin: 0 auto 20px;
     display: block;
     opacity: 0.9;
-    /* optional: make it more subtle */
 }
 
 .minimal-footer {
@@ -394,6 +355,5 @@ FOOTERSTYLING
 }
 
 .more-studies {
-    background-color: #0049D1;
-    height:300px;
+    height: 300px;
 }

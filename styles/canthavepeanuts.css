@@ -1,0 +1,243 @@
+/* -----------------------------
+    Global Styles
+----------------------------- */
+body {
+    margin: 0;
+    font-family: 'Schoolbell', sans-serif;
+    /* <-- this affects the whole site */
+    color: #333;
+    background: #fff;
+    line-height: 1.6;
+}
+
+/* -----------------------------
+        Navbar
+  ----------------------------- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 124px;
+    /* padding: 20px 40px; */
+    /* font-size: 76px; */
+    margin-right: 5cap;
+}
+
+.logo {
+    margin-left: 5cap;
+    height: 100px;
+}
+
+/* default: looks like a word, no fill */
+.nav-links a {
+    position: relative;
+    display: inline-block;
+    padding: 8px 18px;
+    /* keep pill spacing without jump */
+    font-size: 20px;
+    color: #0049D1;
+    text-decoration: none;
+    border-radius: 999px;
+    /* pill shape ready */
+    border: 2px solid transparent;
+    /* invisible outline at rest */
+    transition: all 200ms ease;
+    background: transparent;
+}
+
+/* hover: show ONLY the outline (no fill) */
+.nav-links a:hover {
+    border-color: #0049D1;
+    /* blue outline appears */
+    background: transparent;
+    color: #0049D1;
+}
+
+/* current page: keep the outline on */
+.nav-links a[aria-current="page"] {
+    border-color: #0049D1;
+    font-weight: 600;
+}
+
+.cta {
+    background-color: #0049D1;
+    color: white;
+    padding: 10px 24px;
+    font-size: 16px;
+    /* font-weight: 700; */
+    border-radius: 16px;
+}
+    
+        /* Current page (accessible): keep it outlined so users know where they are */
+        .nav-links a[aria-current="page"] {
+            border-color: #0049D1;
+            font-weight: 600;
+        }
+        
+            .case-content.zac {
+                max-width: 850px;
+                /* same readable column width */
+                margin: 0 auto;
+                /* centers the column */
+                padding: 0 1.5rem 4rem;
+                /* same side + bottom padding */
+                display: flex;
+                flex-direction: column;
+                /* same vertical spacing between sections */
+        
+                font-family: "Schoolbell", cursive;
+                color: #42210B;
+                line-height: 1.7;
+                font-size: 1.125rem;
+            }
+    
+        .case-content.zac h1 {
+            font-family: "Schoolbell", cursive;
+            font-size: clamp(2.25rem, 5vw, 3rem);
+            font-weight: 800;
+            line-height: 1.15;
+            margin-top: 2rem;
+            color: #0049D1
+            /* keep brand blue for headings */
+        }
+    
+        .case-content.zac h2,
+        .case-content.zac h3 {
+            font-family: "Schoolbell", cursive;
+            color: #0049D1;
+            margin: 2rem 0 .75rem;
+            line-height: 1.25;
+        }
+    
+        .case-content.zac p,
+        .case-content.zac li {
+            margin: 0 0 1rem;
+            /* preserve your comfy spacing */
+        }
+    
+        .case-content.zac a {
+            color: #0049D1;
+            text-decoration: none;
+            font-weight: 600;
+        }
+    
+        .case-content.zac a:hover {
+            text-decoration: underline;
+        }
+    
+        /* ---------- Intro grid (image | project text | info) ---------- */
+    .project-intro.zac {
+        display: block;
+        /* no grid, just normal flow */
+        max-width: 850px;
+        /* same as other case studies */
+        margin: 0 auto 4rem;
+        /* centered column with bottom padding */
+        /* padding: 0 1.5rem; */
+    }
+
+        .case-content.zac {
+            max-width: 850px;
+            /* same readable width as your other case studies */
+            margin: 0 auto;
+            /* center the whole column */
+            padding: 0 1.5rem 4rem;
+            /* side + bottom spacing */
+            /* text-align: center; */
+            /* center headings + inline elements */
+        }
+    
+        .case-content.zac p {
+            text-align: left;
+            /* keep body text easy to read */
+            margin: 0 0 1rem;
+        }
+    
+        .image-box {
+            margin: 0 auto 2rem;
+            /* center the image block */
+            display: block;
+            max-width: 400px;
+            /* limit size */
+        }
+
+        .image-box img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 12px;
+        }
+    
+
+.banner-image img {
+    object-fit: cover;
+    justify-content: center;
+    display: block;
+    border-radius: 30px;
+    /* Convert the image to a block-level element */
+    margin: 0 auto;
+    /* width: 80%; */
+    height: 750px;
+}
+
+
+        /* ---------- Image grid (reuse your pattern) ---------- */
+        .image-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+    
+        .image-grid img,
+        .image-grid video {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 12px;
+            background: #f9f9f9;
+        }
+    
+        .img-1 {
+            grid-row: 1 / span 3;
+            grid-column: 1 / 2;
+        }
+    
+        .img-2 {
+            grid-row: 1 / 2;
+            grid-column: 2 / 3;
+        }
+    
+        .img-3 {
+            grid-row: 2 / 3;
+            grid-column: 2 / 3;
+        }
+    
+        .img-4 {
+            grid-row: 3 / 4;
+            grid-column: 2 / 3;
+        }
+    
+        /* ---------- Responsive ---------- */
+        @media (max-width: 900px) {
+            .project-intro.zac {
+                grid-template-columns: 1fr;
+                padding: 0 1rem;
+            }
+    
+            .project-intro.zac .col {
+                border-left: none;
+                padding-left: 0;
+            }
+    
+            .image-box {
+                max-width: 520px;
+                margin: 0 auto;
+            }
+    
+            .image-grid {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+        }

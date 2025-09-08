@@ -16,16 +16,17 @@
     
     <nav class="navbar">
     
-        <a href="index.html">
+        <a href="../index.html">
             <div class="logo">
                 <img src="/assets/contact_assets/daisy-nav-hero.svg" alt="logo" class="logo" />
             </div>
         </a>
     
         <div class="nav-links">
-            <a href="aboutme.html">about me </a>
-            <a href="side-projects.html"> side projects </a>
-            <a href="art.html"> my art</a>
+            <!-- <a href="/art.html" class="cta is-outline">my art</a> -->
+            <a href="../aboutme.html">about me </a>
+            <a href="../side-projects.html"> side projects </a>
+            <a href="../art.html"> my art</a>
         </div>
     </nav>
 </header>
@@ -41,20 +42,138 @@
         <section class="summary">
             <h2>intro</h2>
                 <p>
-                    LAMP is my senior capstone project! I’m working on this with my best friend, <a href = "https://www.linkedin.com/in/bizsarahyoon/"> Sarah Yoon'25</a> and our fellow girl-who-codes
-                    and day 1 - <a href = "https://www.linkedin.com/in/rory-sullivan-4bb233219/">Rory Sullivan'25 </a>. 
-                    <br><br>
-                    Listen : Album Museum & Portiolio, aka /LAMP, as abbreviated by out JIRA board– is a social media platform made for 
-                    music critics, enjoyers, explorers, fans, lovers and haters! Oringinally brainstormed as a music diary and catalog-
-                    LAMP has become our re-design and exploration of what it means to be a Listener.
+                    LAMP is my senior capstone project, created with Sarah Yoon ’25 and Rory Sullivan ’25. Originally brainstormed as a
+                    music diary and catalog, it grew into a social platform for music appreciation and connection.
+                    
+                    LAMP allows listeners to catalog their music journey, discover new sounds, and connect with others through shared
+                    exploration of what it means to be a Listener.
                 </p>
     </section>
 
-    <section class="problem-statement">
-        <div class="image-box">
-            <img src="../projects/lamp-assets/Layer 2.png" alt="project image">
-        </div>
+    <section class="overview">
+        <h5>Problem & Competitive Analysis</h5>
+        <hr>
+        <p>
+            Music platforms like Spotify, Apple Music, and SoundCloud provide access to music, but they center on streaming
+            and
+            playlists. Platforms like Letterboxd and RateYourMusic show the value of cataloging, reviewing, and community
+            engagement.
+            <br>
+            Our Problem Statement:
+            How might we create a platform for listeners — not influencers — that allows them to share, reflect, and connect
+            authentically through music?
+            <br>
+            Insights from competitive analysis:
+        <ul>
+            <li>Spotify / Last.fm → discovery & algorithmic feeds work, but lack depth in community critique.</li>
+            <li>Letterboxd / Goodreads → strong review culture & diary-like cataloging could inspire music-specific
+                features.</li>
+            <li>Discord / niche forums → authentic communities thrive when there’s less hierarchy and more anonymity.</li>
+        </ul>
+        </p>
+    </section>
 
+    <section class="overview">
+        <h5>what does it mean to be a<em> Listener</em>?</h5>
+        <hr>
+        <h3>audiophiles, critics,fans & enjoyers</h3>
+        <p> One of our proposed ideas for LAMP was the use of user types, kind of like personality quizzes and personality
+            types, we liked the idea of different kinds of music enjoyers and debated what each kind of person would want
+            from a
+            social platform- and then saw potential in the categorization. After a lot of self reflection, and
+            brainstorming,
+            and research we landed on four distinct user types.</p>
+    
+        <p>We explored different user types to frame how people interact with music:
+        <ul>
+            <li>🎧 Audiophile — niche, experimental tastes; seeks artistry.</li>
+            <li>🌊 Explorer — open to genres, driven by discovery.</li>
+            <li>📝 Critic — knowledgeable; values deep analysis and review.</li>
+            <li>💿 Fan — personal connection, memory-based engagement.</li>
+        </ul>
+        These user types shaped our interaction design and informed our algorithms (e.g., Critics get industry newcomers,
+        Explorers get emerging genres).
+        </p>
+    </section>
+
+    <section class="overview">
+        <h5>Design Opportunities</h5>
+        <hr>
+        <p>Based on our research, we saw opportunities to design features for:
+        <ol>
+            <li>Music Diary / Annotation → space to document personal notes, critiques, or reflections.</li>
+            <li>User Type-Driven Feeds → tailoring exploration to Audiophiles, Critics, Fans, Explorers.</li>
+            <li>Anonymous Social Interaction → authentic sharing without influencer hierarchies.</li>
+            <li>Album Interaction Models → exploring metaphors like picking CDs, vinyls, or cassettes.</li>
+        </ol>
+    </section>
+
+    <section class="overview">
+        <h5> users & interactions </h5>
+        <hr>
+        <div class="video-box">
+            <video id="myVideo" autoplay muted loop playsinline controls>
+                <source src="../projects/lamp-assets/interaction-designing-animations.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <p>
+            With our Listeners in mind, we set out to model interaction around them from the start, allowing them to decide
+            their user journeys from the start.
+        <ol>
+            <li>picking cd albmums (explorer)</li>
+            <li>picking from a list of vinyls (critic)</li>
+            <li>picking things from the cd (listener)</li>
+            <li>picking from cassettes (fan)</li>
+        </ol>
+        <section class="research-section">
+            <h5>
+                wireframing
+            </h5>
+            <hr>
+            <p></p>
+            <div class="research-grid">
+                <div class="research-card" onclick="toggleExpand(this)">
+                    <img src="../projects/lamp-assets/landing-page.png" alt="landing page">
+                </div>
+                <div class="research-card expanded" onclick="toggleExpand(this)"> <!-- big one -->
+                    <img src="../projects/lamp-assets/album-interaction.png" alt="album interaction">
+                </div>
+                <div class="research-card" onclick="toggleExpand(this)">
+                    <img src="../projects/lamp-assets/review-user-intweraction.png" alt="user interactions">
+                </div>
+            </div>
+        </section>
+        In addition to this, we also designed the flows for:
+        <ul>
+            <li>Landing Page → intro to the platform.</li>
+            <li>Annotation Mode → write notes, reflect, and share.</li>
+            <li>User Interaction Models → explore albums via different metaphors.</li>
+        </ul>
+        We also built demo prototypes to explore how annotation and diary functions could feel in practice.
+        </p>
+        <p>
+            Based on these user types and selections, user algorithms, explore pages, and content would be altered, for
+            example an <strong>Audiophile</strong> is someone who knows what they like, theyre into the niche and the
+            abstract.
+            The feed includes more artsy sounds- more Cordex, less Katy Perry.
+            <br>
+            An <strong>Explorer</strong> is someone that likes music- but wants to get out there and discover more genres-
+            theyre jumping into the deep end of the pool.
+            <br>
+            A Critic is someone well versed in the medium- they've heard it all and they know how to appreciate it! Critic's
+            feeds feature industry newcomers,old names-
+            new names- and new sounds alike, the critic only seeks to enjoy and leave their piece behind.
+            <br>
+        </p>
+    </section>
+    </section>
+
+    <!-- <section class="problem-statement"> -->
+        <!-- <div class="image-box">
+            <img src="../projects/lamp-assets/Layer 2.png" alt="project image">
+        </div> -->
+<!-- 
         <section class="project-intro">
             <div class="project-column">
                 <h5>project</h5>
@@ -62,8 +181,7 @@
                 <h2>/LAMP</h2>
                 <p class="description">
                     Listen: Album Museum & Portfolio
-                    Your collection, connection, and community in one. LAMP is a social platform for music appreciation and connection and expression.</p>
-                <p>
+                    <p>
                     LAMP is a social platform that reimagines music appreciation and connection. Built for the lovers, critics, and casual
                     listeners, it’s designed to help users catalog their music journey while connecting through shared discovery —
                     anonymously
@@ -91,116 +209,64 @@
                     <p>Figma, HTML, CSS, EJS, JIRA, VS Code, Adobe Suite </p>
                 </div>
             </div>
-        </section>
+        </section> -->
     </section>
 
-<section class="overview">
-    <h5>what does it mean to be a<em> Listener</em>?</h5>
-    <hr>
-    <h3>audiophiles, critics, haters, fans & enjoyers</h3>
-    <p> One of our proposed ideas for LAMP was the use of user types, kind of like personality quizzes and personality
-        types, we
-        liked the idea of different kinds of music enjoyers and debated what each kind of person would want from a
-        social
-        platform- and then saw potential in the categorization. After a lot of self reflection, and brainstorming we
-        landed on four distinct user types.</p>
-    <h5><em></em></h5>
-</section>
 
 
-        <section class="overview">
-            <h5> users & interactions </h5>
-            <hr>
-                    <div class="video-box">
-                        <video id="myVideo" autoplay muted loop playsinline controls>
-                            <source src="../projects/lamp-assets/interaction-designing-animations.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-            <p>With our Listeners in mind, we set out to model interaction around them from the start, allowing them to decide their user journeys from the start.
-            </p>
-            <ol>
-                <li>picking cd albmums (explorer)</li>
-                <li>picking from a list of vynils (critic)</li>
-                <li>picking things from the cd (listener)</li>
-                <li>picking from cassettes (fan)</li>
-            </ol>
-            <p>
-                Based on these user types and selections, user algorithms, explore pages, and content would be altered, for example an <strong>Audiophile</strong> is someone who knows what they like, theyre into the niche and the abstract.
-                The feed includes more artsy sounds- more Cordex, less Katy Perry.
-                <br>
-                An <strong>Explorer</strong> is someone that likes music- but wants to get out there and discover more genres- theyre jumping into the deep end of the pool.
-                <br>
-                A Critic is someone well versed in the medium- they've heard it all and they know how to appreciate it! Critic's feeds feature industry newcomers,old names-
-                new names- and new sounds alike, the critic only seeks to enjoy and leave their piece behind.
-                <br>
-                </p>
-        </section>
+<!-- <section class="concept-stuff">
+    <div>
+        <h5>
+            girl, what even is a <em> music diary</em>?
+        </h5>
+        <hr>
+        <p>
+            We liked the idea of a music diary- kind of like today's junk journals but more music specific and more
+            techy. We wanted to make it so people could have a space to annotate, document, and share their love, hate,
+            admiration, connection, and critiques with each other - or privately.
+        </p>
+        <p>
+            wirefeames of annotation more here
+        </p>
+        <p>
+            demo of annotation mode here
+        </P>
+    </div>
+</section> -->
 
-    <section class="concept-stuff">
-        <div>
-            <h5>
-                girl, what even is a <em> music diary</em>?
-            </h5>
-            <hr>
-            <p>
-                We liked the idea of a music diary- kind of like today's junk journals but more music specific and more techy. We wanted to make it so people could have a space to annotate, document, and share their love, hate, admiration, connection, and critiques with each other - or privately. 
-            </p>
-            <p>
-                wirefeames of annotation more here
-            </p>
-            <p> 
-                demo of annotation mode here
-            </P>
-        </div>
-    </section>
+<!-- <section class="concept-stuff">
+    <div>
+        <h5>
+            where's the social part?
+        </h5>
+        <hr>
+        <p>
+            We had ideas for social interacton! We want people to explore, to share, and to connect- but at the same
+            time we want people to be authentic to themselves, their tastes, and their experiences!
+            With /LAMP we never want there to be influencers or stars - just listeners!
+            With that in mind our user interaciton and social system is a bit different to mosts in that everyone- and
+            we mean <em>everyone</em> is anonymous. We're all strangers after all!
+        </p>
 
-    <section class="concept-stuff">
-        <div>
-            <h5>
-                where's the social part?
-            </h5>
-            <hr>
-            <p>
-                We had ideas for social interacton! We want people to explore, to share, and to connect- but at the same time we want people to be authentic to themselves, their tastes, and their experiences!
-                With /LAMP we never want there to be influencers or stars - just listeners! 
-                With that in mind our user interaciton and social system is a bit different to mosts in that everyone- and we mean <em>everyone</em> is anonymous. We're all strangers after all! 
-            </p>
+    </div>
+</section> -->
 
-            <section class="research-section">
-                <h5>
-                    wireframing
-                </h5>
-                <hr>
-                <p></p>
-                <div class="research-grid">
-                    ≈
-                    <div class="research-card" onclick="toggleExpand(this)">
-                        <img src="../projects/lamp-assets/landing-page.png" alt="landing page">
-                    </div>
-                    <div class="research-card expanded" onclick="toggleExpand(this)"> <!-- big one -->
-                        <img src="../projects/lamp-assets/album-interaction.png" alt="album interaction">
-                    </div>
-                    <div class="research-card" onclick="toggleExpand(this)">
-                        <img src="../projects/lamp-assets/review-user-intweraction.png" alt="user interactions">
-                    </div>
-                </div>
-            </section>
-        </div>
-    </section>
 
-    </section>
+    
 
     <section class="conclusions / reflection">
         <div>
-            <h5></h5>
-            <hr>
-            <h4></h4>
-            <p>
+
+            <p>If given more time, I would have loved to build out database functionality for storing user profiles and diary entries, as well as commentds under user reviews.
+                I would like to create functional prototypes for reviews and community features, because although the project was for school, seeing as the grade was only for software functionality and not 
+                end to end completion, I was never able to finish the project with my team to ever devlop it to launch.
             </p>
 
             <h4>what's next for daisy</h4>
 
+            <p> now that ive had more free time, I've grown reattached to my first fully fledged software project and am in the works of developing for a version 2!
+                I'm excited to share my next steps for the proejct. 
+            </p>
             <ul>
                 <li>database functionality ->  create a database to store user and profile info!</li>
                 <li> create user profile interactions</li>
@@ -208,51 +274,42 @@
                 <li> finish UI for site</li>
             </ul>
 
-
-            <h5> demo clips of proto development: </h5>
-
-            <h4></h4>
-            <h2></h2>
-            <p><br></br>
-            </p>
-
-            <h2></h2>
-            <p> </p>
+            <h5> demo clips of proto development for version 2: </h5>
+            <section class="image-grid">
+                <div class="img img-1">
+                    <div class="video-box">
+                        <video id="myVideo" autoplay muted loop playsinline controls>
+                            <source src=" ../projects/lamp-assets/video-clips/new-v2.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
             
-            <h2></h2>
-                <p>
-            </p>
+                <div class="img img-2">
+                    <div class="video-box">
+                        <video id="myVideo" autoplay muted loop playsinline controls>
+                            <source src="../projects/lamp-assets/video-clips/cd-test1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            
+                <div class="img img-3">
+                    <div class="video-box">
+                        <video id="myVideo" autoplay muted loop playsinline controls>
+                            <source src="../projects/lamp-assets/video-clips/album-hover-test.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </section>
+
         </div>
     </section>
 
-<section class="image-grid">
-    <div class="img img-1">
-        <div class="video-box">
-            <video id="myVideo" autoplay muted loop playsinline controls>
-                <source src=" ../projects/lamp-assets/video-clips/new-v2.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </div>
 
-    <div class="img img-2">
-        <div class="video-box">
-            <video id="myVideo" autoplay muted loop playsinline controls>
-                <source src="../projects/lamp-assets/video-clips/cd-test1.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </div>
 
-    <div class="img img-3">
-        <div class="video-box">
-            <video id="myVideo" autoplay muted loop playsinline controls>
-                <source src="../projects/lamp-assets/video-clips/album-hover-test.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </div>
-</section>
+
 
     <script>
         function bringToFront(card) {
@@ -286,29 +343,20 @@
 
 
 </main>
+<footer class="minimal-footer">
+    <div class="footer-left">
+        <p>crafted with curiosity & creativity. hosted with love on github pages </p>
+        <p class="footer-update">© 2025 daisyland all rights reserved</p>
+        <p class="footer-update">Last updated: July 2025</p>
+    </div>
 
-<footer>
-    <section id="footer" class="container">
-        <a href="../index.html">
-            <div class="logo">
-                <img src="../assets/daisyland-branding/daisy-icon.png" alt="daisy logo">
-            </div>
-        </a>
-        <p>crafted with curiosity & creativity<br>hosted with love on github pages <br>© 2024 daisyland</p>
-
-        <div class="doodle-button-icons">
-            <a href="https://github.com/daisyb3ll" class="doodle-button">
-                <img src="../assets/contact_assets/PNG/github-icon-doodle.png" alt="Github">
-            </a>
-            <a href="www.linkedin.com/in/daisyfernandezreyes" class="doodle-button">
-                <img src="../assets/contact_assets/PNG/linkedin-icon-doodle.png" alt="linkedin">
-            </a>
-            <a href="https://www.instagram.com/da.s003" class="doodle-button">
-                <img src="../assets/contact_assets/PNG/instagram-icon-doodle.png" alt="instagram">
-            </a>
-        </div>
-
-    </section>
+    <div class="footer-right">
+        <a href="https://github.com/daisyb3ll" target="_blank">github</a>
+        <a href="https://docs.google.com/document/d/1k9xpl2AOD8KjBLynts9rQQgqLKHwTG_Pfv17IkuoJVs/edit?tab=t.8sxrkt6rhluq"
+            target="_blank">resume</a>
+        <a href="https://www.linkedin.com/in/daisyfernandezreyes/" target="_blank">linkedin</a>
+        <a href="art.html">art</a>
+    </div>
 </footer>
 
 </body>

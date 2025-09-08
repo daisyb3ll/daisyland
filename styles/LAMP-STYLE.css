@@ -1,52 +1,75 @@
-header {
-    background-position: center;
-    padding: 20px;
+/* -----------------------------
+    Global Styles
+----------------------------- */
+body {
+    margin: 0;
+    font-family: 'Coral Pixels', sans-serif;
+    color: #333;
+    background: #fff;
+    line-height: 1.6;
+}
+/* -----------------------------
+        Navbar
+  ----------------------------- */
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 124px;
+    /* padding: 20px 40px; */
+    /* font-size: 76px; */
+    margin-right: 5cap;
 }
 
-.fixed-logo {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    z-index: 100;
+.logo {
+    margin-left: 5cap;
+    height: 100px;
 }
 
-.logo img {
-    height: 4rem;
-}
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.nav-links {
     display: flex;
-    font-size: 1.5rem;
+    gap: 20px;
 }
-
-nav ul li {
-    margin-left: 20px;
-}
-
-nav ul li a {
+/* default nav links */
+.nav-links a {
+    color: #0049D1;
     text-decoration: none;
-    color: inherit;
-    font-size: inherit;
-    cursor: pointer;
+    padding: 8px 18px;
+    /* reserve space so they don’t jump on hover */
+    border-radius: 999px;
+    /* pill shape ready */
+    transition: all 0.25s ease;
+    border: 2px solid transparent;
+    /* invisible border by default */
+    font-weight: 500;
+    display: inline-block;
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
+/* hover effect: show outline */
+.nav-links a:hover {
+    border-color: #0049D1;
+    /* blue outline appears */
+    background-color: transparent;
+    color: #0049D1;
+}
+/* filled button (default) stays as-is */
+.cta {
+    background-color: #0049D1;
+    color: #fff;
+    padding: 10px 24px;
+    border-radius: 16px;
+    display: inline-block;
+    text-decoration: none;
 }
 
-body {
+.body {
     font-family: 'Coral Pixels', sans-serif;
     color: #42210B;
     margin: 5em;
     padding: 20px;
     line-height: 1.6;
     overflow-x: hidden;
+    
 }
 
 p {
@@ -79,14 +102,29 @@ h4 {
 .banner-image img {
     width: 100%;
     object-fit: cover;
+    border-radius: 30px;
     box-shadow: 0 10px 6px rgba(0, 42, 255, 0.067);
 }
 
 .case-content {
+    max-width: 850px;
+    /* keeps text in a readable column */
+    margin: 0 auto;
+    /* centers the column */
+    padding: 0 1.5rem 4rem;
+    /* side + bottom padding */
     display: flex;
     flex-direction: column;
-    gap: 40px;
-    padding: 1em;
+    gap: 3rem;
+    /* consistent spacing between sections */
+
+    font-family: 'Coral Pixels', sans-serif;
+    /* keep your LAMP font */
+    color: #42210B;
+    /* your LAMP text color */
+    line-height: 1.65;
+    font-size: 1.125rem;
+    /* slightly larger, ~18px */
 }
 
 .problem-statement {
@@ -320,15 +358,53 @@ h4 {
     flex: 4;
 }
 
-footer {
-    padding-top: 80px;
-    font-family: "Coral Pixels";
-    text-align: center;
+/* ===========
+FOOTERSTYLING
+=============*/
+.footer-daisy {
+    width: 100px;
+    height: auto;
+    margin: 0 auto 20px;
+    display: block;
+    opacity: 0.9;
+}
+
+.minimal-footer {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 1em;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px 5vw;
+    color: #444;
+    font-size: 0.9rem;
+    flex-wrap: wrap;
+}
+
+.minimal-footer a {
+    color: #444;
+    text-decoration: none;
+    margin-left: 16px;
+    display: inline-block;
+}
+
+.minimal-footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-left {
+    max-width: 60%;
+}
+
+.footer-update {
+    opacity: 0.6;
+    font-size: 0.8rem;
+    margin-top: 4px;
+}
+
+.footer-right {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 12px;
 }
 
 .doodle-icon-buttons {
@@ -368,20 +444,60 @@ footer {
 }
 
 .project-intro {
-    display: flex;
-    justify-content: space-between;
-    gap: 60px;
+    display: grid;
+    grid-template-columns:
+        minmax(260px, 380px)
+        /* image */
+        minmax(340px, 1fr)
+        /* project text */
+        minmax(280px, 1fr);
+    /* info */
+    column-gap: 3rem;
+    row-gap: 2rem;
+    align-items: start;
+
     max-width: 1100px;
     margin: 60px auto;
-    padding: 0 20px;
+    padding: 0 1.5rem;
+    /* match Spark side padding */
     font-family: "Coral Pixels", sans-serif;
     color: #222;
 }
+/* apply light vertical dividers like your mock */
+.project-intro .col {
+    padding-left: 1.5rem;
+    border-left: 1px solid #eaeaea;
+}
 
+.project-intro .col:first-of-type {
+    border-left: none;
+    padding-left: 0;
+}
+
+/* prevent columns from collapsing */
 .project-column,
 .info-column {
-    flex: 1;
+    min-width: 280px;
 }
+
+/* nicer paragraph measure */
+.project-intro p {
+    max-width: 60ch;
+}
+.image-box {
+    width: 100%;
+    max-width: 380px;
+}
+
+.image-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+/* .project-column,
+.info-column {
+    flex: 1;
+} */
 
 h5 {
     letter-spacing: 2px;
