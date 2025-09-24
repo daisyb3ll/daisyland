@@ -1,3 +1,35 @@
+/* ++++++++++++++++++
+page fade transitions
++++++++++++++++++++*/
+
+/* Page fade transition */
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.fade-in {
+    opacity: 1;
+    transition: opacity 0.4s ease;
+}
+
+/* Start hidden */
+body {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+/* Fade in when loaded */
+body.fade-in {
+    opacity: 1;
+}
+
+/* Fade out when navigating */
+body.fade-out {
+    opacity: 0;
+}
+
+
 
 /* global stypings (mr worldwide mueheh) */
 body {

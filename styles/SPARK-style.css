@@ -40,12 +40,17 @@ body {
     color: #0049D1;
     text-decoration: none;
     border-radius: 16px;
-    transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
+    transition: all 0.25s ease;
+    /* transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2); */
+    /* transition: background-color 250ms ease-in-out, color 250ms ease-in-out; */
 }
 
 .nav-links a:hover {
     background-color: #0049D1;
     color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2);
 }
 
 .cta {
@@ -55,6 +60,8 @@ body {
     font-size: 16px;
     /* font-weight: 700; */
     border-radius: 16px;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2);
 }
 
 /* ++++++++++++
@@ -304,6 +311,7 @@ final design deliverables
 .research-card.expanded {
     flex: 4;
 }
+
 
 /* ===========
 FOOTERSTYLING

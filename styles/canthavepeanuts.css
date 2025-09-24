@@ -1,3 +1,36 @@
+/* ++++++++++++++++++
+page fade transitions
++++++++++++++++++++*/
+
+/* Page fade transition */
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.fade-in {
+    opacity: 1;
+    transition: opacity 0.4s ease;
+}
+
+/* Start hidden */
+body {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+/* Fade in when loaded */
+body.fade-in {
+    opacity: 1;
+}
+
+/* Fade out when navigating */
+body.fade-out {
+    opacity: 0;
+}
+
+
+
 /* -----------------------------
     Global Styles
 ----------------------------- */
@@ -217,6 +250,60 @@ body {
             grid-row: 3 / 4;
             grid-column: 2 / 3;
         }
+
+        /* ===========
+    FOOTERSTYLING
+    =============*/
+        .footer-daisy {
+            width: 100px;
+            height: auto;
+            margin: 0 auto 20px;
+            display: block;
+            opacity: 0.9;
+        }
+    
+        .minimal-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 20px 5vw;
+            color: #444;
+            font-size: 0.9rem;
+            flex-wrap: wrap;
+        }
+    
+        .minimal-footer a {
+            color: #444;
+            text-decoration: none;
+            margin-left: 16px;
+            display: inline-block;
+        }
+    
+        .minimal-footer a:hover {
+            text-decoration: underline;
+        }
+    
+        .footer-left {
+            max-width: 60%;
+        }
+    
+        .footer-update {
+            opacity: 0.6;
+            font-size: 0.8rem;
+            margin-top: 4px;
+        }
+    
+        .footer-right {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            gap: 12px;
+        }
+    
+        .more-studies {
+            height: 300px;
+        }
+        
     
         /* ---------- Responsive ---------- */
         @media (max-width: 900px) {

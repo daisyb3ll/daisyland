@@ -31,7 +31,7 @@
         <div class="nav-links">
             <a href="aboutme.html">about me </a>
             <a href="side-projects.html"> side projects </a>
-            <a href="art.html"> my art</a>
+            <a href="https://daisycandraw.my.canva.site/proofdaisydraws/"> my art</a>
         </div>
     </nav>
 
@@ -151,7 +151,10 @@
                     <a href="projects/covalent-therapy.html" class="project-link"> oo la la! </a>
                 </div>
             </section>
-            <a href = "side-projects.html" class = "project link"> wanna see more? check out my othr work here! </a>
+
+            <a href = "side-projects.html" button class="cute-button">
+                check out more of my work here!</a>
+            </button>
         </div>
     </section>
 
@@ -175,6 +178,28 @@
             },
                 h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
         })(document);
+
+
+        // page transitions
+        document.addEventListener("DOMContentLoaded", () => {
+                const body = document.body;
+                body.classList.add("fade-in");
+
+                document.querySelectorAll("a").forEach(link => {
+                    link.addEventListener("click", e => {
+                        if (
+                            link.hostname === window.location.hostname &&
+                            link.pathname !== window.location.pathname
+                        ) {
+                            e.preventDefault();
+                            body.classList.add("fade-out");
+                            setTimeout(() => {
+                                window.location = link.href;
+                            }, 400); // matches CSS duration
+                        }
+                    });
+                });
+            });
     </script>
 
 
@@ -192,7 +217,7 @@
         <a href="https://www.figma.com/design/I05vAAFy0EL2hfwUObnUaU/daisy-s-resume?node-id=0-1&t=3OqVOJUcd7XG9P6h-1"
             target="_blank">resume</a>
         <a href="https://www.linkedin.com/in/daisyfernandezreyes/" target="_blank">linkedin</a>
-        <a href="art.html">art</a>
+        <a href="https://daisycandraw.my.canva.site/proofdaisydraws/">art</a>
     </div>
 </footer>
 

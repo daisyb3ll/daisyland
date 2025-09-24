@@ -26,7 +26,7 @@
             <!-- <a href="/art.html" class="cta is-outline">my art</a> -->
             <a href="../aboutme.html">about me </a>
             <a href="../side-projects.html"> side projects </a>
-            <a href="../art.html"> my art</a>
+            <a href="https://daisycandraw.my.canva.site/proofdaisydraws/"> my art</a>
         </div>
     </nav>
 </header>
@@ -339,6 +339,33 @@
             });
             clickedCard.classList.add('active');
         };
+
+    // fade in transitons 
+    document.addEventListener("DOMContentLoaded", () => {
+        const body = document.body;
+
+        // trigger fade in
+        requestAnimationFrame(() => {
+            body.classList.add("fade-in");
+        });
+
+        // handle fade out on link clicks
+        document.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", e => {
+                if (
+                    link.hostname === window.location.hostname &&
+                    link.pathname !== window.location.pathname
+                ) {
+                    e.preventDefault();
+                    body.classList.remove("fade-in");
+                    body.classList.add("fade-out");
+                    setTimeout(() => {
+                        window.location = link.href;
+                    }, 400); // matches CSS duration
+                }
+            });
+        });
+    });
     </script>
 
 
@@ -355,7 +382,7 @@
         <a href="https://docs.google.com/document/d/1k9xpl2AOD8KjBLynts9rQQgqLKHwTG_Pfv17IkuoJVs/edit?tab=t.8sxrkt6rhluq"
             target="_blank">resume</a>
         <a href="https://www.linkedin.com/in/daisyfernandezreyes/" target="_blank">linkedin</a>
-        <a href="art.html">art</a>
+        <a href="https://daisycandraw.my.canva.site/proofdaisydraws/">art</a>
     </div>
 </footer>
 

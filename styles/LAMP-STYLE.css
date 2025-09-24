@@ -1,3 +1,36 @@
+/* ++++++++++++++++++
+page fade transitions
++++++++++++++++++++*/
+
+/* Page fade transition */
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.fade-in {
+    opacity: 1;
+    transition: opacity 0.4s ease;
+}
+
+/* Start hidden */
+body {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+/* Fade in when loaded */
+body.fade-in {
+    opacity: 1;
+}
+
+/* Fade out when navigating */
+body.fade-out {
+    opacity: 0;
+}
+
+
+
 /* -----------------------------
     Global Styles
 ----------------------------- */
@@ -47,10 +80,12 @@ body {
 
 /* hover effect: show outline */
 .nav-links a:hover {
-    border-color: #0049D1;
+    /* border-color: #0049D1; */
     /* blue outline appears */
     background-color: transparent;
     color: #0049D1;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2);
 }
 /* filled button (default) stays as-is */
 .cta {
@@ -60,7 +95,12 @@ body {
     border-radius: 16px;
     display: inline-block;
     text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2);
 }
+
+
+
 
 .body {
     font-family: 'Coral Pixels', sans-serif;

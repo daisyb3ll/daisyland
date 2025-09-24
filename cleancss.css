@@ -8,6 +8,36 @@ sans-serif;
 font-weight: 800;
 font-style: normal; */
 
+/* ++++++++++++++++++
+page fade transitions
++++++++++++++++++++*/
+
+/* Page fade transition */
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.fade-in {
+    opacity: 1;
+    transition: opacity 0.4s ease;
+}
+
+/* Start hidden */
+body {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+/* Fade in when loaded */
+body.fade-in {
+    opacity: 1;
+}
+
+/* Fade out when navigating */
+body.fade-out {
+    opacity: 0;
+}
 /* -----------------------------
     Global Styles
 ----------------------------- */
@@ -17,10 +47,9 @@ body {
     color: #333;
     background: white;
 }
-
 /* -----------------------------
-        Navbar
-  ----------------------------- */
+Navbar
+----------------------------- */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -50,12 +79,17 @@ body {
     color: #0049D1;
     text-decoration: none;
     border-radius: 16px;
-    transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
+    transition: all 0.25s ease;
+    /* transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2); */
+    /* transition: background-color 250ms ease-in-out, color 250ms ease-in-out; */
 }
 
 .nav-links a:hover {
     background-color: #0049D1;
     color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2);
 }
 
 .cta {
@@ -64,7 +98,10 @@ body {
     padding: 10px 24px;
     font-size: 16px;
     /* font-weight: 700; */
-    border-radius: 16px; }
+    border-radius: 16px;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2);
+}
 
 /* -----------------------------
         Hero Section
@@ -515,6 +552,44 @@ fav projects
     color: #444;
 }
 
+/* cute button */
+
+
+.cute-button {
+    background-color: #0049D1;
+    text-decoration: none;
+        /* remove underline */
+    /* deep navy */
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.9em 1.8em;
+    border: none;
+    border-radius: 999px;
+    /* pill shape */
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6em;
+    /* spacing between text and arrow */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    transition: all 0.25s ease;
+}
+
+.cute-button:hover {
+    background-color:white;
+    color:#0049D1 ; 
+    border-color:#0049D1; 
+    border: 3px;
+    /* slightly lighter navy */
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2);
+}
+
+.cute-button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
 
 /* ===========
 FOOTERSTYLING
