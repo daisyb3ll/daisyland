@@ -749,12 +749,31 @@ FOOTER STYLING
             /* Keep original nav-links styles here */
         }
 
+        .video-header {
+            position: relative;
+            /* Force height to fill the entire vertical space of the screen */
+            height: 100vh !important;
+            min-height: 100vh !important;
+            /* Ensure no margin/padding is inherited and pushing it down */
+            margin-top: 0 !important;
+            padding-top: 0 !important;
+        }
 
+        /* Keep existing cover and width/height */
+        object-fit: cover;
         
-
-    .video-header {
-        margin-top: 80px;
+        /* Change the vertical position from 50% (center) to 30% or 40% 
+           This shifts the video DOWN, making the mid-section more visible. */
+        object-position: center 30%; /* Try 30% first */
+        
+        /* Ensure the old transform is gone */
+        transform: none !important;
     }
+
+        /* Ensure the mobile navbar is still transparent */
+        .navbar {
+            background-color: transparent !important;
+        }
 
     .overlay-text p {
         padding-top: 20px;
