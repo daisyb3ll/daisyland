@@ -601,17 +601,17 @@ FOOTER STYLING
     justify-content: space-between;
     align-items: flex-start;
     padding: 20px 5vw;
-    color: #444;
+    color: #696969;
     font-size: clamp(0.75rem, 1.8vw, 0.9rem);
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 5px;
 }
 
 .minimal-footer a {
-    color: #444;
-    text-decoration: none;
-    margin-left: 16px;
-    display: inline-block;
+    color: #696969;
+        text-decoration: none;
+        margin-left: 16px;
+        display: inline-block;
 }
 
 .minimal-footer a:hover {
@@ -757,8 +757,7 @@ FOOTER STYLING
             /* Ensure no margin/padding is inherited and pushing it down */
             margin-top: 0 !important;
             padding-top: 0 !important;
-        }
-
+        
         /* Keep existing cover and width/height */
         object-fit: cover;
         
@@ -768,6 +767,7 @@ FOOTER STYLING
         
         /* Ensure the old transform is gone */
         transform: none !important;
+        
     }
 
         /* Ensure the mobile navbar is still transparent */
@@ -920,13 +920,20 @@ FOOTER STYLING
     .footer-left {
         max-width: 100%;
     }
+        .footer-left p {
+            margin-bottom: 0;
+            /* Ensures content inside footer-left doesn't add extra space */
+            line-height: 1.4;
+            /* Tighter line spacing for mobile text */
+        }
 
     .footer-right {
-        justify-content: center;
+        justify-content: flex-start;
     }
 
     .footer-right a {
-        margin: 0 8px;
+        margin-left: 0;
+        margin-right: 16px;
     }
 }
 
@@ -1008,17 +1015,19 @@ FOOTER STYLING
     }
 
     .minimal-footer {
+        font-size: 0.75rem;
         padding: 15px 20px;
     }
 
-    .footer-right {
+    /* .footer-right {
         flex-direction: column;
         align-items: center;
         gap: 8px;
-    }
+    } */
 
     .footer-right a {
-        margin: 0;
+        margin-right: 12px;
+        font-size: 0.75rem;
     }
 }
 

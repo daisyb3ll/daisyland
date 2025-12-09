@@ -294,11 +294,12 @@ FOOTERSTYLING
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    flex-direction: column;
     padding: 20px 5vw;
     color: #696969;
     font-size: clamp(0.75rem, 2vw, 0.9rem);
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 5px;
 }
 
 .minimal-footer a {
@@ -540,6 +541,12 @@ Resume section mueheh
     .footer-left {
         max-width: 100%;
     }
+        .footer-left p {
+            margin-bottom: 0;
+            /* Ensures content inside footer-left doesn't add extra space */
+            line-height: 1.4;
+            /* Tighter line spacing for mobile text */
+        }
 
     .footer-right {
         justify-content: flex-start;
